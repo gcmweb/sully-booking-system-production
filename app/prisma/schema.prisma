@@ -87,6 +87,8 @@ model Venue {
   // Relations
   ownerId           String
   owner             User                @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  subscriptionId    String?
+  subscription      Subscription?       @relation(fields: [subscriptionId], references: [id], onDelete: SetNull)
   bookings          Booking[]
   analytics         Analytics[]
   bookingWidgets    BookingWidget[]
@@ -483,6 +485,7 @@ model Subscription {
   // Relations
   userId   String
   user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  venues   Venue[]
   payments Payment[]
 
   @@map("subscriptions")
