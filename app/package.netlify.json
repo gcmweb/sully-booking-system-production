@@ -1,0 +1,18 @@
+
+{
+  "name": "sully-booking-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "chmod +x build-netlify.sh && ./build-netlify.sh",
+    "start": "next start",
+    "lint": "next lint",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:push": "prisma db push"
+  },
+  "dependencies": {
+    "@netlify/functions": "^2.0.0"
+  }
+}

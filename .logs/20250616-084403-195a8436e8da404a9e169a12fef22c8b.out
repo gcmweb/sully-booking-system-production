@@ -1,0 +1,55 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 1362ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.9s (1180 modules)
+ GET / 200 in 4420ms
+ ✓ Compiled in 487ms (592 modules)
+ GET / 200 in 177ms
+ ○ Compiling /api/auth/me ...
+ ✓ Compiled /api/auth/me in 554ms (700 modules)
+ GET /api/auth/me 401 in 737ms
+ GET /api/auth/me 401 in 28ms
+ GET /api/auth/me 401 in 29ms
+ ✓ Compiled /api/auth/register in 257ms (704 modules)
+ POST /api/auth/register 200 in 733ms
+ ✓ Compiled /api/auth/login in 146ms (706 modules)
+ POST /api/auth/login 200 in 517ms
+ ✓ Compiled /api/venues in 154ms (708 modules)
+ POST /api/venues 200 in 232ms
+ ○ Compiling /widget/[venueId] ...
+ ✓ Compiled /widget/[venueId] in 1188ms (1424 modules)
+ GET /widget/cmbyum7g30006m33hjwappdjw 200 in 1621ms
+ ✓ Compiled /api/bookings in 187ms (782 modules)
+ POST /api/bookings 409 in 255ms
+ ✓ Compiled /_not-found in 317ms (1432 modules)
+ POST /api/venues/cmbyum7g30006m33hjwappdjw/availability 404 in 370ms
+ POST /api/bookings 409 in 41ms
+Sending booking confirmation email to: john@example.com
+Booking details: {
+  customerName: 'John Doe',
+  venueName: 'The Golden Spoon',
+  date: 'Wed Jun 18 2025',
+  time: '19:00',
+  partySize: 4
+}
+ POST /api/bookings 200 in 50ms
+ ✓ Compiled /api/venues/[id]/analytics in 211ms (780 modules)
+ GET /api/venues/cmbyum7g30006m33hjwappdjw/analytics 200 in 629ms
+ ✓ Compiled /api/admin/stats in 204ms (780 modules)
+ GET /api/admin/stats 500 in 275ms
+ ✓ Compiled /api/venues in 168ms (712 modules)
+ GET /api/venues 200 in 231ms
+ ✓ Compiled in 391ms (1359 modules)
+ ✓ Compiled in 147ms (704 modules)
+[?25h

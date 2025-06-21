@@ -1,0 +1,59 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1791ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.4s (1180 modules)
+ GET / 200 in 3842ms
+ ✓ Compiled in 503ms (592 modules)
+ ✓ Compiled /api/auth/me in 336ms (700 modules)
+ GET /api/auth/me 200 in 495ms
+ GET /api/auth/me 200 in 26ms
+ ○ Compiling /auth/register ...
+ ✓ Compiled /auth/register in 1196ms (1304 modules)
+ GET /auth/login 200 in 1326ms
+ GET /auth/register 200 in 1325ms
+ GET /api/auth/me 200 in 32ms
+ GET /api/auth/me 200 in 41ms
+ GET /api/auth/me 200 in 29ms
+ GET /api/auth/me 200 in 27ms
+ GET / 200 in 38ms
+ GET /api/auth/me 200 in 19ms
+ GET /api/auth/me 200 in 19ms
+ GET / 200 in 50ms
+ GET /auth/register 200 in 56ms
+ GET /auth/login 200 in 56ms
+ GET / 200 in 50ms
+ GET /api/auth/me 200 in 25ms
+ GET /api/auth/me 200 in 24ms
+ GET /auth/login 200 in 35ms
+ ✓ Compiled /api/auth/register in 282ms (718 modules)
+ POST /api/auth/register 409 in 421ms
+ ✓ Compiled /api/auth/login in 172ms (720 modules)
+ POST /api/auth/login 200 in 549ms
+ GET /api/auth/me 200 in 27ms
+ ✓ Compiled /api/auth/logout in 157ms (722 modules)
+ POST /api/auth/logout 200 in 198ms
+ GET /api/auth/me 200 in 23ms
+ GET /api/auth/me 200 in 19ms
+ GET / 200 in 54ms
+ GET /api/auth/me 200 in 25ms
+ GET /api/auth/me 200 in 22ms
+ GET /auth/login 200 in 40ms
+ GET /api/auth/me 200 in 23ms
+ GET /api/auth/me 200 in 23ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 631ms (1326 modules)
+ GET /dashboard 200 in 711ms
+ ✓ Compiled /api/venues in 176ms (728 modules)
+ GET /api/venues 500 in 225ms
+ GET /api/auth/me 200 in 23ms
+ POST /api/auth/login 200 in 352ms
+ GET /api/auth/me 200 in 20ms
+ POST /api/auth/logout 200 in 23ms
+ GET /api/auth/me 200 in 18ms
+[?25h

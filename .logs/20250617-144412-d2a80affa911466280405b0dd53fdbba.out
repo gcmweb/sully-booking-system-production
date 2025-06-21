@@ -1,0 +1,2044 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1935ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.3s (1180 modules)
+ GET / 200 in 1883ms
+ GET / 200 in 828ms
+ GET / 200 in 2942ms
+ ✓ Compiled in 618ms (595 modules)
+ ✓ Compiled /api/auth/me in 225ms (617 modules)
+ ✓ Compiled (706 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 729ms
+ GET /api/auth/me 200 in 733ms
+ GET /api/venues/featured 200 in 919ms
+ GET / 200 in 928ms
+ GET /api/venues/featured 200 in 70ms
+ ○ Compiling /book/[venueId] ...
+ ✓ Compiled /book/[venueId] in 1740ms (1514 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951353245bc6ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'bfcc1e96-1dff-4e4a-a363-10959b46de8d'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951353246bd4ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '04e2be49-77fc-4571-95f8-e080e52ee5f8'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 1457ms
+ GET /api/auth/me 200 in 1441ms
+ GET /api/venues/featured 200 in 1630ms
+ GET /venues 200 in 2192ms
+ GET /auth/login 200 in 2181ms
+ GET /my-bookings 200 in 2180ms
+ GET /book 200 in 2176ms
+ GET /auth/register 200 in 2177ms
+ GET /api/venues/featured 200 in 362ms
+ GET /book/cmbz3igfd0005qn018j1uu311 200 in 2661ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/register',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/register',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/login',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/login',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/venues',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/my-bookings',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/venues',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 207ms
+ GET /api/auth/me 200 in 204ms
+ GET /api/auth/me 200 in 154ms
+ GET /api/auth/me 200 in 153ms
+ GET /api/auth/me 200 in 135ms
+ GET /api/auth/me 200 in 132ms
+ GET /api/auth/me 200 in 132ms
+ ○ Compiling /api/public/venues/[id] ...
+ ✓ Compiled /api/public/venues/[id] in 637ms (826 modules)
+ ✓ Compiled (828 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/my-bookings',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 1029ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book/cmbz3igfd0005qn018j1uu311',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book/cmbz3igfd0005qn018j1uu311',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 1058ms
+ GET /api/auth/me 200 in 855ms
+ GET /api/auth/me 200 in 850ms
+ GET /api/auth/me 200 in 1059ms
+ GET /api/public/venues?page=1&limit=12 200 in 1075ms
+ GET /api/public/venues 200 in 1132ms
+ GET /api/public/venues?page=1&limit=12 200 in 91ms
+ GET /api/public/venues 200 in 96ms
+ GET /api/public/venues/cmbz3igfd0005qn018j1uu311 200 in 1198ms
+ GET /api/public/venues/cmbz3igfd0005qn018j1uu311 200 in 71ms
+ ○ Compiling /widget/[venueId] ...
+ ✓ Compiled /widget/[venueId] in 807ms (1526 modules)
+ GET / 200 in 1011ms
+ GET /widget/cmbz2opym0002m394a8xjeeiy 200 in 1289ms
+ GET /api/venues/featured 200 in 103ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 117ms
+ GET /api/auth/me 200 in 93ms
+ GET /api/venues/featured 200 in 52ms
+ GET /api/public/venues/cmbz2opym0002m394a8xjeeiy 200 in 71ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/widget/cmbz2opym0002m394a8xjeeiy',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/widget/cmbz2opym0002m394a8xjeeiy',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 83ms
+ GET /api/auth/me 200 in 76ms
+ GET /api/public/venues/cmbz2opym0002m394a8xjeeiy 200 in 50ms
+ GET / 200 in 251ms
+ GET /auth/register 200 in 268ms
+ GET /auth/login 200 in 276ms
+ GET /venues 200 in 276ms
+ GET /my-bookings 200 in 276ms
+ GET /book 200 in 276ms
+ GET /widget/cmbz2opym0002m394a8xjeeiy 200 in 280ms
+ GET /book/cmbz3igfd0005qn018j1uu311 200 in 280ms
+ ✓ Compiled /api/venues/limits in 377ms (836 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+ GET /api/venues/limits 401 in 456ms
+ GET / 200 in 87ms
+ GET / 200 in 59ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951353b51af5ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'e5d3d89d-b6ed-4c0a-8358-444bf9f4018c'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 57ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951353b51afcccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'd0ff01a8-dd96-4ee6-b36c-54e31f8efc4c'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 85ms
+ GET /api/venues/featured 200 in 91ms
+ GET / 200 in 108ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951353baaa72ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '3723cade-ab1b-4c9b-a90c-5bfefe6db762'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951353baaa80ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '8762801b-64c4-4999-91bc-ba900785921b'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 67ms
+ GET /api/auth/me 200 in 55ms
+ GET /api/venues/featured 200 in 68ms
+ GET /api/venues/featured 200 in 40ms
+ GET / 200 in 55ms
+ GET / 200 in 55ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951353df6e82ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '5cd6bb3d-fc7f-4af2-98b0-fc1945afe33b'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951353df6e85ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '4a6bff6c-b663-42f3-9b84-22b7bfdace11'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 121ms
+ GET /api/auth/me 200 in 114ms
+ GET /api/venues/featured 200 in 132ms
+ GET / 200 in 139ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951353e53e53ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '18b4486e-8856-49db-8bc1-1d83beed8a72'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951353e54e5dccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '1553ba7b-4a3c-45ba-80f0-38e2aa58995e'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 69ms
+ GET /api/auth/me 200 in 67ms
+ GET /api/venues/featured 200 in 68ms
+ GET /api/venues/featured 200 in 40ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔴 [AUTH-LIB] No session found in database for token
+ GET /api/venues/limits 401 in 52ms
+ GET / 200 in 58ms
+ GET / 200 in 60ms
+ GET /api/venues/featured 200 in 60ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '95135431ffccccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '0c7c2ad5-5da0-4f47-bb70-0cec0474e0d0'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '95135431ffd1ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'cd7232a8-90d5-4ee8-b798-dd348114925f'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 70ms
+ GET /api/auth/me 200 in 58ms
+ GET / 200 in 60ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951354375e87ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '58eabde9-fd74-4954-842e-16f4a76a9fe9'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951354375e8fccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '9e6493b8-3548-477d-b28b-0d6259cf541b'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 86ms
+ GET /api/auth/me 200 in 71ms
+ GET /api/venues/featured 200 in 82ms
+ GET /api/venues/featured 200 in 49ms
+ ✓ Compiled /api/venues in 460ms (840 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔴 [AUTH-LIB] No session found in database for token
+ GET /api/venues 401 in 553ms
+ GET / 200 in 91ms
+ GET / 200 in 71ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951354578a7accae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '9d225f82-6e7b-44f9-b9f6-c1b18eea1694'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951354578a84ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '6d1b52f8-13c9-4acd-8ce7-3136d541cb81'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 76ms
+ GET /api/auth/me 200 in 70ms
+ GET /api/venues/featured 200 in 82ms
+ GET / 200 in 58ms
+ GET /api/venues/featured 200 in 64ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9513545c38f6ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '1d6fe655-74e8-4c16-a736-59de13d45319'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9513545c3900ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '1f971240-1a91-4adc-a9ff-ea49224cf757'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 65ms
+ GET /api/auth/me 200 in 61ms
+ GET /api/venues/featured 200 in 47ms
+ GET / 200 in 90ms
+ GET /api/venues/featured 200 in 121ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ6MzUxNTEwMDAwcW4wMWF5amlrNDMzIiwiaWF0IjoxNzUwMTU1NjEzLCJleHAiOjE3NTA3NjA0MTN9.JJqlaJhiaUR5NNnJF6UGklwoqZZMnPPFU_2VRz7noAE',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ6MzUxNTEwMDAwcW4wMWF5amlrNDMzIiwiaWF0IjoxNzUwMTU1NjEzLCJleHAiOjE3NTA3NjA0MTN9.JJqlaJhiaUR5NNnJF6UGklwoqZZMnPPFU_2VRz7noAE',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: joncalvert2018@outlook.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: joncalvert2018@outlook.com
+🔵 [AUTH-BACKEND] Session check result: User found: joncalvert2018@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: User found: joncalvert2018@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 155ms
+ GET /api/auth/me 200 in 132ms
+ GET /api/venues/featured 200 in 92ms
+ GET / 200 in 174ms
+ GET / 200 in 103ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '95135495db52ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'a10ede76-d28a-4f61-ba6b-55e98ad41146'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 115ms
+ GET /api/venues/featured 200 in 212ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '95135495eb63ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '07aac66f-26d8-4cfb-9b71-f603e7be4271'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 206ms
+ GET / 200 in 104ms
+ GET /api/venues/featured 200 in 105ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9513549f1fd8ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'e5d16495-82de-4a8f-afc7-24bf76923aac'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9513549f2febccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'effaa587-0795-4379-9d04-3728019924bf'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 123ms
+ GET /api/auth/me 200 in 119ms
+ GET /api/venues/featured 200 in 45ms
+ ✓ Compiled /api/auth/login in 234ms (715 modules)
+🔵 [LOGIN-API] Login attempt started
+🔵 [LOGIN-API] Request body parsed successfully
+🔵 [LOGIN-API] Input validation successful for email: venue@example.com
+🔵 [LOGIN-API] Database query completed, user found: false
+🔴 [LOGIN-API] User not found for email: venue@example.com
+ POST /api/auth/login 401 in 350ms
+ GET / 200 in 115ms
+ GET /api/venues/featured 200 in 70ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9513554e2db6ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '462bb7c9-5fde-4796-865f-bd8c7877c6b5'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9513554e3dc3ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '3ccdeb3e-86d1-4958-83f9-2096ff7f489d'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 89ms
+ GET /api/auth/me 200 in 78ms
+ GET / 200 in 88ms
+ GET /api/venues/featured 200 in 41ms
+ GET / 200 in 57ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951355582de0ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '1a5b1ee4-35ff-49fa-9de5-62a622dff9c7'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '951355583decccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '6c87f4b9-5760-4f75-96f6-e37783465f19'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 82ms
+ GET /api/auth/me 200 in 69ms
+ GET /api/venues/featured 200 in 82ms
+ GET /api/venues/featured 200 in 46ms
+ GET / 200 in 64ms
+ GET / 200 in 59ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9513556b8c05ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '2913cac9-c16c-403f-937f-64a6973ae5b0'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9513556b7bf7ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'b71c1b57-3da6-4aa8-867d-1895ae4ed58c'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 68ms
+ GET /api/auth/me 200 in 67ms
+ GET /api/venues/featured 200 in 73ms
+ GET /api/venues/featured 200 in 46ms
+ GET / 200 in 54ms
+ GET /api/venues/featured 200 in 62ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '95135571be58ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '7a1a5d6d-f374-4b4c-b768-9911b3b94070'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '95135571ae4dccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'b0b92a79-0cda-4afc-b2a6-0f60437acc06'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 69ms
+ GET /api/auth/me 200 in 63ms
+ GET /api/venues/featured 200 in 45ms
+ GET / 200 in 58ms
+ GET / 200 in 57ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9513558c1fecccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '7c155b07-7b83-44d1-8a95-a619181599bb'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 59ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9513558c1ffaccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'bc2c6e16-d550-403c-91b2-f9b489d3e120'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 71ms
+ GET /api/venues/featured 200 in 84ms
+ GET /api/venues/featured 200 in 40ms
+ GET / 200 in 55ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '95135591d83bccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '53ebae80-45b3-41f5-9614-28a179f19908'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 70ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-US,en;q=0.9,en-GB;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '78.145.125.210',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '95135591d845ccae-MAN',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '78.145.125.210',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '36291f4c-1c6c-4015-82ad-1e78f28d17f1'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 70ms
+ GET /api/venues/featured 200 in 82ms
+ GET /api/venues/featured 200 in 47ms
+🔵 [LOGIN-API] Login attempt started
+🔵 [LOGIN-API] Request body parsed successfully
+🔵 [LOGIN-API] Input validation successful for email: owner@example.com
+🔵 [LOGIN-API] Database query completed, user found: false
+🔴 [LOGIN-API] User not found for email: owner@example.com
+ POST /api/auth/login 401 in 50ms
+🔵 [LOGIN-API] Login attempt started
+🔵 [LOGIN-API] Request body parsed successfully
+🔵 [LOGIN-API] Input validation successful for email: test@example.com
+🔵 [LOGIN-API] Database query completed, user found: true
+🔵 [LOGIN-API] Password verification completed: true
+🔵 [LOGIN-API] Session created successfully
+🟢 [LOGIN-API] Login successful for user: test@example.com
+🔵 [LOGIN-API] Auth cookie set successfully
+ POST /api/auth/login 200 in 141ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ GET /api/venues/limits 200 in 54ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ GET /api/venues 200 in 49ms
+ ✓ Compiled /api/auth/register in 271ms (713 modules)
+🔵 [AUTH] Registration attempt started
+🔵 [AUTH] Request body parsed: {
+  email: 'freeuser@example.com',
+  password: '[REDACTED]',
+  firstName: 'Free',
+  lastName: 'User'
+}
+🔵 [AUTH] Data validation successful
+🔵 [AUTH] Checking for existing user: freeuser@example.com
+🔵 [AUTH] Hashing password
+🔵 [AUTH] Creating user in database
+🔵 [AUTH] User created successfully: cmc0n01610002rq5xcs153i25
+🔵 [AUTH] Creating session
+🔵 [AUTH] Session created successfully
+🟢 [AUTH] Registration completed successfully
+ POST /api/auth/register 200 in 664ms
+🔵 [LOGIN-API] Login attempt started
+🔵 [LOGIN-API] Request body parsed successfully
+🔵 [LOGIN-API] Input validation successful for email: freeuser@example.com
+🔵 [LOGIN-API] Database query completed, user found: true
+🔵 [LOGIN-API] Password verification completed: true
+🔵 [LOGIN-API] Session created successfully
+🟢 [LOGIN-API] Login successful for user: freeuser@example.com
+🔵 [LOGIN-API] Auth cookie set successfully
+ POST /api/auth/login 200 in 362ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: freeuser@example.com
+ GET /api/venues/limits 200 in 45ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: freeuser@example.com
+ POST /api/venues 200 in 66ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: freeuser@example.com
+ GET /api/venues/limits 200 in 47ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: freeuser@example.com
+ POST /api/venues 403 in 44ms
+ ✓ Compiled /auth/login in 239ms (723 modules)
+ GET /auth/login 200 in 404ms
+ ✓ Compiled /api/auth/me in 240ms (725 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ6MzUxNTEwMDAwcW4wMWF5amlrNDMzIiwiaWF0IjoxNzUwMTU1NjEzLCJleHAiOjE3NTA3NjA0MTN9.JJqlaJhiaUR5NNnJF6UGklwoqZZMnPPFU_2VRz7noAE',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/login',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ6MzUxNTEwMDAwcW4wMWF5amlrNDMzIiwiaWF0IjoxNzUwMTU1NjEzLCJleHAiOjE3NTA3NjA0MTN9.JJqlaJhiaUR5NNnJF6UGklwoqZZMnPPFU_2VRz7noAE',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/login',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: joncalvert2018@outlook.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: joncalvert2018@outlook.com
+🔵 [AUTH-BACKEND] Session check result: User found: joncalvert2018@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: User found: joncalvert2018@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 420ms
+ GET /api/auth/me 200 in 429ms
+ ✓ Compiled in 315ms (721 modules)
+ ✓ Compiled in 577ms (705 modules)
+[?25h

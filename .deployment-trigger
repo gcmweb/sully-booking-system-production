@@ -1,0 +1,4 @@
+Deployment triggered at: Fri Jun 20 16:29:00 UTC 2025
+Force redeploy to ensure DATABASE_URL configuration is active
+Previous deployment: 16:27:34 GMT
+Trigger reason: Ensure netlify.toml DATABASE_URL override takes effect

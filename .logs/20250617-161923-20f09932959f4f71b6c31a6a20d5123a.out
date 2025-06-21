@@ -1,0 +1,744 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 2.9s
+ ○ Compiling / ...
+ ✓ Compiled / in 4.1s (1184 modules)
+ GET / 200 in 4841ms
+ ✓ Compiled in 674ms (597 modules)
+ ✓ Compiled /api/auth/me in 269ms (619 modules)
+ ✓ Compiled (708 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 846ms
+ GET /api/auth/me 200 in 837ms
+ GET /api/venues/featured 200 in 1115ms
+ GET /api/venues/featured 200 in 62ms
+ GET / 200 in 219ms
+ ○ Compiling /my-bookings ...
+ ✓ Compiled /my-bookings in 2.9s (1510 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 2505ms
+ GET /api/auth/me 200 in 2496ms
+ GET /api/venues/featured 200 in 2526ms
+ GET /auth/register 200 in 3374ms
+ GET /auth/login 200 in 3378ms
+ GET /my-bookings 200 in 3383ms
+ GET /venues 200 in 3411ms
+ GET /api/venues/featured 200 in 259ms
+ GET /book/cmbz3igfd0005qn018j1uu311 200 in 3906ms
+ ✓ Compiled /api/public/venues in 356ms (823 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/venues',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/my-bookings',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/my-bookings',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/register',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/login',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/register',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/login',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book/cmbz3igfd0005qn018j1uu311',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/venues',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 802ms
+ GET /api/auth/me 200 in 795ms
+ GET /api/auth/me 200 in 783ms
+ GET /api/auth/me 200 in 768ms
+ GET /api/auth/me 200 in 766ms
+ GET /api/auth/me 200 in 766ms
+ GET /api/auth/me 200 in 747ms
+ GET /api/auth/me 200 in 230ms
+ GET /api/auth/me 200 in 815ms
+ GET /api/public/venues 200 in 855ms
+ ✓ Compiled /api/public/venues/[id] in 304ms (825 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book/cmbz3igfd0005qn018j1uu311',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 821ms
+ GET /api/public/venues 200 in 615ms
+ GET /api/public/venues/cmbz3igfd0005qn018j1uu311 200 in 1330ms
+ GET /api/public/venues/cmbz3igfd0005qn018j1uu311 200 in 61ms
+ ○ Compiling /book ...
+ ✓ Compiled /book in 1288ms (1530 modules)
+ GET /book 200 in 1444ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 91ms
+ GET /api/auth/me 200 in 81ms
+ GET /api/public/venues?page=1&limit=12 200 in 95ms
+ GET /api/public/venues?page=1&limit=12 200 in 57ms
+ GET /widget/cmc0n0g320008rq5xzzg8wxrj 200 in 1988ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/widget/cmc0n0g320008rq5xzzg8wxrj',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 71ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/widget/cmc0n0g320008rq5xzzg8wxrj',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 133ms
+ GET /api/public/venues/cmc0n0g320008rq5xzzg8wxrj 200 in 136ms
+ GET /api/public/venues/cmc0n0g320008rq5xzzg8wxrj 200 in 65ms
+ GET / 200 in 296ms
+ GET /my-bookings 200 in 326ms
+ GET /venues 200 in 327ms
+ GET /book 200 in 326ms
+ GET /auth/login 200 in 332ms
+ GET /widget/cmc0n0g320008rq5xzzg8wxrj 200 in 329ms
+ GET /auth/register 200 in 333ms
+ GET /book/cmbz3igfd0005qn018j1uu311 200 in 332ms
+ GET / 200 in 140ms
+ GET /api/venues/featured 200 in 126ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ6MzUxNTEwMDAwcW4wMWF5amlrNDMzIiwiaWF0IjoxNzUwMTU1NjEzLCJleHAiOjE3NTA3NjA0MTN9.JJqlaJhiaUR5NNnJF6UGklwoqZZMnPPFU_2VRz7noAE',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ6MzUxNTEwMDAwcW4wMWF5amlrNDMzIiwiaWF0IjoxNzUwMTU1NjEzLCJleHAiOjE3NTA3NjA0MTN9.JJqlaJhiaUR5NNnJF6UGklwoqZZMnPPFU_2VRz7noAE',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: joncalvert2018@outlook.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: joncalvert2018@outlook.com
+🔵 [AUTH-BACKEND] Session check result: User found: joncalvert2018@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: User found: joncalvert2018@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 143ms
+ GET /api/auth/me 200 in 142ms
+ GET /api/venues/featured 200 in 78ms
+ ✓ Compiled /api/auth/logout in 335ms (837 modules)
+ POST /api/auth/logout 200 in 418ms
+ GET / 200 in 83ms
+ GET / 200 in 61ms
+ GET /api/venues/featured 200 in 69ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ6MzUxNTEwMDAwcW4wMWF5amlrNDMzIiwiaWF0IjoxNzUwMTU1NjEzLCJleHAiOjE3NTA3NjA0MTN9.JJqlaJhiaUR5NNnJF6UGklwoqZZMnPPFU_2VRz7noAE',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ6MzUxNTEwMDAwcW4wMWF5amlrNDMzIiwiaWF0IjoxNzUwMTU1NjEzLCJleHAiOjE3NTA3NjA0MTN9.JJqlaJhiaUR5NNnJF6UGklwoqZZMnPPFU_2VRz7noAE',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: joncalvert2018@outlook.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: joncalvert2018@outlook.com
+🔵 [AUTH-BACKEND] Session check result: User found: joncalvert2018@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: User found: joncalvert2018@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 94ms
+ GET /api/auth/me 200 in 90ms
+ GET /api/venues/featured 200 in 59ms
+ ○ Compiling /api/auth/login ...
+ ✓ Compiled /api/auth/login in 502ms (841 modules)
+🔵 [LOGIN-API] Login attempt started
+🔵 [LOGIN-API] Request body parsed successfully
+🔵 [LOGIN-API] Input validation successful for email: test@example.com
+🔵 [LOGIN-API] Database query completed, user found: true
+🔵 [LOGIN-API] Password verification completed: true
+🔵 [LOGIN-API] Session created successfully
+🟢 [LOGIN-API] Login successful for user: test@example.com
+🔵 [LOGIN-API] Auth cookie set successfully
+ POST /api/auth/login 200 in 716ms
+ POST /api/auth/logout 200 in 47ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'content-type': 'application/json',
+  host: 'localhost:3000',
+  'user-agent': 'curl/7.81.0',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 56ms
+ GET /auth/register 200 in 84ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 1263ms (1558 modules)
+ GET /dashboard 200 in 1421ms
+ GET / 200 in 79ms
+ GET / 200 in 68ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  host: 'localhost:3000',
+  'user-agent': 'curl/7.81.0',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 62ms
+🔵 [LOGIN-API] Login attempt started
+🔵 [LOGIN-API] Request body parsed successfully
+🔵 [LOGIN-API] Input validation successful for email: test@example.com
+🔵 [LOGIN-API] Database query completed, user found: true
+🔵 [LOGIN-API] Password verification completed: true
+🔵 [LOGIN-API] Session created successfully
+🟢 [LOGIN-API] Login successful for user: test@example.com
+🔵 [LOGIN-API] Auth cookie set successfully
+ POST /api/auth/login 200 in 152ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  cookie: 'auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ6Mm9weWYwMDAwbTM5NGRia3Fqd2p1IiwiaWF0IjoxNzUwMTc3MzM4LCJleHAiOjE3NTA3ODIxMzh9.bG4iCSGfLq5be1At0UYMCiWkWEfAdTCQ84Q6xeLM6bU',
+  host: 'localhost:3000',
+  'user-agent': 'curl/7.81.0',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 46ms
+ GET /dashboard 200 in 59ms
+[?25h

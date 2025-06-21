@@ -1,0 +1,211 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1772ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.5s (1180 modules)
+ GET / 200 in 4074ms
+ GET / 200 in 3898ms
+ ✓ Compiled in 531ms (592 modules)
+ GET / 200 in 41ms
+ ✓ Compiled /api/auth/me in 431ms (700 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-GB,en;q=0.9,en-US;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '176.35.55.181',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9509c03d4e96ae03-LHR',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '176.35.55.181',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'f84d7bf3-4849-4314-8204-7c09503298d7'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-GB,en;q=0.9,en-US;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '176.35.55.181',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9509c03d5ea5ae03-LHR',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '176.35.55.181',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'ae6f4a19-a326-43f0-9284-5fb7e8b1790d'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 605ms
+ GET /api/auth/me 200 in 610ms
+ GET / 200 in 84ms
+ GET / 200 in 37ms
+ GET / 200 in 38ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-GB,en;q=0.9,en-US;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '176.35.55.181',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9509c0bd1e94ae03-LHR',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '176.35.55.181',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'ff86ff78-0721-436e-90f4-2ce543eea491'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 35ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-GB,en;q=0.9,en-US;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '176.35.55.181',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '9509c0bd2ea2ae03-LHR',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-storage-access': 'active',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '176.35.55.181',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'f090b5de-1bc7-4ada-8dc8-eaa9d2920636'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-BACKEND] Session check result: No user session
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 37ms
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 684ms (1179 modules)
+ ✓ Compiled /api/auth/login in 214ms (712 modules)
+ POST /api/auth/login 200 in 742ms
+ ✓ Compiled /dashboard in 425ms (1333 modules)
+ ✓ Compiled /api/notifications in 154ms (732 modules)
+ ✓ Compiled (735 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+ GET /api/venues 401 in 500ms
+ GET /api/venues 401 in 491ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+ GET /api/notifications?limit=5 500 in 507ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: No token found
+🔵 [AUTH-LIB] No auth token found in cookies
+ GET /api/notifications?limit=5 500 in 31ms
+ ✓ Compiled /_not-found in 272ms (1341 modules)
+ GET /_next/static/chunks/handle-smooth-scroll.js.map 404 in 370ms
+ GET /_next/static/chunks/app/bundle-mjs.mjs.map 404 in 368ms
+ GET /_next/static/chunks/app/auth/login/bundle-mjs.mjs.map 404 in 369ms
+ GET /_next/static/chunks/static-generation-async-storage-instance.js.map 404 in 23ms
+ GET /_next/static/chunks/app/dashboard/bundle-mjs.mjs.map 404 in 14ms
+ GET /_next/static/chunks/app/bundle-mjs.mjs.map 404 in 16ms
+ GET /_next/static/chunks/app/dashboard/bundle-mjs.mjs.map 404 in 15ms
+ ✓ Compiled in 261ms (609 modules)
+ ✓ Compiled in 541ms (615 modules)
+ ✓ Compiled in 379ms (615 modules)
+ ✓ Compiled in 311ms (615 modules)
+ ✓ Compiled in 310ms (615 modules)
+ ✓ Compiled in 340ms (615 modules)
+ ✓ Compiled in 291ms (615 modules)
+ ✓ Compiled in 288ms (615 modules)
+ ✓ Compiled in 275ms (615 modules)
+ ✓ Compiled in 280ms (615 modules)
+ ✓ Compiled in 311ms (615 modules)
+ ✓ Compiled in 276ms (615 modules)
+ ✓ Compiled in 327ms (615 modules)
+ ✓ Compiled in 289ms (615 modules)
+ ✓ Compiled in 279ms (615 modules)
+ ✓ Compiled in 288ms (615 modules)
+ ✓ Compiled in 301ms (615 modules)
+[?25h

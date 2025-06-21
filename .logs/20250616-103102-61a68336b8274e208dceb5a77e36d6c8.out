@@ -1,0 +1,260 @@
+sending incremental file list
+browser_cookies.txt
+components.json
+cookies.txt
+customer_cookies.txt
+next-env.d.ts
+next.config.js
+package.json
+postcss.config.js
+tailwind.config.ts
+tsconfig.json
+app/
+app/globals.css
+app/layout.tsx
+app/page.tsx
+app/admin/
+app/admin/page.tsx
+app/api/
+app/api/admin/
+app/api/admin/stats/
+app/api/admin/stats/route.ts
+app/api/admin/users/
+app/api/admin/users/route.ts
+app/api/analytics/
+app/api/analytics/route.ts
+app/api/auth/
+app/api/auth/login/
+app/api/auth/login/route.ts
+app/api/auth/logout/
+app/api/auth/logout/route.ts
+app/api/auth/me/
+app/api/auth/me/route.ts
+app/api/auth/register/
+app/api/auth/register/route.ts
+app/api/bookings/
+app/api/bookings/route.ts
+app/api/bookings/[id]/
+app/api/bookings/[id]/route.ts
+app/api/bookings/[id]/status/
+app/api/bookings/[id]/status/route.ts
+app/api/customer/
+app/api/customer/bookings/
+app/api/customer/bookings/route.ts
+app/api/notifications/
+app/api/notifications/route.ts
+app/api/notifications/[id]/
+app/api/notifications/[id]/read/
+app/api/notifications/[id]/read/route.ts
+app/api/payments/
+app/api/payments/stripe/
+app/api/payments/stripe/create-payment-intent/
+app/api/payments/stripe/create-payment-intent/route.ts
+app/api/payments/stripe/webhook/
+app/api/payments/stripe/webhook/route.ts
+app/api/public/
+app/api/public/bookings/
+app/api/public/bookings/route.ts
+app/api/public/venues/
+app/api/public/venues/route.ts
+app/api/public/venues/[id]/
+app/api/public/venues/[id]/route.ts
+app/api/public/venues/[id]/availability/
+app/api/public/venues/[id]/availability/route.ts
+app/api/venues/
+app/api/venues/route.ts
+app/api/venues/[id]/
+app/api/venues/[id]/route.ts
+app/api/venues/[id]/analytics/
+app/api/venues/[id]/analytics/route.ts
+app/api/venues/[id]/availability/
+app/api/venues/[id]/availability/route.ts
+app/api/venues/[id]/tables/
+app/api/venues/[id]/tables/route.ts
+app/api/widgets/
+app/api/widgets/route.ts
+app/api/widgets/[id]/
+app/api/widgets/[id]/route.ts
+app/api/widgets/[id]/embed/
+app/api/widgets/[id]/embed/route.ts
+app/auth/
+app/auth/login/
+app/auth/login/page.tsx
+app/auth/register/
+app/auth/register/page.tsx
+app/book/
+app/book/page.tsx
+app/book/[venueId]/
+app/book/[venueId]/page.tsx
+app/dashboard/
+app/dashboard/layout.tsx
+app/dashboard/page.tsx
+app/dashboard/analytics/
+app/dashboard/analytics/page.tsx
+app/dashboard/bookings/
+app/dashboard/bookings/page.tsx
+app/dashboard/venues/
+app/dashboard/venues/page.tsx
+app/dashboard/venues/[id]/
+app/dashboard/venues/[id]/page.tsx
+app/dashboard/venues/[id]/analytics/
+app/dashboard/venues/[id]/analytics/page.tsx
+app/dashboard/venues/new/
+app/dashboard/venues/new/page.tsx
+app/dashboard/widgets/
+app/dashboard/widgets/page.tsx
+app/my-bookings/
+app/my-bookings/page.tsx
+app/test-auth/
+app/test-auth/page.tsx
+app/widget/
+app/widget/[venueId]/
+app/widget/[venueId]/page.tsx
+components/
+components/auth-provider.tsx
+components/theme-provider.tsx
+components/ui/
+components/ui/accordion.tsx
+components/ui/alert-dialog.tsx
+components/ui/alert.tsx
+components/ui/aspect-ratio.tsx
+components/ui/avatar.tsx
+components/ui/badge.tsx
+components/ui/breadcrumb.tsx
+components/ui/button.tsx
+components/ui/calendar.tsx
+components/ui/card.tsx
+components/ui/carousel.tsx
+components/ui/checkbox.tsx
+components/ui/collapsible.tsx
+components/ui/command.tsx
+components/ui/context-menu.tsx
+components/ui/date-range-picker.tsx
+components/ui/dialog.tsx
+components/ui/drawer.tsx
+components/ui/dropdown-menu.tsx
+components/ui/form.tsx
+components/ui/hover-card.tsx
+components/ui/input-otp.tsx
+components/ui/input.tsx
+components/ui/label.tsx
+components/ui/menubar.tsx
+components/ui/navigation-menu.tsx
+components/ui/pagination.tsx
+components/ui/popover.tsx
+components/ui/progress.tsx
+components/ui/radio-group.tsx
+components/ui/resizable.tsx
+components/ui/scroll-area.tsx
+components/ui/select.tsx
+components/ui/separator.tsx
+components/ui/sheet.tsx
+components/ui/skeleton.tsx
+components/ui/slider.tsx
+components/ui/sonner.tsx
+components/ui/switch.tsx
+components/ui/table.tsx
+components/ui/tabs.tsx
+components/ui/task-card.tsx
+components/ui/textarea.tsx
+components/ui/toast.tsx
+components/ui/toaster.tsx
+components/ui/toggle-group.tsx
+components/ui/toggle.tsx
+components/ui/tooltip.tsx
+components/ui/use-toast.ts
+hooks/
+hooks/use-toast.ts
+lib/
+lib/analytics.ts
+lib/auth.ts
+lib/booking-utils.ts
+lib/db.ts
+lib/notifications.ts
+lib/subscription.ts
+lib/types.ts
+lib/utils.ts
+lib/validations.ts
+lib/db/
+prisma/
+prisma/schema.prisma
+
+sent 537,518 bytes  received 2,589 bytes  1,080,214.00 bytes/sec
+total size is 527,252  speedup is 0.98
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+  ▲ Next.js 14.2.28
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/16) ...
+   Generating static pages (4/16) 
+   Generating static pages (8/16) 
+   Generating static pages (12/16) 
+ ✓ Generating static pages (16/16)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                     Size     First Load JS
+┌ ○ /                                           4.91 kB         141 kB
+├ ○ /_not-found                                 873 B            88 kB
+├ ○ /admin                                      4.44 kB         141 kB
+├ ƒ /api/admin/stats                            0 B                0 B
+├ ƒ /api/admin/users                            0 B                0 B
+├ ƒ /api/analytics                              0 B                0 B
+├ ƒ /api/auth/login                             0 B                0 B
+├ ƒ /api/auth/logout                            0 B                0 B
+├ ƒ /api/auth/me                                0 B                0 B
+├ ƒ /api/auth/register                          0 B                0 B
+├ ƒ /api/bookings                               0 B                0 B
+├ ƒ /api/bookings/[id]                          0 B                0 B
+├ ƒ /api/bookings/[id]/status                   0 B                0 B
+├ ƒ /api/customer/bookings                      0 B                0 B
+├ ƒ /api/notifications                          0 B                0 B
+├ ƒ /api/notifications/[id]/read                0 B                0 B
+├ ƒ /api/payments/stripe/create-payment-intent  0 B                0 B
+├ ƒ /api/payments/stripe/webhook                0 B                0 B
+├ ƒ /api/public/bookings                        0 B                0 B
+├ ƒ /api/public/venues                          0 B                0 B
+├ ƒ /api/public/venues/[id]                     0 B                0 B
+├ ƒ /api/public/venues/[id]/availability        0 B                0 B
+├ ƒ /api/venues                                 0 B                0 B
+├ ƒ /api/venues/[id]                            0 B                0 B
+├ ƒ /api/venues/[id]/analytics                  0 B                0 B
+├ ƒ /api/venues/[id]/availability               0 B                0 B
+├ ƒ /api/venues/[id]/tables                     0 B                0 B
+├ ƒ /api/widgets                                0 B                0 B
+├ ƒ /api/widgets/[id]                           0 B                0 B
+├ ƒ /api/widgets/[id]/embed                     0 B                0 B
+├ ○ /auth/login                                 1.25 kB         109 kB
+├ ○ /auth/register                              1.58 kB         109 kB
+├ ○ /book                                       4.84 kB         166 kB
+├ ƒ /book/[venueId]                             4.21 kB         168 kB
+├ ○ /dashboard                                  4.53 kB         141 kB
+├ ○ /dashboard/analytics                        4.52 kB         159 kB
+├ ○ /dashboard/bookings                         3.69 kB         159 kB
+├ ○ /dashboard/venues                           4.15 kB         140 kB
+├ ƒ /dashboard/venues/[id]                      8.05 kB         169 kB
+├ ƒ /dashboard/venues/[id]/analytics            7.81 kB         172 kB
+├ ○ /dashboard/venues/new                       4.73 kB         133 kB
+├ ○ /dashboard/widgets                          10.1 kB         165 kB
+├ ○ /my-bookings                                6.8 kB          146 kB
+├ ○ /test-auth                                  1.17 kB        88.3 kB
+└ ƒ /widget/[venueId]                           5.55 kB         125 kB
++ First Load JS shared by all                   87.1 kB
+  ├ chunks/117-48f287d7bc3c67fa.js              31.6 kB
+  ├ chunks/fd9d1056-7c7bb764d8eb8c76.js         53.6 kB
+  └ other shared chunks (total)                 1.9 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

@@ -1,0 +1,1206 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1819ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.4s (1173 modules)
+ GET / 200 in 2936ms
+ ✓ Compiled in 544ms (592 modules)
+ ✓ Compiled /api/public/venues in 311ms (613 modules)
+ GET /api/public/venues 200 in 521ms
+ ✓ Compiled /api/public/bookings in 204ms (620 modules)
+ POST /api/public/bookings 409 in 271ms
+ ✓ Compiled /auth/login in 473ms (1218 modules)
+ POST /auth/login 200 in 601ms
+ ✓ Compiled /api/auth/login in 275ms (719 modules)
+ POST /api/auth/login 200 in 751ms
+ ✓ Compiled /_not-found in 287ms (1310 modules)
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 404 in 365ms
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 404 in 15ms
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 404 in 16ms
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 404 in 17ms
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 404 in 17ms
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 404 in 16ms
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 404 in 14ms
+ POST /api/public/bookings 409 in 46ms
+ ✓ Compiled /api/venues/[id] in 233ms (722 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ GET /api/venues/cmbywqos30006m3fxrkk38a8z 200 in 657ms
+ ✓ Compiled /api/venues in 140ms (422 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ GET /api/venues 200 in 197ms
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 404 in 34ms
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 404 in 15ms
+ ✓ Compiled in 420ms (602 modules)
+ ✓ Compiled /api/venues/[id]/availability in 180ms (381 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 500 in 633ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 500 in 51ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 500 in 35ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 500 in 34ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 500 in 38ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 500 in 35ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 500 in 34ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ POST /api/venues/cmbywqos30006m3fxrkk38a8z/availability 500 in 34ms
+ ✓ Compiled /api/public/bookings in 204ms (63 modules)
+Booking confirmation email would be sent to: john.smith@example.com
+Email content: {
+  html: '\n' +
+    '    <!DOCTYPE html>\n' +
+    '    <html>\n' +
+    '    <head>\n' +
+    '      <meta charset="utf-8">\n' +
+    '      <title>Booking Confirmation</title>\n' +
+    '      <style>\n' +
+    '        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }\n' +
+    '        .container { max-width: 600px; margin: 0 auto; padding: 20px; }\n' +
+    '        .header { background: #3b82f6; color: white; padding: 20px; text-align: center; }\n' +
+    '        .content { padding: 20px; background: #f9f9f9; }\n' +
+    '        .booking-details { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; }\n' +
+    '        .detail-row { display: flex; justify-content: space-between; margin: 10px 0; }\n' +
+    '        .footer { text-align: center; padding: 20px; color: #666; font-size: 14px; }\n' +
+    '        .button { background: #3b82f6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block; }\n' +
+    '      </style>\n' +
+    '    </head>\n' +
+    '    <body>\n' +
+    '      <div class="container">\n' +
+    '        <div class="header">\n' +
+    '          <h1>Booking Confirmed!</h1>\n' +
+    '          <p>Your reservation at The Golden Spoon has been confirmed</p>\n' +
+    '        </div>\n' +
+    '        \n' +
+    '        <div class="content">\n' +
+    '          <p>Dear John Smith,</p>\n' +
+    "          <p>Thank you for your booking! We're excited to welcome you to The Golden Spoon.</p>\n" +
+    '          \n' +
+    '          <div class="booking-details">\n' +
+    '            <h3>Booking Details</h3>\n' +
+    '            <div class="detail-row">\n' +
+    '              <strong>Booking ID:</strong>\n' +
+    '              <span>mmflsrdq</span>\n' +
+    '            </div>\n' +
+    '            <div class="detail-row">\n' +
+    '              <strong>Date:</strong>\n' +
+    '              <span>Wed Jun 18 2025</span>\n' +
+    '            </div>\n' +
+    '            <div class="detail-row">\n' +
+    '              <strong>Time:</strong>\n' +
+    '              <span>19:00</span>\n' +
+    '            </div>\n' +
+    '            <div class="detail-row">\n' +
+    '              <strong>Party Size:</strong>\n' +
+    '              <span>4 guests</span>\n' +
+    '            </div>\n' +
+    '            <div class="detail-row">\n' +
+    '              <strong>Service Type:</strong>\n' +
+    '              <span>Dine In</span>\n' +
+    '            </div>\n' +
+    '            \n' +
+    '            <div class="detail-row">\n' +
+    '              <strong>Special Requests:</strong>\n' +
+    '              <span>Window table if possible</span>\n' +
+    '            </div>\n' +
+    '            \n' +
+    '          </div>\n' +
+    '          \n' +
+    '          <div class="booking-details">\n' +
+    '            <h3>Venue Information</h3>\n' +
+    '            <p><strong>The Golden Spoon</strong></p>\n' +
+    '            <p>456 Main Street, London</p>\n' +
+    '            <p>Phone: +44 20 7987 6543</p>\n' +
+    '          </div>\n' +
+    '          \n' +
+    '          <p>If you need to make any changes or cancel your booking, please contact the venue directly.</p>\n' +
+    '          \n' +
+    '          <p>We look forward to seeing you!</p>\n' +
+    '        </div>\n' +
+    '        \n' +
+    '        <div class="footer">\n' +
+    '          <p>This email was sent by Sully Booking System</p>\n' +
+    '          <p>If you have any questions, please contact The Golden Spoon directly at +44 20 7987 6543</p>\n' +
+    '        </div>\n' +
+    '      </div>\n' +
+    '    </body>\n' +
+    '    </html>\n' +
+    '  ',
+  text: '\n' +
+    '    Booking Confirmed!\n' +
+    '    \n' +
+    '    Dear John Smith,\n' +
+    '    \n' +
+    "    Thank you for your booking! We're excited to welcome you to The Golden Spoon.\n" +
+    '    \n' +
+    '    Booking Details:\n' +
+    '    - Booking ID: mmflsrdq\n' +
+    '    - Date: Wed Jun 18 2025\n' +
+    '    - Time: 19:00\n' +
+    '    - Party Size: 4 guests\n' +
+    '    - Service Type: Dine In\n' +
+    '    - Special Requests: Window table if possible\n' +
+    '    \n' +
+    '    Venue Information:\n' +
+    '    The Golden Spoon\n' +
+    '    456 Main Street, London\n' +
+    '    Phone: +44 20 7987 6543\n' +
+    '    \n' +
+    '    If you need to make any changes or cancel your booking, please contact the venue directly.\n' +
+    '    \n' +
+    '    We look forward to seeing you!\n' +
+    '    \n' +
+    '    ---\n' +
+    '    This email was sent by Sully Booking System\n' +
+    '    If you have any questions, please contact The Golden Spoon directly at +44 20 7987 6543\n' +
+    '  '
+}
+ POST /api/public/bookings 200 in 305ms
+ ✓ Compiled /api/public/venues/[id]/availability in 86ms (65 modules)
+ GET /api/public/venues/cmbywqos30006m3fxrkk38a8z/availability?date=2025-06-18&serviceType=DINE_IN&partySize=2 200 in 440ms
+ ✓ Compiled /api/customer/bookings in 81ms (67 modules)
+ GET /api/customer/bookings?email=john.smith@example.com 200 in 142ms
+ ✓ Compiled /api/widgets in 116ms (160 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ POST /api/widgets 200 in 193ms
+ ✓ Compiled /api/widgets/[id]/embed in 110ms (162 modules)
+ GET /api/widgets/cmbyxit6p000om36j2qlzdu7t/embed 200 in 438ms
+ ○ Compiling / ...
+ ✓ Compiled / in 699ms (713 modules)
+ GET / 200 in 923ms
+ ✓ Compiled /api/auth/me in 302ms (715 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 501ms
+ GET /api/auth/me 200 in 503ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 1039ms (1348 modules)
+ ✓ Compiled /api/notifications in 190ms (735 modules)
+ ✓ Compiled (737 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ GET /api/notifications?limit=5 200 in 472ms
+ GET /api/venues 200 in 473ms
+ GET /api/venues 200 in 476ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+ GET /api/notifications?limit=5 200 in 36ms
+ ○ Compiling /book ...
+ ✓ Compiled /book in 759ms (1469 modules)
+ GET /book 200 in 934ms
+ ✓ Compiled /api/public/venues in 314ms (805 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 712ms
+ GET /api/auth/me 200 in 717ms
+ GET /api/public/venues?page=1&limit=12 200 in 729ms
+ GET /api/public/venues?page=1&limit=12 200 in 34ms
+ ✓ Compiled in 806ms (1483 modules)
+ ✓ Compiled in 1ms (805 modules)
+ ✓ Compiled in 0ms (805 modules)
+ ✓ Compiled in 0ms (805 modules)
+ GET /book 200 in 1182ms
+ GET /api/public/venues?page=1&limit=12 200 in 88ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 113ms
+ GET /api/auth/me 200 in 108ms
+ GET /api/public/venues?page=1&limit=12 200 in 46ms
+ ✓ Compiled in 892ms (1483 modules)
+ GET /book 200 in 106ms
+ GET /api/public/venues?page=1&limit=12 200 in 55ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 74ms
+ GET /api/auth/me 200 in 71ms
+ GET /api/public/venues?page=1&limit=12 200 in 40ms
+ ✓ Compiled in 578ms (1483 modules)
+ ✓ Compiled in 0ms (805 modules)
+ ✓ Compiled in 0ms (805 modules)
+ ✓ Compiled in 0ms (805 modules)
+ GET /api/public/venues?page=1&limit=12&city=all&venueType=all 500 in 873ms
+ ✓ Compiled in 0ms (805 modules)
+ GET /api/public/venues?page=1&limit=12&city=all&venueType=all 500 in 448ms
+ ✓ Compiled in 538ms (1480 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 49ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 34ms
+ ○ Compiling /dashboard/venues/[id] ...
+ ✓ Compiled /dashboard/venues/[id] in 899ms (1481 modules)
+ ✓ Compiled /api/venues/[id] in 291ms (808 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues/cmbywjrlw0004m31yzvwk5hue 200 in 378ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues/cmbywjrlw0004m31yzvwk5hue 200 in 37ms
+ ✓ Compiled in 744ms (1485 modules)
+ ○ Compiling /dashboard/venues ...
+ ✓ Compiled /dashboard/venues in 646ms (1481 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 66ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 74ms
+ GET /book 200 in 153ms
+ GET /api/public/venues?page=1&limit=12 200 in 92ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 119ms
+ GET /api/auth/me 200 in 106ms
+ GET /api/public/venues?page=1&limit=12 200 in 61ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+ GET /api/venues 200 in 47ms
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 45ms
+ ○ Compiling /book/[venueId] ...
+ ✓ Compiled /book/[venueId] in 924ms (1492 modules)
+ GET /book/cmbywqos30006m3fxrkk38a8z 200 in 1347ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book/cmbywqos30006m3fxrkk38a8z',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 50ms
+ ✓ Compiled /api/public/venues/[id] in 248ms (812 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/book/cmbywqos30006m3fxrkk38a8z',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 794ms
+ GET /api/public/venues/cmbywqos30006m3fxrkk38a8z 200 in 1129ms
+ GET /api/public/venues/cmbywqos30006m3fxrkk38a8z 200 in 48ms
+ ✓ Compiled /api/widgets/[id]/embed in 326ms (814 modules)
+ GET /api/widgets/cmbyxit6p000om36j2qlzdu7t/embed 200 in 408ms
+ ✓ Compiled / in 363ms (820 modules)
+ GET / 200 in 466ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 561ms (1505 modules)
+ GET /_next/static/chunks/app/bundle-mjs.mjs.map 404 in 644ms
+ GET /_next/static/chunks/static-generation-async-storage-instance.js.map 404 in 124ms
+ GET /_next/static/chunks/handle-smooth-scroll.js.map 404 in 619ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-GB,en;q=0.9,en-US;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '176.35.55.181',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '950980c3fc6fd07a-LHR',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  cookie: 'auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5d2pkYWQwMDAwbTMxeWZ5MTQ5a21tIiwiaWF0IjoxNzUwMDY2NzE3LCJleHAiOjE3NTA2NzE1MTd9.kTUGbeDyBBEqQVAHcTIybni4S2H4cfh1_YJkpQn4ai8',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '176.35.55.181',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '9b4d59fd-f6eb-4132-9759-2dbfa87914ec'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+🔵 [AUTH-BACKEND] Session check result: User found: gcmweb2023@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 47ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-GB,en;q=0.9,en-US;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '176.35.55.181',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '950980c41c9fd07a-LHR',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  cookie: 'auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5d2pkYWQwMDAwbTMxeWZ5MTQ5a21tIiwiaWF0IjoxNzUwMDY2NzE3LCJleHAiOjE3NTA2NzE1MTd9.kTUGbeDyBBEqQVAHcTIybni4S2H4cfh1_YJkpQn4ai8',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '176.35.55.181',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '669944cb-6a07-4ce8-a8c6-040796382292'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+🔵 [AUTH-BACKEND] Session check result: User found: gcmweb2023@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 49ms
+ GET /_next/static/chunks/app/bundle-mjs.mjs.map 404 in 19ms
+ GET /_next/static/chunks/app/dashboard/bundle-mjs.mjs.map 404 in 20ms
+ GET /_next/static/chunks/app/dashboard/bundle-mjs.mjs.map 404 in 19ms
+ ✓ Compiled /api/notifications in 375ms (824 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 673ms
+ GET /api/venues 200 in 678ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/notifications?limit=5 200 in 690ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/notifications?limit=5 200 in 31ms
+ ○ Compiling /my-bookings ...
+ ✓ Compiled /my-bookings in 944ms (1522 modules)
+ GET /my-bookings 200 in 1068ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/my-bookings',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 45ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/my-bookings',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 61ms
+ ○ Compiling /dashboard/widgets ...
+ ✓ Compiled /dashboard/widgets in 848ms (1539 modules)
+ GET /_next/static/chunks/app/dashboard/widgets/bundle-mjs.mjs.map 404 in 133ms
+ ○ Compiling /api/widgets ...
+ ✓ Compiled /auth/login in 774ms (844 modules)
+ ✓ Compiled (850 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/widgets 400 in 1358ms
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 1371ms
+ GET /auth/login 200 in 816ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/widgets 400 in 45ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 78ms
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/login',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, deflate, br, zstd',
+  'accept-language': 'en-US,en;q=0.9',
+  connection: 'keep-alive',
+  'content-type': 'application/json',
+  cookie: 'next-auth.callback-url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard; next-auth.csrf-token=35444b04df4a9254400521b3a0a4d4269741131fd0d0ced23c8087cf287afc69%7C63151685019b9da549ce8eb3263a26e6027aba835f01e64916ca1173bb4c5dac; __stripe_mid=8eaac037-ff88-48a4-a002-3ce6bffc7970f2b296; auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5dnl6MzcwMDAwbTNna3NsZDhrdGxpIiwiaWF0IjoxNzUwMDY1OTYwLCJleHAiOjE3NTA2NzA3NjB9.wMFJKGog3pVQ1nFfNGTjSlK635DdIRmGgx8UzY2emfM',
+  host: 'localhost:3000',
+  referer: 'http://localhost:3000/auth/login',
+  'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Linux"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36',
+  'x-forwarded-for': '::ffff:127.0.0.1',
+  'x-forwarded-host': 'localhost:3000',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'http'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: test@example.com
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: User found: test@example.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 63ms
+ GET /api/auth/me 200 in 59ms
+ GET /_next/static/chunks/app/dashboard/venues/bundle-mjs.mjs.map 404 in 22ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+ GET /api/venues 200 in 46ms
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 40ms
+ ○ Compiling /dashboard/analytics ...
+ ✓ Compiled /dashboard/analytics in 4.2s (2859 modules)
+ GET /_next/static/chunks/app/dashboard/analytics/bundle-mjs.mjs.map 404 in 57ms
+ ○ Compiling /api/analytics ...
+ ✓ Compiled /api/analytics in 1127ms (1501 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 1620ms
+ GET /api/analytics?timeRange=30 500 in 1641ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 64ms
+ GET /api/analytics?timeRange=30 500 in 80ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/widgets 400 in 45ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 50ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/widgets 400 in 42ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues 200 in 46ms
+ ✓ Compiled in 1025ms (2863 modules)
+ ✓ Compiled in 409ms (1364 modules)
+ GET /_next/static/chunks/app/book/bundle-mjs.mjs.map 404 in 66ms
+ ✓ Compiled /api/public/venues in 282ms (1491 modules)
+ GET /api/public/venues?page=1&limit=12 200 in 345ms
+ GET /api/public/venues?page=1&limit=12 200 in 36ms
+ ✓ Compiled in 414ms (1364 modules)
+ ✓ Compiled in 370ms (1364 modules)
+ ✓ Compiled in 386ms (1364 modules)
+ GET /api/public/venues?page=1&limit=12 200 in 38ms
+ GET /_next/static/chunks/app/my-bookings/bundle-mjs.mjs.map 404 in 34ms
+ ✓ Compiled in 1529ms (2845 modules)
+ GET /api/public/venues?page=1&limit=12 200 in 40ms
+ GET /api/public/venues?page=1&limit=12 200 in 32ms
+ GET /_next/static/chunks/app/book/[venueId]/bundle-mjs.mjs.map 404 in 37ms
+ ✓ Compiled /api/public/venues/[id] in 335ms (1481 modules)
+ GET /api/public/venues/cmbywjrlw0004m31yzvwk5hue 200 in 430ms
+ GET /api/public/venues/cmbywjrlw0004m31yzvwk5hue 200 in 41ms
+ GET /api/public/venues?page=1&limit=12 200 in 38ms
+ GET /api/public/venues?page=1&limit=12 200 in 31ms
+ ✓ Compiled in 731ms (1446 modules)
+ ✓ Compiled in 1ms (731 modules)
+ GET /api/public/venues/cmbywjrlw0004m31yzvwk5hue 200 in 780ms
+ GET /api/public/venues/cmbywjrlw0004m31yzvwk5hue 200 in 167ms
+ ✓ Compiled /api/public/venues/[id]/availability in 797ms (1438 modules)
+ GET /api/public/venues/cmbywjrlw0004m31yzvwk5hue/availability?date=2025-06-18&serviceType=DINE_IN&partySize=2 200 in 666ms
+ GET /api/public/venues/cmbywjrlw0004m31yzvwk5hue/availability?date=2025-06-18&serviceType=DINE_IN&partySize=4 200 in 42ms
+ ✓ Compiled in 393ms (715 modules)
+ ✓ Compiled / in 329ms (729 modules)
+ ✓ Compiled /api/venues in 326ms (819 modules)
+ ✓ Compiled (823 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/notifications?limit=5 200 in 802ms
+ GET /api/venues 200 in 803ms
+ GET /api/venues 200 in 809ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/notifications?limit=5 200 in 31ms
+ ✓ Compiled in 381ms (715 modules)
+ ○ Compiling /dashboard/venues/[id] ...
+ ✓ Compiled /dashboard/venues/[id] in 676ms (831 modules)
+ GET /_next/undefined 404 in 62ms
+ GET /dashboard/venues/cmbywjrlw0004m31yzvwk5hue 200 in 91ms
+ GET /_next/static/chunks/handle-smooth-scroll.js.map 404 in 18ms
+ GET /_next/static/chunks/static-generation-async-storage-instance.js.map 404 in 23ms
+ GET /_next/static/chunks/app/dashboard/bundle-mjs.mjs.map 404 in 18ms
+ GET /_next/static/chunks/app/dashboard/venues/%5Bid%5D/bundle-mjs.mjs.map 404 in 22ms
+ GET /_next/static/chunks/app/bundle-mjs.mjs.map 404 in 18ms
+ ✓ Compiled /api/auth/me in 400ms (833 modules)
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-GB,en;q=0.9,en-US;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '176.35.55.181',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '950984c7dc0fd07a-LHR',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  cookie: 'auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5d2pkYWQwMDAwbTMxeWZ5MTQ5a21tIiwiaWF0IjoxNzUwMDY2NzE3LCJleHAiOjE3NTA2NzE1MTd9.kTUGbeDyBBEqQVAHcTIybni4S2H4cfh1_YJkpQn4ai8',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/dashboard/venues/cmbywjrlw0004m31yzvwk5hue',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '176.35.55.181',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': 'fa032596-3233-4c43-9e14-aa7c45fb302b'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-BACKEND] Auth check request received
+🔵 [AUTH-BACKEND] Request headers: {
+  accept: '*/*',
+  'accept-encoding': 'gzip, br',
+  'accept-language': 'en-GB,en;q=0.9,en-US;q=0.8',
+  'cdn-loop': 'cloudflare; loops=1',
+  'cf-connecting-ip': '176.35.55.181',
+  'cf-ipcountry': 'GB',
+  'cf-ray': '950984c7dc12d07a-LHR',
+  'cf-visitor': '{"scheme":"https"}',
+  'content-type': 'application/json',
+  cookie: 'auth-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbWJ5d2pkYWQwMDAwbTMxeWZ5MTQ5a21tIiwiaWF0IjoxNzUwMDY2NzE3LCJleHAiOjE3NTA2NzE1MTd9.kTUGbeDyBBEqQVAHcTIybni4S2H4cfh1_YJkpQn4ai8',
+  host: 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  priority: 'u=1, i',
+  referer: 'https://601b330f.preview.abacusai.app/dashboard/venues/cmbywjrlw0004m31yzvwk5hue',
+  'sec-ch-ua': '"Microsoft Edge";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"Windows"',
+  'sec-fetch-dest': 'empty',
+  'sec-fetch-mode': 'cors',
+  'sec-fetch-site': 'same-origin',
+  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0',
+  'x-abacus-service': 'chatllm-computer-601b330f-vnc.default.svc.cluster.local:3000',
+  'x-envoy-expected-rq-timeout-ms': '3620000',
+  'x-forwarded-for': '176.35.55.181',
+  'x-forwarded-host': '601b330f.preview.abacusai.app',
+  'x-forwarded-port': '3000',
+  'x-forwarded-proto': 'https',
+  'x-request-id': '191f776e-861e-4deb-9f99-6faef9045a2c'
+}
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+🔵 [AUTH-BACKEND] Session check result: User found: gcmweb2023@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+🔵 [AUTH-BACKEND] Session check result: User found: gcmweb2023@outlook.com
+🟢 [AUTH-BACKEND] Auth check completed successfully
+ GET /api/auth/me 200 in 484ms
+ GET /api/auth/me 200 in 493ms
+ ✓ Compiled /api/venues/[id] in 284ms (835 modules)
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/notifications?limit=5 200 in 577ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues/cmbywjrlw0004m31yzvwk5hue 200 in 615ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/notifications?limit=5 200 in 33ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues/cmbywjrlw0004m31yzvwk5hue 200 in 37ms
+🔵 [AUTH-LIB] Getting session
+🔵 [AUTH-LIB] Token from cookies: Token found (eyJhbGciOiJIUzI1NiIs...)
+🔵 [AUTH-LIB] Looking up session in database
+🔵 [AUTH-LIB] Session found, checking expiration
+🟢 [AUTH-LIB] Valid session found for user: gcmweb2023@outlook.com
+ GET /api/venues/cmbywjrlw0004m31yzvwk5hue 200 in 50ms
+[?25h

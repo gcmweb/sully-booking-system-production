@@ -1,0 +1,128 @@
+Get venues error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:520:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:193:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get venues error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:520:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:193:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get notifications error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:520:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:185:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get notifications error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:520:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:185:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get notifications error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:185:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get venues error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:193:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get venues error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:193:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get notifications error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:185:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get venues error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:193:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get venues error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:193:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get notifications error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:185:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get notifications error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:185:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get venues error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:193:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get notifications error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:185:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get venues error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/route.js:193:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)
+Get notifications error: Error: Authentication required
+    at requireAuth (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:321:15)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/notifications/route.js:185:22)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/base-server.js:1588:28)

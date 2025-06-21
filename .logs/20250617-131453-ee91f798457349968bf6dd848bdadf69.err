@@ -1,0 +1,4 @@
+ ⨯ ReferenceError: TrendingUp is not defined
+    at (ssr)/./app/page.tsx (/home/ubuntu/sully-booking-system/app/.next/server/app/page.js:1528:15)
+    at Object.__webpack_require__ [as require] (/home/ubuntu/sully-booking-system/app/.next/server/webpack-runtime.js:25:42)
+digest: "2608028663"

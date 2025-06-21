@@ -1,0 +1,189 @@
+sending incremental file list
+browser_cookies.txt
+components.json
+cookies.txt
+customer_cookies.txt
+next-env.d.ts
+next.config.js
+package.json
+postcss.config.js
+tailwind.config.ts
+tsconfig.json
+app/
+app/globals.css
+app/layout.tsx
+app/page.tsx
+app/admin/
+app/admin/page.tsx
+app/api/
+app/api/admin/
+app/api/admin/stats/
+app/api/admin/stats/route.ts
+app/api/admin/users/
+app/api/admin/users/route.ts
+app/api/auth/
+app/api/auth/login/
+app/api/auth/login/route.ts
+app/api/auth/logout/
+app/api/auth/logout/route.ts
+app/api/auth/me/
+app/api/auth/me/route.ts
+app/api/auth/register/
+app/api/auth/register/route.ts
+app/api/bookings/
+app/api/bookings/route.ts
+app/api/bookings/[id]/
+app/api/bookings/[id]/route.ts
+app/api/venues/
+app/api/venues/route.ts
+app/api/venues/[id]/
+app/api/venues/[id]/route.ts
+app/api/venues/[id]/analytics/
+app/api/venues/[id]/analytics/route.ts
+app/api/venues/[id]/tables/
+app/api/venues/[id]/tables/route.ts
+app/api/widgets/
+app/api/widgets/route.ts
+app/auth/
+app/auth/login/
+app/auth/login/page.tsx
+app/auth/register/
+app/auth/register/page.tsx
+app/dashboard/
+app/dashboard/page.tsx
+app/dashboard/analytics/
+app/dashboard/analytics/page.tsx
+app/dashboard/bookings/
+app/dashboard/bookings/page.tsx
+app/dashboard/venues/
+app/dashboard/venues/new/
+app/dashboard/venues/new/page.tsx
+app/widget/
+app/widget/[venueId]/
+app/widget/[venueId]/page.tsx
+components/
+components/auth-provider.tsx
+components/theme-provider.tsx
+components/ui/
+components/ui/accordion.tsx
+components/ui/alert-dialog.tsx
+components/ui/alert.tsx
+components/ui/aspect-ratio.tsx
+components/ui/avatar.tsx
+components/ui/badge.tsx
+components/ui/breadcrumb.tsx
+components/ui/button.tsx
+components/ui/calendar.tsx
+components/ui/card.tsx
+components/ui/carousel.tsx
+components/ui/checkbox.tsx
+components/ui/collapsible.tsx
+components/ui/command.tsx
+components/ui/context-menu.tsx
+components/ui/date-range-picker.tsx
+components/ui/dialog.tsx
+components/ui/drawer.tsx
+components/ui/dropdown-menu.tsx
+components/ui/form.tsx
+components/ui/hover-card.tsx
+components/ui/input-otp.tsx
+components/ui/input.tsx
+components/ui/label.tsx
+components/ui/menubar.tsx
+components/ui/navigation-menu.tsx
+components/ui/pagination.tsx
+components/ui/popover.tsx
+components/ui/progress.tsx
+components/ui/radio-group.tsx
+components/ui/resizable.tsx
+components/ui/scroll-area.tsx
+components/ui/select.tsx
+components/ui/separator.tsx
+components/ui/sheet.tsx
+components/ui/skeleton.tsx
+components/ui/slider.tsx
+components/ui/sonner.tsx
+components/ui/switch.tsx
+components/ui/table.tsx
+components/ui/tabs.tsx
+components/ui/task-card.tsx
+components/ui/textarea.tsx
+components/ui/toast.tsx
+components/ui/toaster.tsx
+components/ui/toggle-group.tsx
+components/ui/toggle.tsx
+components/ui/tooltip.tsx
+components/ui/use-toast.ts
+hooks/
+hooks/use-toast.ts
+lib/
+lib/analytics.ts
+lib/auth.ts
+lib/booking-utils.ts
+lib/db.ts
+lib/notifications.ts
+lib/subscription.ts
+lib/types.ts
+lib/utils.ts
+lib/validations.ts
+lib/db/
+prisma/
+prisma/schema.prisma
+
+sent 307,576 bytes  received 2,012 bytes  619,176.00 bytes/sec
+total size is 299,951  speedup is 0.97
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+  ▲ Next.js 14.2.28
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/11) ...
+   Generating static pages (2/11) 
+   Generating static pages (5/11) 
+   Generating static pages (8/11) 
+ ✓ Generating static pages (11/11)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    4.21 kB         141 kB
+├ ○ /_not-found                          876 B          88.3 kB
+├ ○ /admin                               3.79 kB         141 kB
+├ ƒ /api/admin/stats                     0 B                0 B
+├ ƒ /api/admin/users                     0 B                0 B
+├ ƒ /api/auth/login                      0 B                0 B
+├ ƒ /api/auth/logout                     0 B                0 B
+├ ƒ /api/auth/me                         0 B                0 B
+├ ƒ /api/auth/register                   0 B                0 B
+├ ƒ /api/bookings                        0 B                0 B
+├ ƒ /api/bookings/[id]                   0 B                0 B
+├ ƒ /api/venues                          0 B                0 B
+├ ƒ /api/venues/[id]                     0 B                0 B
+├ ƒ /api/venues/[id]/analytics           0 B                0 B
+├ ƒ /api/venues/[id]/tables              0 B                0 B
+├ ƒ /api/widgets                         0 B                0 B
+├ ○ /auth/login                          3.84 kB         108 kB
+├ ○ /auth/register                       4.16 kB         109 kB
+├ ○ /dashboard                           3.75 kB         141 kB
+├ ○ /dashboard/analytics                 111 kB          272 kB
+├ ○ /dashboard/bookings                  4.99 kB         166 kB
+├ ○ /dashboard/venues/new                4.59 kB         133 kB
+└ ƒ /widget/[venueId]                    5.12 kB         125 kB
++ First Load JS shared by all            87.4 kB
+  ├ chunks/117-b2617ffdf24fa602.js       31.8 kB
+  ├ chunks/fd9d1056-b359876d09278ba4.js  53.6 kB
+  └ other shared chunks (total)          2 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

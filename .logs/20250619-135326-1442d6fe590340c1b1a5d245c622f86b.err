@@ -1,0 +1,50 @@
+ ⚠ Found a change in next.config.js. Restarting the server to apply the changes...
+ ⚠ Found a change in next.config.js. Restarting the server to apply the changes...
+ ⨯ ./app/globals.css.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/globals.css
+Error: ENOENT: no such file or directory, open '/home/ubuntu/sully-booking-system/app/app/globals.css'
+
+Import trace for requested module:
+./app/globals.css.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/globals.css
+./app/globals.css
+Error: ENOENT: no such file or directory, scandir '/home/ubuntu/sully-booking-system/app/app'
+    at async Object.readdir (node:internal/fs/promises:954:18)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/lib/recursive-readdir.js:39:29
+    at async Promise.all (index 0)
+    at async recursiveReadDir (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/lib/recursive-readdir.js:32:25)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:71:25
+    at async Promise.all (index 0)
+    at async BatchedFileReader.load (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:67:25)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:41:26 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '/home/ubuntu/sully-booking-system/app/app'
+}
+ ⨯ unhandledRejection: Error: ENOENT: no such file or directory, scandir '/home/ubuntu/sully-booking-system/app/app'
+    at async Object.readdir (node:internal/fs/promises:954:18)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/lib/recursive-readdir.js:39:29
+    at async Promise.all (index 0)
+    at async recursiveReadDir (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/lib/recursive-readdir.js:32:25)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:71:25
+    at async Promise.all (index 0)
+    at async BatchedFileReader.load (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:67:25)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:41:26 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '/home/ubuntu/sully-booking-system/app/app'
+}
+ ⨯ unhandledRejection: Error: ENOENT: no such file or directory, scandir '/home/ubuntu/sully-booking-system/app/app'
+    at async Object.readdir (node:internal/fs/promises:954:18)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/lib/recursive-readdir.js:39:29
+    at async Promise.all (index 0)
+    at async recursiveReadDir (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/lib/recursive-readdir.js:32:25)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:71:25
+    at async Promise.all (index 0)
+    at async BatchedFileReader.load (/home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:67:25)
+    at async /home/ubuntu/sully-booking-system/app/node_modules/next/dist/server/future/route-matcher-providers/dev/helpers/file-reader/batched-file-reader.js:41:26 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '/home/ubuntu/sully-booking-system/app/app'
+}

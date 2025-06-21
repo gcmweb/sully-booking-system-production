@@ -1,0 +1,373 @@
+Error fetching venue: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findUnique()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/public/venues/[id]/route.js:114:79
+
+  111 async function GET(request, { params }) {
+  112     try {
+  113         const venueId = params.id;
+→ 114         const venue = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findUnique({
+                where: {
+                  id: "cmbz3igfd0005qn018j1uu311",
+                  isActive: true
+                },
+                include: {
+                ~~~~~~~
+                  images: {
+                    where: {
+                      isActive: true
+                    },
+                    orderBy: {
+                      displayOrder: "asc"
+                    },
+                    select: {
+                      id: true,
+                      url: true,
+                      alt: true,
+                      type: true
+                    }
+                  }
+                },
+                select: {
+                ~~~~~~
+                  id: true,
+                  name: true,
+                  slug: true,
+                  description: true,
+                  address: true,
+                  city: true,
+                  postcode: true,
+                  country: true,
+                  phone: true,
+                  email: true,
+                  website: true,
+                  cuisine: true,
+                  venueType: true,
+                  capacity: true,
+                  logoUrl: true,
+                  headerImageUrl: true,
+                  images: true
+                }
+              })
+
+Please either use `include` or `select`, but not both at the same time.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at e.throwValidationError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:10051)
+    at Xd (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5911)
+    at bt (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5863)
+    at Dn (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5747)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10331
+    at Object.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1549)
+    at Io.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1913)
+    at r._executeRequest (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10310)
+    at nl (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:34:9835)
+    at l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9784)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10078
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10058
+    at Object.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1549)
+    at Io.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1913)
+    at r._request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9981)
+    at e._createPrismaPromise.action (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:34:5390)
+    at o (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1018)
+    at Proxy.then (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1114) {
+  clientVersion: '6.7.0'
+}
+Error fetching venue: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findUnique()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/public/venues/[id]/route.js:114:79
+
+  111 async function GET(request, { params }) {
+  112     try {
+  113         const venueId = params.id;
+→ 114         const venue = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findUnique({
+                where: {
+                  id: "cmbz3igfd0005qn018j1uu311",
+                  isActive: true
+                },
+                include: {
+                ~~~~~~~
+                  images: {
+                    where: {
+                      isActive: true
+                    },
+                    orderBy: {
+                      displayOrder: "asc"
+                    },
+                    select: {
+                      id: true,
+                      url: true,
+                      alt: true,
+                      type: true
+                    }
+                  }
+                },
+                select: {
+                ~~~~~~
+                  id: true,
+                  name: true,
+                  slug: true,
+                  description: true,
+                  address: true,
+                  city: true,
+                  postcode: true,
+                  country: true,
+                  phone: true,
+                  email: true,
+                  website: true,
+                  cuisine: true,
+                  venueType: true,
+                  capacity: true,
+                  logoUrl: true,
+                  headerImageUrl: true,
+                  images: true
+                }
+              })
+
+Please either use `include` or `select`, but not both at the same time.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at e.throwValidationError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:10051)
+    at Xd (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5911)
+    at bt (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5863)
+    at Dn (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5747)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10331
+    at Object.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1549)
+    at Io.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1913)
+    at r._executeRequest (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10310)
+    at nl (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:34:9835)
+    at l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9784)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10078
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10058
+    at Object.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1549)
+    at Io.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1913)
+    at r._request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9981)
+    at e._createPrismaPromise.action (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:34:5390)
+    at o (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1018)
+    at Proxy.then (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1114) {
+  clientVersion: '6.7.0'
+}
+Error fetching venue: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findUnique()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/public/venues/[id]/route.js:114:79
+
+  111 async function GET(request, { params }) {
+  112     try {
+  113         const venueId = params.id;
+→ 114         const venue = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findUnique({
+                where: {
+                  id: "cmbz3igfd0005qn018j1uu311",
+                  isActive: true
+                },
+                include: {
+                ~~~~~~~
+                  images: {
+                    where: {
+                      isActive: true
+                    },
+                    orderBy: {
+                      displayOrder: "asc"
+                    },
+                    select: {
+                      id: true,
+                      url: true,
+                      alt: true,
+                      type: true
+                    }
+                  }
+                },
+                select: {
+                ~~~~~~
+                  id: true,
+                  name: true,
+                  slug: true,
+                  description: true,
+                  address: true,
+                  city: true,
+                  postcode: true,
+                  country: true,
+                  phone: true,
+                  email: true,
+                  website: true,
+                  cuisine: true,
+                  venueType: true,
+                  capacity: true,
+                  logoUrl: true,
+                  headerImageUrl: true,
+                  images: true
+                }
+              })
+
+Please either use `include` or `select`, but not both at the same time.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at e.throwValidationError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:10051)
+    at Xd (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5911)
+    at bt (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5863)
+    at Dn (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5747)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10331
+    at Object.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1549)
+    at Io.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1913)
+    at r._executeRequest (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10310)
+    at nl (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:34:9835)
+    at l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9784)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10078
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10058
+    at Object.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1549)
+    at Io.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1913)
+    at r._request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9981)
+    at e._createPrismaPromise.action (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:34:5390)
+    at o (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1018)
+    at Proxy.then (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1114) {
+  clientVersion: '6.7.0'
+}
+Error fetching venue: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findUnique()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/public/venues/[id]/route.js:114:79
+
+  111 async function GET(request, { params }) {
+  112     try {
+  113         const venueId = params.id;
+→ 114         const venue = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findUnique({
+                where: {
+                  id: "cmbz3igfd0005qn018j1uu311",
+                  isActive: true
+                },
+                include: {
+                ~~~~~~~
+                  images: {
+                    where: {
+                      isActive: true
+                    },
+                    orderBy: {
+                      displayOrder: "asc"
+                    },
+                    select: {
+                      id: true,
+                      url: true,
+                      alt: true,
+                      type: true
+                    }
+                  }
+                },
+                select: {
+                ~~~~~~
+                  id: true,
+                  name: true,
+                  slug: true,
+                  description: true,
+                  address: true,
+                  city: true,
+                  postcode: true,
+                  country: true,
+                  phone: true,
+                  email: true,
+                  website: true,
+                  cuisine: true,
+                  venueType: true,
+                  capacity: true,
+                  logoUrl: true,
+                  headerImageUrl: true,
+                  images: true
+                }
+              })
+
+Please either use `include` or `select`, but not both at the same time.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at e.throwValidationError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:10051)
+    at Xd (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5911)
+    at bt (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5863)
+    at Dn (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5747)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10331
+    at Object.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1549)
+    at Io.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1913)
+    at r._executeRequest (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10310)
+    at nl (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:34:9835)
+    at l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9784)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10078
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10058
+    at Object.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1549)
+    at Io.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1913)
+    at r._request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9981)
+    at e._createPrismaPromise.action (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:34:5390)
+    at o (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1018)
+    at Proxy.then (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1114) {
+  clientVersion: '6.7.0'
+}
+Error fetching venue: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findUnique()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/public/venues/[id]/route.js:114:79
+
+  111 async function GET(request, { params }) {
+  112     try {
+  113         const venueId = params.id;
+→ 114         const venue = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findUnique({
+                where: {
+                  id: "cmbz3igfd0005qn018j1uu311",
+                  isActive: true
+                },
+                include: {
+                ~~~~~~~
+                  images: {
+                    where: {
+                      isActive: true
+                    },
+                    orderBy: {
+                      displayOrder: "asc"
+                    },
+                    select: {
+                      id: true,
+                      url: true,
+                      alt: true,
+                      type: true
+                    }
+                  }
+                },
+                select: {
+                ~~~~~~
+                  id: true,
+                  name: true,
+                  slug: true,
+                  description: true,
+                  address: true,
+                  city: true,
+                  postcode: true,
+                  country: true,
+                  phone: true,
+                  email: true,
+                  website: true,
+                  cuisine: true,
+                  venueType: true,
+                  capacity: true,
+                  logoUrl: true,
+                  headerImageUrl: true,
+                  images: true
+                }
+              })
+
+Please either use `include` or `select`, but not both at the same time.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at e.throwValidationError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:10051)
+    at Xd (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5911)
+    at bt (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5863)
+    at Dn (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:5747)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10331
+    at Object.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1549)
+    at Io.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1913)
+    at r._executeRequest (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10310)
+    at nl (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:34:9835)
+    at l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9784)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10078
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at /opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:10058
+    at Object.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1549)
+    at Io.runInChildSpan (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1913)
+    at r._request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9981)
+    at e._createPrismaPromise.action (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:34:5390)
+    at o (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1018)
+    at Proxy.then (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:1114) {
+  clientVersion: '6.7.0'
+}
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload

@@ -1,0 +1,49 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1770ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.7s (1173 modules)
+ GET / 200 in 3246ms
+ ✓ Compiled in 556ms (592 modules)
+ GET / 200 in 63ms
+ GET / 200 in 44ms
+ GET / 200 in 44ms
+ ✓ Compiled /api/auth/me in 480ms (700 modules)
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1196ms (1507 modules)
+ GET /api/auth/me 500 in 2001ms
+ GET /api/auth/me 500 in 2007ms
+ ○ Compiling /venues ...
+ ✓ Compiled /venues in 966ms (1676 modules)
+ ✓ Compiled /api/public/venues in 172ms (828 modules)
+ GET /api/public/venues 500 in 269ms
+ GET /api/public/venues 500 in 38ms
+ ○ Compiling /auth/login ...
+ ✓ Compiled /auth/login in 626ms (1605 modules)
+ ✓ Compiled /api/auth/login in 267ms (839 modules)
+ POST /api/auth/login 500 in 376ms
+ GET / 200 in 120ms
+ GET / 200 in 36ms
+ ✓ Compiled /api/auth/me in 198ms (841 modules)
+ GET /api/auth/me 500 in 281ms
+ GET /api/auth/me 500 in 284ms
+ POST /api/auth/login 500 in 52ms
+ GET / 200 in 103ms
+ GET /api/auth/me 500 in 47ms
+ GET /api/auth/me 500 in 63ms
+ POST /api/auth/login 500 in 45ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 546ms (1699 modules)
+ GET /_next/static/chunks/app/auth/login/bundle-mjs.mjs.map 404 in 641ms
+ GET /_next/static/chunks/static-generation-async-storage-instance.js.map 404 in 633ms
+ GET /_next/static/chunks/handle-smooth-scroll.js.map 404 in 633ms
+ GET /_next/static/chunks/app/bundle-mjs.mjs.map 404 in 628ms
+ GET /_next/static/chunks/app/bundle-mjs.mjs.map 404 in 16ms
+ POST /api/auth/login 500 in 60ms
+ POST /api/auth/login 500 in 88ms
+[?25h

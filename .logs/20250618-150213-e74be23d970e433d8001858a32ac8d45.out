@@ -1,0 +1,34 @@
+➤ YN0000: · Yarn 4.9.2
+➤ YN0000: ┌ Resolution step
+➤ YN0085: │ + @netlify/functions@npm:4.1.6, @prisma/client@npm:6.9.0, @stripe/stripe-js@npm:7.3.1, @types/formidable@npm:3.4.5, @types/react-dropzone@npm:5.1.0, and 213 more.
+➤ YN0085: │ - @prisma/client@npm:6.7.0, @prisma/config@npm:6.7.0, @prisma/debug@npm:6.7.0, and 8 more.
+➤ YN0000: └ Completed in 1s 269ms
+➤ YN0000: ┌ Post-resolution validation
+➤ YN0060: │ @typescript-eslint/parser is listed by your project with version 7.0.0 (p6cb6c), which doesn't satisfy what @typescript-eslint/eslint-plugin requests (^6.0.0-alpha).
+➤ YN0060: │ eslint is listed by your project with version 9.24.0 (pe6e00), which doesn't satisfy what @typescript-eslint/eslint-plugin and other dependencies request (^8.57.0).
+➤ YN0086: │ Some peer dependencies are incorrectly met by your project; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code.
+➤ YN0086: │ Some peer dependencies are incorrectly met by dependencies; run yarn explain peer-requirements for details.
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Fetch step
+➤ YN0013: │ 8 packages were added to the project (+ 3.98 MiB).
+➤ YN0000: └ Completed in 3s 332ms
+➤ YN0000: ┌ Link step
+➤ YN0000: └ Completed in 2s 145ms
+➤ YN0000: · Done with warnings in 6s 933ms
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.9.0) to ./node_modules/.prisma/client in 647ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Want to turn off tips and other hints? https://pris.ly/tip-4-nohints
+
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 5.3s

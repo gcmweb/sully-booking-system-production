@@ -1,0 +1,762 @@
+Create venue availability error: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:98
+
+  240     });
+  241 }
+  242 // Create or update availability
+→ 243 const availability = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert({
+        where: {
+          venueId_dayOfWeek: {
+          ~~~~~~~~~~~~~~~~~
+            venueId: "cmbywqos30006m3fxrkk38a8z",
+            dayOfWeek: 3
+          },
+      ?   id?: String,
+      ?   AND?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   OR?: VenueAvailabilityWhereInput[],
+      ?   NOT?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   venueId?: StringFilter | String,
+      ?   dayOfWeek?: IntFilter | Int,
+      ?   openTime?: StringFilter | String,
+      ?   closeTime?: StringFilter | String,
+      ?   isOpen?: BoolFilter | Boolean,
+      ?   date?: DateTimeNullableFilter | DateTime | Null,
+      ?   createdAt?: DateTimeFilter | DateTime,
+      ?   updatedAt?: DateTimeFilter | DateTime,
+      ?   venue?: VenueScalarRelationFilter | VenueWhereInput
+        },
+        update: {
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        },
+        create: {
+          venueId: "cmbywqos30006m3fxrkk38a8z",
+          dayOfWeek: 3,
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        }
+      })
+
+Unknown argument `venueId_dayOfWeek`. Available options are marked with ?.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async POST (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:30)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1576:40)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.7.0'
+}
+Create venue availability error: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:98
+
+  240     });
+  241 }
+  242 // Create or update availability
+→ 243 const availability = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert({
+        where: {
+          venueId_dayOfWeek: {
+          ~~~~~~~~~~~~~~~~~
+            venueId: "cmbywqos30006m3fxrkk38a8z",
+            dayOfWeek: 0
+          },
+      ?   id?: String,
+      ?   AND?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   OR?: VenueAvailabilityWhereInput[],
+      ?   NOT?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   venueId?: StringFilter | String,
+      ?   dayOfWeek?: IntFilter | Int,
+      ?   openTime?: StringFilter | String,
+      ?   closeTime?: StringFilter | String,
+      ?   isOpen?: BoolFilter | Boolean,
+      ?   date?: DateTimeNullableFilter | DateTime | Null,
+      ?   createdAt?: DateTimeFilter | DateTime,
+      ?   updatedAt?: DateTimeFilter | DateTime,
+      ?   venue?: VenueScalarRelationFilter | VenueWhereInput
+        },
+        update: {
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        },
+        create: {
+          venueId: "cmbywqos30006m3fxrkk38a8z",
+          dayOfWeek: 0,
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        }
+      })
+
+Unknown argument `venueId_dayOfWeek`. Available options are marked with ?.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async POST (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:30)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1576:40)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.7.0'
+}
+Create venue availability error: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:98
+
+  240     });
+  241 }
+  242 // Create or update availability
+→ 243 const availability = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert({
+        where: {
+          venueId_dayOfWeek: {
+          ~~~~~~~~~~~~~~~~~
+            venueId: "cmbywqos30006m3fxrkk38a8z",
+            dayOfWeek: 1
+          },
+      ?   id?: String,
+      ?   AND?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   OR?: VenueAvailabilityWhereInput[],
+      ?   NOT?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   venueId?: StringFilter | String,
+      ?   dayOfWeek?: IntFilter | Int,
+      ?   openTime?: StringFilter | String,
+      ?   closeTime?: StringFilter | String,
+      ?   isOpen?: BoolFilter | Boolean,
+      ?   date?: DateTimeNullableFilter | DateTime | Null,
+      ?   createdAt?: DateTimeFilter | DateTime,
+      ?   updatedAt?: DateTimeFilter | DateTime,
+      ?   venue?: VenueScalarRelationFilter | VenueWhereInput
+        },
+        update: {
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        },
+        create: {
+          venueId: "cmbywqos30006m3fxrkk38a8z",
+          dayOfWeek: 1,
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        }
+      })
+
+Unknown argument `venueId_dayOfWeek`. Available options are marked with ?.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async POST (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:30)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1576:40)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.7.0'
+}
+Create venue availability error: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:98
+
+  240     });
+  241 }
+  242 // Create or update availability
+→ 243 const availability = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert({
+        where: {
+          venueId_dayOfWeek: {
+          ~~~~~~~~~~~~~~~~~
+            venueId: "cmbywqos30006m3fxrkk38a8z",
+            dayOfWeek: 2
+          },
+      ?   id?: String,
+      ?   AND?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   OR?: VenueAvailabilityWhereInput[],
+      ?   NOT?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   venueId?: StringFilter | String,
+      ?   dayOfWeek?: IntFilter | Int,
+      ?   openTime?: StringFilter | String,
+      ?   closeTime?: StringFilter | String,
+      ?   isOpen?: BoolFilter | Boolean,
+      ?   date?: DateTimeNullableFilter | DateTime | Null,
+      ?   createdAt?: DateTimeFilter | DateTime,
+      ?   updatedAt?: DateTimeFilter | DateTime,
+      ?   venue?: VenueScalarRelationFilter | VenueWhereInput
+        },
+        update: {
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        },
+        create: {
+          venueId: "cmbywqos30006m3fxrkk38a8z",
+          dayOfWeek: 2,
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        }
+      })
+
+Unknown argument `venueId_dayOfWeek`. Available options are marked with ?.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async POST (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:30)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1576:40)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.7.0'
+}
+Create venue availability error: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:98
+
+  240     });
+  241 }
+  242 // Create or update availability
+→ 243 const availability = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert({
+        where: {
+          venueId_dayOfWeek: {
+          ~~~~~~~~~~~~~~~~~
+            venueId: "cmbywqos30006m3fxrkk38a8z",
+            dayOfWeek: 3
+          },
+      ?   id?: String,
+      ?   AND?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   OR?: VenueAvailabilityWhereInput[],
+      ?   NOT?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   venueId?: StringFilter | String,
+      ?   dayOfWeek?: IntFilter | Int,
+      ?   openTime?: StringFilter | String,
+      ?   closeTime?: StringFilter | String,
+      ?   isOpen?: BoolFilter | Boolean,
+      ?   date?: DateTimeNullableFilter | DateTime | Null,
+      ?   createdAt?: DateTimeFilter | DateTime,
+      ?   updatedAt?: DateTimeFilter | DateTime,
+      ?   venue?: VenueScalarRelationFilter | VenueWhereInput
+        },
+        update: {
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        },
+        create: {
+          venueId: "cmbywqos30006m3fxrkk38a8z",
+          dayOfWeek: 3,
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        }
+      })
+
+Unknown argument `venueId_dayOfWeek`. Available options are marked with ?.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async POST (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:30)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1576:40)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.7.0'
+}
+Create venue availability error: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:98
+
+  240     });
+  241 }
+  242 // Create or update availability
+→ 243 const availability = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert({
+        where: {
+          venueId_dayOfWeek: {
+          ~~~~~~~~~~~~~~~~~
+            venueId: "cmbywqos30006m3fxrkk38a8z",
+            dayOfWeek: 4
+          },
+      ?   id?: String,
+      ?   AND?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   OR?: VenueAvailabilityWhereInput[],
+      ?   NOT?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   venueId?: StringFilter | String,
+      ?   dayOfWeek?: IntFilter | Int,
+      ?   openTime?: StringFilter | String,
+      ?   closeTime?: StringFilter | String,
+      ?   isOpen?: BoolFilter | Boolean,
+      ?   date?: DateTimeNullableFilter | DateTime | Null,
+      ?   createdAt?: DateTimeFilter | DateTime,
+      ?   updatedAt?: DateTimeFilter | DateTime,
+      ?   venue?: VenueScalarRelationFilter | VenueWhereInput
+        },
+        update: {
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        },
+        create: {
+          venueId: "cmbywqos30006m3fxrkk38a8z",
+          dayOfWeek: 4,
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        }
+      })
+
+Unknown argument `venueId_dayOfWeek`. Available options are marked with ?.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async POST (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:30)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1576:40)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.7.0'
+}
+Create venue availability error: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:98
+
+  240     });
+  241 }
+  242 // Create or update availability
+→ 243 const availability = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert({
+        where: {
+          venueId_dayOfWeek: {
+          ~~~~~~~~~~~~~~~~~
+            venueId: "cmbywqos30006m3fxrkk38a8z",
+            dayOfWeek: 5
+          },
+      ?   id?: String,
+      ?   AND?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   OR?: VenueAvailabilityWhereInput[],
+      ?   NOT?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   venueId?: StringFilter | String,
+      ?   dayOfWeek?: IntFilter | Int,
+      ?   openTime?: StringFilter | String,
+      ?   closeTime?: StringFilter | String,
+      ?   isOpen?: BoolFilter | Boolean,
+      ?   date?: DateTimeNullableFilter | DateTime | Null,
+      ?   createdAt?: DateTimeFilter | DateTime,
+      ?   updatedAt?: DateTimeFilter | DateTime,
+      ?   venue?: VenueScalarRelationFilter | VenueWhereInput
+        },
+        update: {
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        },
+        create: {
+          venueId: "cmbywqos30006m3fxrkk38a8z",
+          dayOfWeek: 5,
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        }
+      })
+
+Unknown argument `venueId_dayOfWeek`. Available options are marked with ?.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async POST (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:30)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1576:40)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.7.0'
+}
+Create venue availability error: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:98
+
+  240     });
+  241 }
+  242 // Create or update availability
+→ 243 const availability = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venueAvailability.upsert({
+        where: {
+          venueId_dayOfWeek: {
+          ~~~~~~~~~~~~~~~~~
+            venueId: "cmbywqos30006m3fxrkk38a8z",
+            dayOfWeek: 6
+          },
+      ?   id?: String,
+      ?   AND?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   OR?: VenueAvailabilityWhereInput[],
+      ?   NOT?: VenueAvailabilityWhereInput | VenueAvailabilityWhereInput[],
+      ?   venueId?: StringFilter | String,
+      ?   dayOfWeek?: IntFilter | Int,
+      ?   openTime?: StringFilter | String,
+      ?   closeTime?: StringFilter | String,
+      ?   isOpen?: BoolFilter | Boolean,
+      ?   date?: DateTimeNullableFilter | DateTime | Null,
+      ?   createdAt?: DateTimeFilter | DateTime,
+      ?   updatedAt?: DateTimeFilter | DateTime,
+      ?   venue?: VenueScalarRelationFilter | VenueWhereInput
+        },
+        update: {
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        },
+        create: {
+          venueId: "cmbywqos30006m3fxrkk38a8z",
+          dayOfWeek: 6,
+          openTime: "12:00",
+          closeTime: "22:00",
+          isOpen: true
+        }
+      })
+
+Unknown argument `venueId_dayOfWeek`. Available options are marked with ?.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async POST (/home/ubuntu/sully-booking-system/app/.next/server/app/api/venues/[id]/availability/route.js:243:30)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1576:40)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.7.0'
+}
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+Get public venues error: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findMany()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/public/venues/route.js:153:80
+
+  150 if (venueType) {
+  151     whereClause.venueType = venueType;
+  152 }
+→ 153 const venues = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findMany({
+        where: {
+          isActive: true,
+          city: {
+            contains: "all",
+            mode: "insensitive"
+          },
+          venueType: "all"
+                     ~~~~~
+        },
+        select: {
+          id: true,
+          name: true,
+          slug: true,
+          description: true,
+          address: true,
+          city: true,
+          cuisine: true,
+          venueType: true,
+          capacity: true,
+          branding: true,
+          _count: {
+            select: {
+              bookings: {
+                where: {
+                  status: "CONFIRMED"
+                }
+              }
+            }
+          }
+        },
+        orderBy: {
+          createdAt: "desc"
+        },
+        skip: 0,
+        take: 12
+      })
+
+Invalid value for argument `venueType`. Expected VenueType.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/public/venues/route.js:153:24)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.7.0'
+}
+Get public venues error: PrismaClientValidationError: 
+Invalid `_lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findMany()` invocation in
+/home/ubuntu/sully-booking-system/app/.next/server/app/api/public/venues/route.js:153:80
+
+  150 if (venueType) {
+  151     whereClause.venueType = venueType;
+  152 }
+→ 153 const venues = await _lib_db__WEBPACK_IMPORTED_MODULE_1__.prisma.venue.findMany({
+        where: {
+          isActive: true,
+          city: {
+            contains: "all",
+            mode: "insensitive"
+          },
+          venueType: "all"
+                     ~~~~~
+        },
+        select: {
+          id: true,
+          name: true,
+          slug: true,
+          description: true,
+          address: true,
+          city: true,
+          cuisine: true,
+          venueType: true,
+          capacity: true,
+          branding: true,
+          _count: {
+            select: {
+              bookings: {
+                where: {
+                  status: "CONFIRMED"
+                }
+              }
+            }
+          }
+        },
+        orderBy: {
+          createdAt: "desc"
+        },
+        skip: 0,
+        take: 12
+      })
+
+Invalid value for argument `venueType`. Expected VenueType.
+    at An (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/public/venues/route.js:153:24)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.7.0'
+}
+Analytics error: PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42601`. Message: `ERROR: syntax error at or near "$3"`
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7459)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/analytics/route.js:261:31)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'P2010',
+  meta: { code: '42601', message: 'ERROR: syntax error at or near "$3"' },
+  clientVersion: '6.7.0'
+}
+Analytics error: PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42601`. Message: `ERROR: syntax error at or near "$3"`
+    at zn.handleRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:7459)
+    at zn.handleAndLogRequestError (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at zn.request (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/opt/hostedapp/node/root/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async GET (/home/ubuntu/sully-booking-system/app/.next/server/app/api/analytics/route.js:261:31)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  code: 'P2010',
+  meta: { code: '42601', message: 'ERROR: syntax error at or near "$3"' },
+  clientVersion: '6.7.0'
+}
