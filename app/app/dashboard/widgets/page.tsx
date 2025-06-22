@@ -20,12 +20,15 @@ interface Widget {
   name: string;
   isActive: boolean;
   embedCode: string;
-  settings: {
-    theme?: string;
-    primaryColor?: string;
-    showLogo?: boolean;
-    allowedServices?: string[];
-  };
+  theme: string;
+  primaryColor: string;
+  backgroundColor: string;
+  textColor: string;
+  allowGuestBooking: boolean;
+  requirePhone: boolean;
+  maxAdvanceBooking: number;
+  minAdvanceBooking: number;
+  customCss?: string;
   createdAt: string;
 }
 
@@ -43,12 +46,14 @@ export default function WidgetsPage() {
   const [newWidget, setNewWidget] = useState({
     name: '',
     venueId: '',
-    settings: {
-      theme: 'light',
-      primaryColor: '#3b82f6',
-      showLogo: true,
-      allowedServices: ['DINE_IN', 'TAKEAWAY', 'DELIVERY'],
-    },
+    theme: 'light',
+    primaryColor: '#3b82f6',
+    backgroundColor: '#FFFFFF',
+    textColor: '#1F2937',
+    allowGuestBooking: true,
+    requirePhone: false,
+    maxAdvanceBooking: 30,
+    minAdvanceBooking: 1,
   });
   const { toast } = useToast();
 
@@ -102,12 +107,14 @@ export default function WidgetsPage() {
         setNewWidget({
           name: '',
           venueId: '',
-          settings: {
-            theme: 'light',
-            primaryColor: '#3b82f6',
-            showLogo: true,
-            allowedServices: ['DINE_IN', 'TAKEAWAY', 'DELIVERY'],
-          },
+          theme: 'light',
+          primaryColor: '#3b82f6',
+          backgroundColor: '#FFFFFF',
+          textColor: '#1F2937',
+          allowGuestBooking: true,
+          requirePhone: false,
+          maxAdvanceBooking: 30,
+          minAdvanceBooking: 1,
         });
         toast({
           title: 'Widget created',
@@ -275,10 +282,10 @@ export default function WidgetsPage() {
                   <div className="space-y-2">
                     <Label htmlFor="theme">Theme</Label>
                     <Select 
-                      value={newWidget.settings.theme} 
+                      value={newWidget.theme} 
                       onValueChange={(value) => setNewWidget(prev => ({ 
                         ...prev, 
-                        settings: { ...prev.settings, theme: value }
+                        theme: value
                       }))}
                     >
                       <SelectTrigger>
@@ -294,10 +301,10 @@ export default function WidgetsPage() {
                     <Label htmlFor="primaryColor">Primary Color</Label>
                     <Input
                       type="color"
-                      value={newWidget.settings.primaryColor}
+                      value={newWidget.primaryColor}
                       onChange={(e) => setNewWidget(prev => ({ 
                         ...prev, 
-                        settings: { ...prev.settings, primaryColor: e.target.value }
+                        primaryColor: e.target.value
                       }))}
                     />
                   </div>
@@ -305,13 +312,13 @@ export default function WidgetsPage() {
 
                 <div className="flex items-center space-x-2">
                   <Switch
-                    checked={newWidget.settings.showLogo}
+                    checked={newWidget.allowGuestBooking}
                     onCheckedChange={(checked) => setNewWidget(prev => ({ 
                       ...prev, 
-                      settings: { ...prev.settings, showLogo: checked }
+                      allowGuestBooking: checked
                     }))}
                   />
-                  <Label>Show Sully branding</Label>
+                  <Label>Allow Guest Booking</Label>
                 </div>
               </div>
 
@@ -329,175 +336,207 @@ export default function WidgetsPage() {
       </div>
 
       {widgets.length === 0 ? (
-        <Card className="text-center py-12">
-          <CardContent>
-            <Code className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-lg font-medium text-gray-900 mb-2">
-              No widgets created yet
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Create your first booking widget to embed on your website
+        <Card>
+          <CardContent className="flex flex-col items-center justify-center py-16">
+            <Code className="h-12 w-12 text-gray-400 mb-4" />
+            <h3 className="text-lg font-medium text-gray-900 mb-2">No widgets yet</h3>
+            <p className="text-gray-500 text-center mb-6">
+              Create your first booking widget to start accepting reservations on your website.
             </p>
             <Dialog>
               <DialogTrigger asChild>
-                <Button>Create Your First Widget</Button>
+                <Button>
+                  <Plus className="h-4 w-4 mr-2" />
+                  Create Your First Widget
+                </Button>
               </DialogTrigger>
             </Dialog>
           </CardContent>
         </Card>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {widgets.map((widget, index) => (
+          {widgets.map((widget) => (
             <motion.div
               key={widget.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.3 }}
             >
-              <Card className="hover:shadow-lg transition-shadow">
+              <Card className="h-full">
                 <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-lg">{widget.name}</CardTitle>
-                      <CardDescription>
-                        Created {new Date(widget.createdAt).toLocaleDateString()}
-                      </CardDescription>
-                    </div>
-                    <Badge variant={widget.isActive ? "default" : "secondary"}>
+                  <div className="flex items-center justify-between">
+                    <CardTitle className="text-lg">{widget.name}</CardTitle>
+                    <Badge variant={widget.isActive ? 'default' : 'secondary'}>
                       {widget.isActive ? 'Active' : 'Inactive'}
                     </Badge>
                   </div>
+                  <CardDescription>
+                    Created {new Date(widget.createdAt).toLocaleDateString()}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex space-x-2">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => {
-                        const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
-                        window.open(`${baseUrl}/api/widgets/${widget.id}/embed`, '_blank');
-                      }}
-                    >
-                      <Eye className="h-4 w-4 mr-1" />
-                      Preview
-                    </Button>
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button variant="outline" size="sm">
-                          <Code className="h-4 w-4 mr-1" />
-                          Embed
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-3xl">
-                        <DialogHeader>
-                          <DialogTitle>Embed Code</DialogTitle>
-                          <DialogDescription>
-                            Copy this code and paste it into your website where you want the booking form to appear
-                          </DialogDescription>
-                        </DialogHeader>
-                        <Tabs defaultValue="iframe" className="space-y-4">
-                          <TabsList>
-                            <TabsTrigger value="iframe">iFrame</TabsTrigger>
-                            <TabsTrigger value="responsive">Responsive</TabsTrigger>
-                          </TabsList>
-                          <TabsContent value="iframe" className="space-y-4">
-                            <div className="relative">
-                              <div className="bg-gray-100 p-4 rounded-lg border border-gray-200 max-h-48 overflow-auto">
-                                <pre className="text-sm whitespace-pre-wrap break-all font-mono">
-                                  <code>{getEmbedCode(widget.id)}</code>
-                                </pre>
-                              </div>
-                              <Button
-                                size="sm"
-                                className="absolute top-2 right-2"
-                                onClick={() => copyToClipboard(getEmbedCode(widget.id))}
-                              >
-                                <Copy className="h-4 w-4" />
-                              </Button>
-                            </div>
-                          </TabsContent>
-                          <TabsContent value="responsive" className="space-y-4">
-                            <div className="relative">
-                              <div className="bg-gray-100 p-4 rounded-lg border border-gray-200 max-h-48 overflow-auto">
-                                <pre className="text-sm whitespace-pre-wrap break-all font-mono">
-                                  <code>{`<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-  <iframe 
-    src="${typeof window !== 'undefined' ? window.location.origin : ''}/api/widgets/${widget.id}/embed" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
-    title="Booking Widget">
-  </iframe>
-</div>`}</code>
-                                </pre>
-                              </div>
-                              <Button
-                                size="sm"
-                                className="absolute top-2 right-2"
-                                onClick={() => copyToClipboard(`<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="${typeof window !== 'undefined' ? window.location.origin : ''}/api/widgets/${widget.id}/embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" title="Booking Widget"></iframe></div>`)}
-                              >
-                                <Copy className="h-4 w-4" />
-                              </Button>
-                            </div>
-                          </TabsContent>
-                        </Tabs>
-                      </DialogContent>
-                    </Dialog>
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button variant="outline" size="sm">
-                          <Settings className="h-4 w-4 mr-1" />
-                          Settings
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent>
-                        <DialogHeader>
-                          <DialogTitle>Widget Settings</DialogTitle>
-                          <DialogDescription>
-                            Customize the appearance and behavior of your widget
-                          </DialogDescription>
-                        </DialogHeader>
-                        <div className="space-y-4">
-                          <div className="space-y-2">
-                            <Label>Widget Name</Label>
-                            <Input
-                              value={widget.name}
-                              onChange={(e) => {
-                                const updatedWidget = { ...widget, name: e.target.value };
-                                setWidgets(prev => 
-                                  prev.map(w => w.id === widget.id ? updatedWidget : w)
-                                );
-                              }}
-                              onBlur={() => handleUpdateWidget(widget.id, { name: widget.name })}
-                            />
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <Switch
-                              checked={widget.isActive}
-                              onCheckedChange={(checked) => {
-                                const updatedWidget = { ...widget, isActive: checked };
-                                setWidgets(prev => 
-                                  prev.map(w => w.id === widget.id ? updatedWidget : w)
-                                );
-                                handleUpdateWidget(widget.id, { isActive: checked });
-                              }}
-                            />
-                            <Label>Active</Label>
-                          </div>
-                        </div>
-                      </DialogContent>
-                    </Dialog>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => handleDeleteWidget(widget.id)}
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
+                  <div className="flex items-center space-x-2">
+                    <div 
+                      className="w-4 h-4 rounded-full border" 
+                      style={{ backgroundColor: widget.primaryColor }}
+                    ></div>
+                    <span className="text-sm text-gray-600">
+                      {widget.theme === 'dark' ? 'Dark' : 'Light'} theme
+                    </span>
                   </div>
+                  
+                  <Tabs defaultValue="preview" className="w-full">
+                    <TabsList className="grid w-full grid-cols-2">
+                      <TabsTrigger value="preview">Preview</TabsTrigger>
+                      <TabsTrigger value="embed">Embed Code</TabsTrigger>
+                    </TabsList>
+                    <TabsContent value="preview" className="space-y-2">
+                      <div className="flex space-x-2">
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="flex-1"
+                          onClick={() => window.open(`/api/widgets/${widget.id}/embed`, '_blank')}
+                        >
+                          <Eye className="h-4 w-4 mr-2" />
+                          Preview
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          onClick={() => setSelectedWidget(widget)}
+                        >
+                          <Settings className="h-4 w-4" />
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          onClick={() => handleDeleteWidget(widget.id)}
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    </TabsContent>
+                    <TabsContent value="embed" className="space-y-2">
+                      <div className="bg-gray-50 p-3 rounded-md">
+                        <code className="text-xs text-gray-700 break-all">
+                          {getEmbedCode(widget.id).substring(0, 100)}...
+                        </code>
+                      </div>
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="w-full"
+                        onClick={() => copyToClipboard(getEmbedCode(widget.id))}
+                      >
+                        <Copy className="h-4 w-4 mr-2" />
+                        Copy Embed Code
+                      </Button>
+                    </TabsContent>
+                  </Tabs>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
+      )}
+
+      {/* Widget Settings Dialog */}
+      {selectedWidget && (
+        <Dialog open={!!selectedWidget} onOpenChange={() => setSelectedWidget(null)}>
+          <DialogContent className="max-w-2xl">
+            <DialogHeader>
+              <DialogTitle>Edit Widget: {selectedWidget.name}</DialogTitle>
+              <DialogDescription>
+                Customize your booking widget settings
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label>Widget Name</Label>
+                  <Input
+                    value={selectedWidget.name}
+                    onChange={(e) => setSelectedWidget(prev => prev ? { ...prev, name: e.target.value } : null)}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label>Theme</Label>
+                  <Select 
+                    value={selectedWidget.theme}
+                    onValueChange={(value) => setSelectedWidget(prev => prev ? { ...prev, theme: value } : null)}
+                  >
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="light">Light</SelectItem>
+                      <SelectItem value="dark">Dark</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label>Primary Color</Label>
+                  <Input
+                    type="color"
+                    value={selectedWidget.primaryColor}
+                    onChange={(e) => setSelectedWidget(prev => prev ? { ...prev, primaryColor: e.target.value } : null)}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label>Background Color</Label>
+                  <Input
+                    type="color"
+                    value={selectedWidget.backgroundColor}
+                    onChange={(e) => setSelectedWidget(prev => prev ? { ...prev, backgroundColor: e.target.value } : null)}
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <Switch
+                    checked={selectedWidget.allowGuestBooking}
+                    onCheckedChange={(checked) => setSelectedWidget(prev => prev ? { ...prev, allowGuestBooking: checked } : null)}
+                  />
+                  <Label>Allow Guest Booking</Label>
+                </div>
+                
+                <div className="flex items-center space-x-2">
+                  <Switch
+                    checked={selectedWidget.requirePhone}
+                    onCheckedChange={(checked) => setSelectedWidget(prev => prev ? { ...prev, requirePhone: checked } : null)}
+                  />
+                  <Label>Require Phone Number</Label>
+                </div>
+              </div>
+
+              <div className="flex justify-end space-x-2">
+                <Button variant="outline" onClick={() => setSelectedWidget(null)}>
+                  Cancel
+                </Button>
+                <Button onClick={() => {
+                  if (selectedWidget) {
+                    handleUpdateWidget(selectedWidget.id, {
+                      name: selectedWidget.name,
+                      theme: selectedWidget.theme,
+                      primaryColor: selectedWidget.primaryColor,
+                      backgroundColor: selectedWidget.backgroundColor,
+                      allowGuestBooking: selectedWidget.allowGuestBooking,
+                      requirePhone: selectedWidget.requirePhone,
+                    });
+                    setSelectedWidget(null);
+                  }
+                }}>
+                  Save Changes
+                </Button>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
       )}
     </div>
   );
