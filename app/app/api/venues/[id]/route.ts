@@ -18,7 +18,6 @@ export async function GET(
     const venue = await prisma.venue.findUnique({
       where: { id },
       include: {
-        subscription: true,
         tables: true,
         services: true,
         availability: true,
@@ -88,8 +87,7 @@ export async function PUT(
       where: { id },
       data: venueData,
       include: {
-        subscription: true,
-      },
+        },
     });
 
     return NextResponse.json({ venue });

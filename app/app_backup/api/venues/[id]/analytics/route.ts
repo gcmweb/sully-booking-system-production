@@ -146,7 +146,7 @@ export async function GET(
 
     // Group by hour
     const hourlyData = allBookings.reduce((acc: any, booking) => {
-      const hour = booking.time.split(':')[0];
+      const hour = booking.time!.split(':')[0];
       if (!acc[hour]) {
         acc[hour] = {
           hour: `${hour}:00`,

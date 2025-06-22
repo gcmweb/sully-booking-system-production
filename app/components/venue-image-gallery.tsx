@@ -12,7 +12,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Plus, Edit, Trash2, GripVertical, Image as ImageIcon } from 'lucide-react';
 import { useToast } from "../hooks/use-toast";
 import Image from 'next/image';
-import ImageUpload from './image-upload';
+import { ImageUpload } from "./image-upload";
 
 interface VenueImage {
   id: string;

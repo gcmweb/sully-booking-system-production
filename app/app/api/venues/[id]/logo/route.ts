@@ -74,7 +74,7 @@ export async function DELETE(
     // Update venue to remove logo
     const updatedVenue = await prisma.venue.update({
       where: { id: venueId },
-      data: { logoUrl: null },
+      data: { },
     });
 
     return NextResponse.json({

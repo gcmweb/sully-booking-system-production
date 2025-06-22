@@ -7,7 +7,7 @@ import { Badge } from "./ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Image as ImageIcon, Crown } from 'lucide-react';
 import { useToast } from "../hooks/use-toast";
-import ImageUpload from './image-upload';
+import { ImageUpload } from "./image-upload";
 import VenueImageGallery from './venue-image-gallery';
 
 interface VenueImageManagerProps {

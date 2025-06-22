@@ -17,7 +17,7 @@ export async function checkSubscriptionLimits(venueId: string): Promise<{
     const newSubscription = await prisma.subscription.create({
       data: {
         venueId,
-        plan: SubscriptionPlan.FREE,
+        plan: SubscriptionPlan.STARTER,
         status: SubscriptionStatus.ACTIVE,
         currentPeriodStart: new Date(),
         currentPeriodEnd: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days
@@ -29,12 +29,12 @@ export async function checkSubscriptionLimits(venueId: string): Promise<{
       canCreateBooking: true,
       bookingsUsed: 0,
       bookingsLimit: 50,
-      plan: SubscriptionPlan.FREE,
+      plan: SubscriptionPlan.STARTER,
     };
   }
 
-  const canCreateBooking = subscription.plan === SubscriptionPlan.PAID || 
-    subscription.plan === SubscriptionPlan.PREMIUM ||
+  const canCreateBooking = subscription.plan === SubscriptionPlan.PROFESSIONAL || 
+    subscription.plan === SubscriptionPlan.ENTERPRISE ||
     (subscription.bookingsLimit !== null && subscription.bookingsUsed < subscription.bookingsLimit);
 
   return {
@@ -56,15 +56,15 @@ export async function checkImageUploadPermissions(venueId: string): Promise<{
     where: { venueId },
   });
 
-  const plan = subscription?.plan || SubscriptionPlan.FREE;
+  const plan = subscription?.plan || SubscriptionPlan.STARTER;
 
   // Free tier: Logo + Header image only
   // Premium/Paid tier: Logo + Header + Gallery (up to 20 images)
   const permissions = {
     canUploadLogo: true, // All tiers can upload logo
     canUploadHeader: true, // All tiers can upload header
-    canUploadGallery: plan === SubscriptionPlan.PREMIUM || plan === SubscriptionPlan.PAID,
-    maxGalleryImages: plan === SubscriptionPlan.PREMIUM || plan === SubscriptionPlan.PAID ? 20 : 0,
+    canUploadGallery: plan === SubscriptionPlan.ENTERPRISE || plan === SubscriptionPlan.PROFESSIONAL,
+    maxGalleryImages: plan === SubscriptionPlan.ENTERPRISE || plan === SubscriptionPlan.PROFESSIONAL ? 20 : 0,
     plan,
   };
 
@@ -145,14 +145,14 @@ export async function checkVenueCreationLimits(userId: string): Promise<{
   });
 
   // Determine the highest plan the user has
-  let highestPlan: SubscriptionPlan = SubscriptionPlan.FREE;
+  let highestPlan: SubscriptionPlan = SubscriptionPlan.STARTER;
   for (const venue of userVenues) {
     if (venue.subscription) {
-      if (venue.subscription.plan === SubscriptionPlan.PREMIUM) {
-        highestPlan = SubscriptionPlan.PREMIUM;
+      if (venue.subscription.plan === SubscriptionPlan.ENTERPRISE) {
+        highestPlan = SubscriptionPlan.ENTERPRISE;
         break;
-      } else if (venue.subscription.plan === SubscriptionPlan.PAID && highestPlan === SubscriptionPlan.FREE) {
-        highestPlan = SubscriptionPlan.PAID;
+      } else if (venue.subscription.plan === SubscriptionPlan.PROFESSIONAL && highestPlan === SubscriptionPlan.STARTER) {
+        highestPlan = SubscriptionPlan.PROFESSIONAL;
       }
     }
   }

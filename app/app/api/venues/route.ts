@@ -24,7 +24,6 @@ export async function GET(request: NextRequest) {
               lastName: true,
             },
           },
-          subscription: true,
           _count: {
             select: {
               bookings: true,
@@ -38,7 +37,6 @@ export async function GET(request: NextRequest) {
       venues = await prisma.venue.findMany({
         where: { ownerId: user.id },
         include: {
-          subscription: true,
           _count: {
             select: {
               bookings: true,
@@ -162,7 +160,7 @@ export async function POST(request: NextRequest) {
         ownerId: user.id,
         subscription: {
           create: {
-            plan: SubscriptionPlan.FREE,
+            plan: SubscriptionPlan.STARTER,
             status: SubscriptionStatus.ACTIVE,
             currentPeriodStart: new Date(),
             currentPeriodEnd: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
@@ -171,8 +169,7 @@ export async function POST(request: NextRequest) {
         },
       },
       include: {
-        subscription: true,
-      },
+        },
     });
 
     return NextResponse.json({ 

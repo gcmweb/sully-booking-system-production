@@ -15,17 +15,17 @@ export async function getUserSubscription(userId: string) {
 
     // Find the highest tier subscription
     let highestSubscription = null;
-    let highestPlan: SubscriptionPlan = SubscriptionPlan.FREE;
+    let highestPlan: SubscriptionPlan = SubscriptionPlan.STARTER;
 
     for (const venue of userVenues) {
       if (venue.subscription) {
-        if (venue.subscription.plan === SubscriptionPlan.PREMIUM) {
+        if (venue.subscription.plan === SubscriptionPlan.ENTERPRISE) {
           highestSubscription = venue.subscription;
-          highestPlan = SubscriptionPlan.PREMIUM;
+          highestPlan = SubscriptionPlan.ENTERPRISE;
           break;
-        } else if (venue.subscription.plan === SubscriptionPlan.PAID && highestPlan === SubscriptionPlan.FREE) {
+        } else if (venue.subscription.plan === SubscriptionPlan.PROFESSIONAL && highestPlan === SubscriptionPlan.STARTER) {
           highestSubscription = venue.subscription;
-          highestPlan = SubscriptionPlan.PAID;
+          highestPlan = SubscriptionPlan.PROFESSIONAL;
         }
       }
     }
@@ -89,7 +89,7 @@ export async function createUserSubscription(
       stripeSubscriptionId,
       currentPeriodStart: new Date(),
       currentPeriodEnd: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
-      bookingsLimit: plan === SubscriptionPlan.FREE ? 50 : null,
+      bookingsLimit: plan === SubscriptionPlan.STARTER ? 50 : null,
     },
   });
 
@@ -112,7 +112,7 @@ export async function updateUserSubscriptionPlan(
     data: {
       plan: newPlan,
       stripeSubscriptionId: stripeSubscriptionId || subscription.stripeSubscriptionId,
-      bookingsLimit: newPlan === SubscriptionPlan.FREE ? 50 : null,
+      bookingsLimit: newPlan === SubscriptionPlan.STARTER ? 50 : null,
       updatedAt: new Date(),
     },
   });
@@ -130,7 +130,7 @@ export async function cancelUserSubscription(userId: string) {
   const canceledSubscription = await prisma.subscription.update({
     where: { id: subscription.id },
     data: {
-      status: SubscriptionStatus.CANCELLED,
+      status: SubscriptionStatus.CANCELED,
       updatedAt: new Date(),
     },
   });

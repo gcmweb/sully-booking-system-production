@@ -72,15 +72,13 @@ export async function POST(
       update: {
         openTime: availabilityData.openTime,
         closeTime: availabilityData.closeTime,
-        isOpen: availabilityData.isOpen,
-      },
+        },
       create: {
         venueId: params.id,
         dayOfWeek: availabilityData.dayOfWeek,
         openTime: availabilityData.openTime,
         closeTime: availabilityData.closeTime,
-        isOpen: availabilityData.isOpen,
-      },
+        },
     });
 
     return NextResponse.json({ availability });

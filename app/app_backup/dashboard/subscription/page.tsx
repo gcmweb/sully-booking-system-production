@@ -246,7 +246,7 @@ export default function SubscriptionPage() {
                       <ExternalLink className="h-4 w-4 ml-2" />
                     </Button>
 
-                    {plan !== SubscriptionPlan.FREE && (
+                    {plan !== SubscriptionPlan.STARTER && (
                       <Button
                         onClick={handleCancel}
                         disabled={actionLoading}

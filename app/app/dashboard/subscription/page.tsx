@@ -2,6 +2,20 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+
+interface SubscriptionBannerProps {
+  plan: any;
+  venuesUsed: any;
+  venuesLimit: any;
+  showUpgradeButton?: boolean;
+}
+
+interface PricingPlansProps {
+  currentPlan: any;
+  onUpgrade: (plan: any) => Promise<void>;
+  loading: boolean;
+}
+
 import { Card, CardContent, CardHeader, CardTitle } from "../../../components/ui/card";
 import { Button } from "../../../components/ui/button";
 import { Badge } from "../../../components/ui/badge";
@@ -246,7 +260,7 @@ export default function SubscriptionPage() {
                       <ExternalLink className="h-4 w-4 ml-2" />
                     </Button>
 
-                    {plan !== SubscriptionPlan.FREE && (
+                    {plan !== SubscriptionPlan.STARTER && (
                       <Button
                         onClick={handleCancel}
                         disabled={actionLoading}

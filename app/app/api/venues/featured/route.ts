@@ -31,7 +31,6 @@ export async function GET() {
             website: true,
             cuisine: true,
             venueType: true,
-            logoUrl: true,
             headerImageUrl: true,
             isActive: true,
             featured: true,

@@ -74,7 +74,7 @@ export async function DELETE(
     // Update venue to remove header image
     const updatedVenue = await prisma.venue.update({
       where: { id: venueId },
-      data: { headerImageUrl: null },
+      data: { },
     });
 
     return NextResponse.json({

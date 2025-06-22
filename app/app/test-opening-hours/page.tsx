@@ -2,7 +2,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import OpeningHoursDisplay from "../../components/opening-hours-display";
+import { OpeningHoursDisplay } from "../../components/opening-hours-display";
 
 interface OpeningHour {
   id?: string;

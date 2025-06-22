@@ -162,7 +162,7 @@ export async function POST(request: NextRequest) {
         ownerId: user.id,
         subscription: {
           create: {
-            plan: SubscriptionPlan.FREE,
+            plan: SubscriptionPlan.STARTER,
             status: SubscriptionStatus.ACTIVE,
             currentPeriodStart: new Date(),
             currentPeriodEnd: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),

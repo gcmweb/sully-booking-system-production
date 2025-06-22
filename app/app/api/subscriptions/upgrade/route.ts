@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid plan' }, { status: 400 });
     }
 
-    if (plan === SubscriptionPlan.FREE) {
+    if (plan === SubscriptionPlan.STARTER) {
       return NextResponse.json({ error: 'Cannot upgrade to FREE plan' }, { status: 400 });
     }
 

@@ -57,8 +57,6 @@ export async function GET(request: NextRequest) {
         website: true,
         cuisine: true,
         venueType: true,
-        logoUrl: true,
-        headerImageUrl: true,
         isActive: true,
         capacity: true,
         branding: true,

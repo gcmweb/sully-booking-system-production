@@ -106,7 +106,7 @@ async function handleSubscriptionCreated(subscription: any) {
       return;
     }
 
-    const userId = existingSubscription.venue.ownerId;
+    const userId = existingSubscription.userId;
     const plan = getPlanFromPriceId(subscription.items.data[0].price.id);
 
     await updateUserSubscriptionPlan(userId, plan, subscription.id);
@@ -124,7 +124,7 @@ async function handleSubscriptionUpdated(subscription: any) {
     // Find subscription by Stripe subscription ID
     const existingSubscription = await prisma.subscription.findFirst({
       where: { stripeSubscriptionId: subscription.id },
-      include: { venue: true },
+      include: { },
     });
 
     if (!existingSubscription) {
@@ -132,16 +132,16 @@ async function handleSubscriptionUpdated(subscription: any) {
       return;
     }
 
-    const userId = existingSubscription.venue.ownerId;
+    const userId = existingSubscription.userId;
 
     // Update subscription status based on Stripe status
     let status: SubscriptionStatus = SubscriptionStatus.ACTIVE;
     if (subscription.status === 'canceled') {
-      status = SubscriptionStatus.CANCELLED;
+      status = SubscriptionStatus.CANCELED;
     } else if (subscription.status === 'past_due') {
       status = SubscriptionStatus.PAST_DUE;
     } else if (subscription.status === 'unpaid') {
-      status = SubscriptionStatus.UNPAID;
+      status = SubscriptionStatus.INACTIVE;
     }
 
     await prisma.subscription.update({
@@ -151,8 +151,7 @@ async function handleSubscriptionUpdated(subscription: any) {
         status,
         currentPeriodStart: new Date(subscription.current_period_start * 1000),
         currentPeriodEnd: new Date(subscription.current_period_end * 1000),
-        bookingsLimit: plan === SubscriptionPlan.FREE ? 50 : null,
-      },
+        },
     });
 
     console.log(`Subscription updated for user ${userId}, plan: ${plan}, status: ${status}`);
@@ -166,7 +165,7 @@ async function handleSubscriptionDeleted(subscription: any) {
     // Find subscription by Stripe subscription ID
     const existingSubscription = await prisma.subscription.findFirst({
       where: { stripeSubscriptionId: subscription.id },
-      include: { venue: true },
+      include: { },
     });
 
     if (!existingSubscription) {
@@ -174,15 +173,15 @@ async function handleSubscriptionDeleted(subscription: any) {
       return;
     }
 
-    const userId = existingSubscription.venue.ownerId;
+    const userId = existingSubscription.userId;
 
     // Downgrade to FREE plan
-    await updateUserSubscriptionPlan(userId, SubscriptionPlan.FREE);
+    await updateUserSubscriptionPlan(userId, SubscriptionPlan.STARTER);
 
     await prisma.subscription.update({
       where: { id: existingSubscription.id },
       data: {
-        status: SubscriptionStatus.CANCELLED,
+        status: SubscriptionStatus.CANCELED,
         stripeSubscriptionId: null,
       },
     });
@@ -293,9 +292,9 @@ async function handlePaymentFailed(invoice: any) {
 
 function getPlanFromPriceId(priceId: string): SubscriptionPlan {
   const priceIdMap: Record<string, SubscriptionPlan> = {
-    [process.env.STRIPE_PAID_PRICE_ID || 'price_paid_mock']: SubscriptionPlan.PAID,
-    [process.env.STRIPE_PREMIUM_PRICE_ID || 'price_premium_mock']: SubscriptionPlan.PREMIUM,
+    [process.env.STRIPE_PAID_PRICE_ID || 'price_paid_mock']: SubscriptionPlan.PROFESSIONAL,
+    [process.env.STRIPE_PREMIUM_PRICE_ID || 'price_premium_mock']: SubscriptionPlan.ENTERPRISE,
   };
 
-  return priceIdMap[priceId] || SubscriptionPlan.FREE;
+  return priceIdMap[priceId] || SubscriptionPlan.STARTER;
 }

@@ -92,7 +92,7 @@ export async function GET(
 
     // Group by date
     const trendsByDate = bookingTrends.reduce((acc: any, booking) => {
-      const dateKey = (booking.date || booking.startTime).toISOString().split('T')[0];
+      const dateKey = (booking.date || booking.time).toISOString().split('T')[0];
       if (!acc[dateKey]) {
         acc[dateKey] = {
           date: dateKey,
@@ -146,7 +146,7 @@ export async function GET(
 
     // Group by hour
     const hourlyData = allBookings.reduce((acc: any, booking) => {
-      const hour = (booking.time || booking.startTime.toLocaleTimeString()).split(':')[0];
+      const hour = (booking.time || booking.time.toLocaleTimeString()).split(':')[0];
       if (!acc[hour]) {
         acc[hour] = {
           hour: `${hour}:00`,
@@ -354,7 +354,7 @@ export async function GET(
 
     // Group by day of week
     const dayData = dayBookings.reduce((acc: any, booking) => {
-      const dayOfWeek = (booking.date || booking.startTime).getDay();
+      const dayOfWeek = (booking.date || booking.time).getDay();
       if (!acc[dayOfWeek]) {
         acc[dayOfWeek] = {
           day: dayNames[dayOfWeek],

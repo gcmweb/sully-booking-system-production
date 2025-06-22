@@ -81,7 +81,7 @@ export async function checkAvailability(
 
     for (const booking of conflictingBookings) {
       const bookingStart = new Date(booking.date);
-      const [bookingHours, bookingMinutes] = booking.time.split(':').map(Number);
+      const [bookingHours, bookingMinutes] = booking.time!.split(':').map(Number);
       bookingStart.setHours(bookingHours, bookingMinutes, 0, 0);
       const bookingEnd = new Date(bookingStart);
       bookingEnd.setMinutes(bookingEnd.getMinutes() + booking.duration);
