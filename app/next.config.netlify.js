@@ -4,8 +4,7 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: '.next',
-  // Enable static export for better Netlify compatibility
-  output: 'export',
+  // Remove static export to enable API routes
   trailingSlash: true,
   images: { 
     unoptimized: true 
@@ -19,12 +18,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
-  // Disable server-side features for static export
-  async rewrites() {
-    return []
-  },
-  // Configure for static hosting
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
 };
 
 module.exports = nextConfig;
