@@ -51,7 +51,17 @@ export async function GET(
       );
     }
 
-    return NextResponse.json({ venue });
+    // Map images to expected fields for backward compatibility
+    const headerImage = venue.images.find(img => img.type === 'MAIN');
+    const logoImage = venue.images.find(img => img.type === 'THUMBNAIL');
+
+    const venueWithMappedImages = {
+      ...venue,
+      headerImageUrl: headerImage?.url || null,
+      logoUrl: logoImage?.url || null,
+    };
+
+    return NextResponse.json({ venue: venueWithMappedImages });
   } catch (error) {
     console.error('Error fetching venue:', error);
     return NextResponse.json(

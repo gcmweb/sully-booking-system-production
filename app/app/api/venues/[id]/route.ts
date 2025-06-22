@@ -19,8 +19,8 @@ export async function GET(
       where: { id },
       include: {
         tables: true,
-        services: true,
-        availability: true,
+        venueAvailability: true,
+        images: true,
         _count: {
           select: {
             bookings: true,
@@ -44,7 +44,17 @@ export async function GET(
       );
     }
 
-    return NextResponse.json({ venue });
+    // Map images to expected fields for backward compatibility
+    const headerImage = venue.images.find(img => img.type === 'MAIN' && img.isActive);
+    const logoImage = venue.images.find(img => img.type === 'THUMBNAIL' && img.isActive);
+
+    const venueWithMappedImages = {
+      ...venue,
+      headerImageUrl: headerImage?.url || null,
+      logoUrl: logoImage?.url || null,
+    };
+
+    return NextResponse.json({ venue: venueWithMappedImages });
   } catch (error) {
     console.error('Get venue error:', error);
     return NextResponse.json(

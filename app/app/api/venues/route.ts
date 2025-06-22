@@ -24,6 +24,15 @@ export async function GET(request: NextRequest) {
               lastName: true,
             },
           },
+          images: {
+            where: { isActive: true },
+            select: {
+              id: true,
+              url: true,
+              type: true,
+              isActive: true,
+            },
+          },
           _count: {
             select: {
               bookings: true,
@@ -37,6 +46,15 @@ export async function GET(request: NextRequest) {
       venues = await prisma.venue.findMany({
         where: { ownerId: user.id },
         include: {
+          images: {
+            where: { isActive: true },
+            select: {
+              id: true,
+              url: true,
+              type: true,
+              isActive: true,
+            },
+          },
           _count: {
             select: {
               bookings: true,
@@ -51,9 +69,21 @@ export async function GET(request: NextRequest) {
     // Ensure venues is always an array
     const safeVenues = Array.isArray(venues) ? venues : [];
 
+    // Map images to expected fields for backward compatibility
+    const venuesWithMappedImages = safeVenues.map(venue => {
+      const headerImage = venue.images?.find(img => img.type === 'MAIN' && img.isActive);
+      const logoImage = venue.images?.find(img => img.type === 'THUMBNAIL' && img.isActive);
+      
+      return {
+        ...venue,
+        headerImageUrl: headerImage?.url || null,
+        logoUrl: logoImage?.url || null,
+      };
+    });
+
     return NextResponse.json({ 
       success: true,
-      venues: safeVenues 
+      venues: venuesWithMappedImages 
     });
   } catch (error: any) {
     console.error('Get venues error:', error);
