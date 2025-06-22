@@ -98,7 +98,7 @@ async function handleSubscriptionCreated(subscription: any) {
     // Find user by Stripe customer ID
     const existingSubscription = await prisma.subscription.findFirst({
       where: { stripeCustomerId: customerId },
-      include: { venue: { include: { owner: true } } },
+      include: { venues: { include: { owner: true } } },
     });
 
     if (!existingSubscription) {
