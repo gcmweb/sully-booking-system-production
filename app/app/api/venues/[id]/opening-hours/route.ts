@@ -17,8 +17,7 @@ export async function GET(
     const venue = await prisma.venue.findUnique({
       where: { id: params.id },
       include: {
-        openingHours: {
-          where: { isActive: true },
+        venueOpeningHours: {
           orderBy: [
             { dayOfWeek: 'asc' },
             { openTime: 'asc' }
@@ -46,7 +45,7 @@ export async function GET(
     }
 
     return NextResponse.json({ 
-      openingHours: venue.openingHours 
+      openingHours: venue.venueOpeningHours 
     });
   } catch (error) {
     console.error('Get venue opening hours error:', error);
