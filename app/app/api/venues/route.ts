@@ -194,12 +194,15 @@ export async function POST(request: NextRequest) {
             status: SubscriptionStatus.ACTIVE,
             currentPeriodStart: new Date(),
             currentPeriodEnd: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
-            bookingsLimit: 50,
+            planType: 'starter',
+            amount: 0,
+            userId: user.id,
           },
         },
       },
       include: {
-        },
+        subscription: true,
+      },
     });
 
     return NextResponse.json({ 
