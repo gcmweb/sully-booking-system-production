@@ -118,7 +118,7 @@ export async function POST(request: NextRequest) {
       customerName: bookingData.customerName,
       venueName: venue.name,
       venueAddress: `${venue.address}, ${venue.city}`,
-      venuePhone: venue.phone,
+      venuePhone: venue.phone ?? '',
       date: bookingDate.toDateString(),
       time: bookingData.time,
       partySize: bookingData.partySize,
