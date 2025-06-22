@@ -98,15 +98,20 @@ export const venueOpeningHoursSchema = z.object({
   openingHours: z.array(openingHoursSchema),
 });
 
-// Widget validations
+// Widget validations - Updated to match Prisma schema fields
 export const widgetSchema = z.object({
   name: z.string().min(1, 'Widget name is required'),
-  settings: z.object({
-    theme: z.string().optional(),
-    primaryColor: z.string().optional(),
-    showLogo: z.boolean().optional(),
-    allowedServices: z.array(z.nativeEnum(ServiceType)).optional(),
-  }).optional(),
+  isActive: z.boolean().default(true),
+  theme: z.string().default('default'),
+  primaryColor: z.string().default('#3B82F6'),
+  backgroundColor: z.string().default('#FFFFFF'),
+  textColor: z.string().default('#1F2937'),
+  allowGuestBooking: z.boolean().default(true),
+  requirePhone: z.boolean().default(false),
+  maxAdvanceBooking: z.number().default(30),
+  minAdvanceBooking: z.number().default(1),
+  embedCode: z.string().optional(),
+  customCss: z.string().optional(),
 });
 
 export type LoginInput = z.infer<typeof loginSchema>;
