@@ -1,65 +1,64 @@
+
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
-import { auth } from '@clerk/nextjs/server';
+import { prisma } from "@/lib/db";
+import { requireAuth } from "@/lib/auth";
+import { Role } from '@prisma/client';
+
+export const dynamic = 'force-dynamic';
 
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
-    const { userId } = auth();
-    
-    if (!userId) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
+    const user = await requireAuth();
     const venueId = params.id;
+    const { searchParams } = new URL(request.url);
+    const timeRange = parseInt(searchParams.get('timeRange') || '30');
 
-    // Verify venue ownership
-    const venue = await prisma.venue.findFirst({
-      where: {
-        id: venueId,
-        userId: userId,
+    // Verify venue ownership or admin access
+    const venue = await prisma.venue.findUnique({
+      where: { id: venueId },
+      include: {
+        owner: true,
       },
     });
 
     if (!venue) {
-      return NextResponse.json({ error: 'Venue not found' }, { status: 404 });
+      return NextResponse.json(
+        { error: 'Venue not found' },
+        { status: 404 }
+      );
     }
 
-    // Get date range from query params
-    const url = new URL(request.url);
-    const startDate = url.searchParams.get('startDate');
-    const endDate = url.searchParams.get('endDate');
+    // Check permissions
+    if (user.role !== Role.SUPER_ADMIN && venue.ownerId !== user.id) {
+      return NextResponse.json(
+        { error: 'Access denied' },
+        { status: 403 }
+      );
+    }
 
-    // Default to last 30 days if no date range provided
-    const defaultEndDate = new Date();
-    const defaultStartDate = new Date();
-    defaultStartDate.setDate(defaultStartDate.getDate() - 30);
+    // Calculate date range
+    const endDate = new Date();
+    const startDate = new Date();
+    startDate.setDate(startDate.getDate() - timeRange);
 
-    const dateFilter = {
-      gte: startDate ? new Date(startDate) : defaultStartDate,
-      lte: endDate ? new Date(endDate) : defaultEndDate,
-    };
-
-    // Base where clause
+    // Build where clause for venue-specific data
     const whereClause = {
       venueId: venueId,
-      createdAt: dateFilter,
+      createdAt: {
+        gte: startDate,
+        lte: endDate,
+      },
     };
 
-    // Get total bookings
-    const totalBookings = await prisma.booking.count({
-      where: whereClause,
-    });
-
-    // Get total revenue from completed payments
+    // Get basic metrics
+    const totalBookings = await prisma.booking.count({ where: whereClause });
+    
     const revenueResult = await prisma.payment.aggregate({
       where: {
-        booking: {
-          venueId: venueId,
-          createdAt: dateFilter,
-        },
+        booking: whereClause,
         status: 'COMPLETED',
       },
       _sum: {
@@ -68,7 +67,6 @@ export async function GET(
     });
     const totalRevenue = Number(revenueResult._sum.amount || 0);
 
-    // Get average party size
     const partySizeResult = await prisma.booking.aggregate({
       where: whereClause,
       _avg: {
@@ -94,7 +92,7 @@ export async function GET(
 
     // Group by date
     const trendsByDate = bookingTrends.reduce((acc: any, booking) => {
-      const dateKey = (booking.date ?? booking.startTime).toISOString().split('T')[0];
+      const dateKey = (booking.date || booking.startTime).toISOString().split('T')[0];
       if (!acc[dateKey]) {
         acc[dateKey] = {
           date: dateKey,
@@ -119,29 +117,29 @@ export async function GET(
     }));
 
     // Get service type breakdown
-    const serviceTypeBreakdown = await prisma.booking.groupBy({
+    const serviceTypeData = await prisma.booking.groupBy({
       by: ['serviceType'],
       where: whereClause,
       _count: {
-        id: true,
+        serviceType: true,
       },
       _sum: {
-        totalAmount: true,
+        partySize: true,
       },
     });
 
-    const formattedServiceTypes = serviceTypeBreakdown.map((item) => ({
-      serviceType: item.serviceType || 'Unknown',
-      bookings: item._count.id,
-      revenue: Number(item._sum.totalAmount || 0),
+    const serviceTypeBreakdown = serviceTypeData.map(item => ({
+      type: item.serviceType,
+      count: item._count.serviceType,
+      totalGuests: item._sum.partySize || 0,
+      percentage: (item._count.serviceType / totalBookings) * 100,
     }));
 
-    // Get peak hours analysis
+    // Get peak hours - using Prisma aggregation
     const allBookings = await prisma.booking.findMany({
       where: whereClause,
       select: {
         startTime: true,
-        time: true,
         partySize: true,
       },
     });
@@ -169,111 +167,133 @@ export async function GET(
         bookings: hour.bookings,
         avgPartySize: hour.count > 0 ? hour.totalPartySize / hour.count : 0,
       }))
-      .sort((a: any, b: any) => b.bookings - a.bookings)
-      .slice(0, 5);
-
-    // Get customer insights
-    const customerInsights = await prisma.booking.groupBy({
-      by: ['customerEmail'],
-      where: whereClause,
-      _count: {
-        id: true,
-      },
-      _sum: {
-        totalAmount: true,
-      },
-      orderBy: {
-        _count: {
-          id: 'desc',
-        },
-      },
-      take: 10,
-    });
-
-    const topCustomers = customerInsights.map((customer) => ({
-      email: customer.customerEmail,
-      bookings: customer._count.id,
-      totalSpent: Number(customer._sum.totalAmount || 0),
-    }));
+      .sort((a: any, b: any) => b.bookings - a.bookings);
 
     // Get booking status breakdown
-    const statusBreakdown = await prisma.booking.groupBy({
+    const statusData = await prisma.booking.groupBy({
       by: ['status'],
       where: whereClause,
       _count: {
-        id: true,
+        status: true,
       },
     });
 
-    const formattedStatusBreakdown = statusBreakdown.map((status) => ({
-      status: status.status,
-      count: status._count.id,
+    const statusBreakdown = statusData.map(item => ({
+      status: item.status,
+      count: item._count.status,
+      percentage: (item._count.status / totalBookings) * 100,
     }));
 
-    // Get conversion rate (completed vs total bookings)
-    const completedBookings = await prisma.booking.count({
+    // Get table utilization - using Prisma aggregation
+    const tables = await prisma.table.findMany({
       where: {
-        ...whereClause,
-        status: 'CONFIRMED',
+        venueId: venueId,
       },
-    });
-
-    const conversionRate = totalBookings > 0 ? (completedBookings / totalBookings) * 100 : 0;
-
-    // Get average booking value
-    const avgBookingValue = totalBookings > 0 ? totalRevenue / totalBookings : 0;
-
-    // Get repeat customer rate
-    const repeatCustomers = await prisma.booking.groupBy({
-      by: ['customerEmail'],
-      where: whereClause,
-      having: {
-        customerEmail: {
-          _count: {
-            gt: 1,
+      include: {
+        bookings: {
+          where: {
+            createdAt: {
+              gte: startDate,
+              lte: endDate,
+            },
           },
         },
       },
-      _count: {
-        customerEmail: true,
-      },
     });
 
-    const uniqueCustomers = await prisma.booking.groupBy({
-      by: ['customerEmail'],
+    const tableUtilization = tables.map(table => {
+      const bookings = table.bookings.length;
+      const avgPartySize = bookings > 0 
+        ? table.bookings.reduce((sum, booking) => sum + (booking.partySize || 0), 0) / bookings 
+        : 0;
+      const utilizationRate = table.capacity > 0 ? (avgPartySize / table.capacity) * 100 : 0;
+      
+      return {
+        tableName: table.name,
+        capacity: table.capacity,
+        bookings,
+        avgPartySize,
+        utilizationRate,
+      };
+    }).sort((a, b) => b.bookings - a.bookings);
+
+    // Get customer insights - using Prisma aggregation
+    const customerBookings = await prisma.booking.findMany({
       where: whereClause,
-      _count: {
+      select: {
         customerEmail: true,
+        customerName: true,
+        partySize: true,
+        createdAt: true,
       },
     });
 
-    const repeatCustomerRate = uniqueCustomers.length > 0 
-      ? (repeatCustomers.length / uniqueCustomers.length) * 100 
-      : 0;
+    // Group by customer email
+    const customerData = customerBookings.reduce((acc: any, booking) => {
+      const email = booking.customerEmail;
+      if (!acc[email]) {
+        acc[email] = {
+          email,
+          name: booking.customerName,
+          totalBookings: 0,
+          totalGuests: 0,
+          lastBooking: booking.createdAt,
+        };
+      }
+      acc[email].totalBookings += 1;
+      acc[email].totalGuests += booking.partySize || 0;
+      if (booking.createdAt > acc[email].lastBooking) {
+        acc[email].lastBooking = booking.createdAt;
+      }
+      return acc;
+    }, {});
 
-    // Get monthly comparison (current vs previous period)
-    const previousPeriodStart = new Date(dateFilter.gte);
-    const previousPeriodEnd = new Date(dateFilter.gte);
-    const daysDiff = Math.ceil((dateFilter.lte.getTime() - dateFilter.gte.getTime()) / (1000 * 60 * 60 * 24));
-    previousPeriodStart.setDate(previousPeriodStart.getDate() - daysDiff);
+    const customerInsights = Object.values(customerData)
+      .filter((customer: any) => customer.totalBookings > 1)
+      .map((customer: any) => ({
+        email: customer.email,
+        name: customer.name,
+        totalBookings: customer.totalBookings,
+        totalGuests: customer.totalGuests,
+        avgPartySize: customer.totalGuests / customer.totalBookings,
+        lastBooking: customer.lastBooking.toLocaleDateString(),
+      }))
+      .sort((a: any, b: any) => b.totalBookings - a.totalBookings)
+      .slice(0, 10);
 
-    const previousPeriodBookings = await prisma.booking.count({
+    // Get monthly comparison
+    const currentMonthStart = new Date();
+    currentMonthStart.setDate(1);
+    const previousMonthStart = new Date(currentMonthStart);
+    previousMonthStart.setMonth(previousMonthStart.getMonth() - 1);
+    const previousMonthEnd = new Date(currentMonthStart);
+    previousMonthEnd.setDate(previousMonthEnd.getDate() - 1);
+
+    const currentMonthBookings = await prisma.booking.count({
       where: {
         venueId: venueId,
         createdAt: {
-          gte: previousPeriodStart,
-          lte: previousPeriodEnd,
+          gte: currentMonthStart,
         },
       },
     });
 
-    const previousPeriodRevenue = await prisma.payment.aggregate({
+    const previousMonthBookings = await prisma.booking.count({
+      where: {
+        venueId: venueId,
+        createdAt: {
+          gte: previousMonthStart,
+          lte: previousMonthEnd,
+        },
+      },
+    });
+
+    const currentMonthRevenue = await prisma.payment.aggregate({
       where: {
         booking: {
           venueId: venueId,
           createdAt: {
-            gte: previousPeriodStart,
-            lte: previousPeriodEnd,
+            gte: currentMonthStart,
           },
         },
         status: 'COMPLETED',
@@ -283,29 +303,59 @@ export async function GET(
       },
     });
 
-    const bookingGrowth = previousPeriodBookings > 0 
-      ? ((totalBookings - previousPeriodBookings) / previousPeriodBookings) * 100 
+    const previousMonthRevenue = await prisma.payment.aggregate({
+      where: {
+        booking: {
+          venueId: venueId,
+          createdAt: {
+            gte: previousMonthStart,
+            lte: previousMonthEnd,
+          },
+        },
+        status: 'COMPLETED',
+      },
+      _sum: {
+        amount: true,
+      },
+    });
+
+    const bookingGrowth = previousMonthBookings > 0 
+      ? ((currentMonthBookings - previousMonthBookings) / previousMonthBookings) * 100 
       : 0;
 
-    const revenueGrowth = Number(previousPeriodRevenue._sum.amount || 0) > 0 
-      ? ((totalRevenue - Number(previousPeriodRevenue._sum.amount || 0)) / Number(previousPeriodRevenue._sum.amount || 0)) * 100 
+    const revenueGrowth = Number(previousMonthRevenue._sum.amount || 0) > 0
+      ? ((Number(currentMonthRevenue._sum.amount || 0) - Number(previousMonthRevenue._sum.amount || 0)) / Number(previousMonthRevenue._sum.amount || 0)) * 100
       : 0;
 
-    // Get day of week analysis
+    const monthlyComparison = {
+      currentMonth: {
+        bookings: currentMonthBookings,
+        revenue: Number(currentMonthRevenue._sum.amount || 0),
+      },
+      previousMonth: {
+        bookings: previousMonthBookings,
+        revenue: Number(previousMonthRevenue._sum.amount || 0),
+      },
+      growth: {
+        bookings: Math.round(bookingGrowth),
+        revenue: Math.round(revenueGrowth),
+      },
+    };
+
+    // Get busiest days of week - using Prisma aggregation
     const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const dayBookings = await prisma.booking.findMany({
       where: whereClause,
       select: {
         date: true,
         startTime: true,
-        time: true,
         partySize: true,
       },
     });
 
     // Group by day of week
     const dayData = dayBookings.reduce((acc: any, booking) => {
-      const dayOfWeek = (booking.date ?? booking.startTime).getDay();
+      const dayOfWeek = (booking.date || booking.startTime).getDay();
       if (!acc[dayOfWeek]) {
         acc[dayOfWeek] = {
           day: dayNames[dayOfWeek],
@@ -320,46 +370,41 @@ export async function GET(
       return acc;
     }, {});
 
-    const dayOfWeekAnalysis = Object.values(dayData).map((day: any) => ({
-      day: day.day,
-      bookings: day.bookings,
-      avgPartySize: day.count > 0 ? day.totalPartySize / day.count : 0,
-    }));
-
-    // Format trends data for chart
-    const chartData = formattedTrends.map((trend) => ({
-      date: new Date(trend.date).toLocaleDateString(),
-      bookings: trend.bookings,
-      revenue: trend.revenue,
-      avgPartySize: Number(trend.avgPartySize.toFixed(1)),
-    }));
+    const busiestDaysFormatted = Object.values(dayData)
+      .map((day: any) => ({
+        day: day.day,
+        bookings: day.bookings,
+        avgPartySize: day.count > 0 ? day.totalPartySize / day.count : 0,
+      }))
+      .sort((a: any, b: any) => b.bookings - a.bookings);
 
     return NextResponse.json({
-      summary: {
-        totalBookings,
-        totalRevenue,
-        averagePartySize: Number(averagePartySize.toFixed(1)),
-        conversionRate: Number(conversionRate.toFixed(1)),
-        avgBookingValue: Number(avgBookingValue.toFixed(2)),
-        repeatCustomerRate: Number(repeatCustomerRate.toFixed(1)),
-        bookingGrowth: Number(bookingGrowth.toFixed(1)),
-        revenueGrowth: Number(revenueGrowth.toFixed(1)),
+      venue: {
+        id: venue.id,
+        name: venue.name,
+        venueType: venue.venueType,
       },
-      trends: chartData,
-      serviceTypes: formattedServiceTypes,
+      totalBookings,
+      totalRevenue,
+      averagePartySize,
+      bookingTrends: formattedTrends.map(trend => ({
+        date: new Date(trend.date).toLocaleDateString(),
+        bookings: trend.bookings,
+        revenue: trend.revenue,
+        avgPartySize: trend.avgPartySize,
+      })),
+      serviceTypeBreakdown,
+      statusBreakdown,
       peakHours,
-      topCustomers,
-      statusBreakdown: formattedStatusBreakdown,
-      dayOfWeekAnalysis,
-      dateRange: {
-        start: dateFilter.gte.toISOString(),
-        end: dateFilter.lte.toISOString(),
-      },
+      tableUtilization,
+      customerInsights,
+      busiestDays: busiestDaysFormatted,
+      monthlyComparison,
     });
   } catch (error) {
-    console.error('Analytics API Error:', error);
+    console.error('Venue analytics error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch analytics data' },
+      { error: 'Failed to fetch venue analytics' },
       { status: 500 }
     );
   }
