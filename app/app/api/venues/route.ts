@@ -4,15 +4,68 @@ import { prisma } from "../../../lib/db";
 import { requireAuth } from "../../../lib/auth";
 import { venueSchema } from "../../../lib/validations";
 import { checkVenueCreationLimits } from "../../../lib/subscription";
-import { Role, SubscriptionPlan, SubscriptionStatus } from '@prisma/client';
+import { Role, SubscriptionPlan, SubscriptionStatus, VenueImageType } from '@prisma/client';
 
 export const dynamic = 'force-dynamic';
+
+// Type definitions for better type safety
+interface VenueWithImages {
+  id: string;
+  name: string;
+  description: string | null;
+  address: string;
+  city: string;
+  state: string;
+  zipCode: string;
+  postcode: string | null;
+  country: string;
+  phone: string | null;
+  email: string | null;
+  website: string | null;
+  capacity: number | null;
+  pricePerHour: number | null;
+  currency: string;
+  featured: boolean;
+  cuisine: string | null;
+  venueType: string | null;
+  amenities: string[];
+  isActive: boolean;
+  openingHours: any;
+  latitude: number | null;
+  longitude: number | null;
+  slug: string | null;
+  metaTitle: string | null;
+  metaDescription: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+  ownerId: string;
+  subscriptionId: string | null;
+  images: {
+    id: string;
+    url: string;
+    type: VenueImageType;
+    isActive: boolean;
+  }[];
+  _count: {
+    bookings: number;
+    tables: number;
+  };
+  owner?: {
+    id: string;
+    email: string;
+    firstName: string;
+    lastName: string;
+  };
+  headerImageUrl?: string | null;
+  logoUrl?: string | null;
+}
 
 export async function GET(request: NextRequest) {
   try {
     const user = await requireAuth();
 
-    let venues;
+    let venues: VenueWithImages[];
+    
     if (user.role === Role.SUPER_ADMIN) {
       venues = await prisma.venue.findMany({
         include: {
@@ -41,7 +94,7 @@ export async function GET(request: NextRequest) {
           },
         },
         orderBy: { createdAt: 'desc' },
-      });
+      }) as VenueWithImages[];
     } else {
       venues = await prisma.venue.findMany({
         where: { ownerId: user.id },
@@ -63,7 +116,7 @@ export async function GET(request: NextRequest) {
           },
         },
         orderBy: { createdAt: 'desc' },
-      });
+      }) as VenueWithImages[];
     }
 
     // Ensure venues is always an array
@@ -71,8 +124,8 @@ export async function GET(request: NextRequest) {
 
     // Map images to expected fields for backward compatibility
     const venuesWithMappedImages = safeVenues.map(venue => {
-      const headerImage = venue.images?.find(img => img.type === 'MAIN' && img.isActive);
-      const logoImage = venue.images?.find(img => img.type === 'THUMBNAIL' && img.isActive);
+      const headerImage = venue.images?.find(img => img.type === VenueImageType.MAIN && img.isActive);
+      const logoImage = venue.images?.find(img => img.type === VenueImageType.THUMBNAIL && img.isActive);
       
       return {
         ...venue,
@@ -182,26 +235,44 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create venue with subscription
+    // First, create the subscription separately
+    const subscription = await prisma.subscription.create({
+      data: {
+        plan: SubscriptionPlan.STARTER,
+        status: SubscriptionStatus.ACTIVE.toString(), // Convert enum to string
+        currentPeriodStart: new Date(),
+        currentPeriodEnd: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
+        planType: 'starter',
+        amount: 0,
+        userId: user.id,
+      },
+    });
+
+    // Then create the venue with the subscription ID
     const venue = await prisma.venue.create({
       data: {
         ...venueData,
         slug,
         ownerId: user.id,
-        subscription: {
-          create: {
-            plan: SubscriptionPlan.STARTER,
-            status: SubscriptionStatus.ACTIVE,
-            currentPeriodStart: new Date(),
-            currentPeriodEnd: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
-            planType: 'starter',
-            amount: 0,
-            userId: user.id,
-          },
-        },
+        subscriptionId: subscription.id, // Link to the created subscription
       },
       include: {
         subscription: true,
+        images: {
+          where: { isActive: true },
+          select: {
+            id: true,
+            url: true,
+            type: true,
+            isActive: true,
+          },
+        },
+        _count: {
+          select: {
+            bookings: true,
+            tables: true,
+          },
+        },
       },
     });
 
