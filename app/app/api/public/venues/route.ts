@@ -59,7 +59,6 @@ export async function GET(request: NextRequest) {
         venueType: true,
         isActive: true,
         capacity: true,
-        branding: true,
         images: {
           select: {
             id: true,
