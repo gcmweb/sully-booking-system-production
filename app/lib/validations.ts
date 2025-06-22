@@ -48,6 +48,7 @@ export const bookingSchema = z.object({
 // Table validations
 export const tableSchema = z.object({
   name: z.string().min(1, 'Table name is required'),
+  number: z.string().min(1, 'Table number is required'),
   capacity: z.number().min(1, 'Capacity must be at least 1'),
   description: z.string().optional(),
 });
