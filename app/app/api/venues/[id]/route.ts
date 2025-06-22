@@ -19,7 +19,7 @@ export async function GET(
       where: { id },
       include: {
         tables: true,
-        availability: true,
+        venueAvailability: true,
         _count: {
           select: {
             bookings: true,
