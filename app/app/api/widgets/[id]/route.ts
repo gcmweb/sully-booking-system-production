@@ -53,7 +53,7 @@ export async function PUT(
 ) {
   try {
     const user = await requireAuth();
-    const { name, settings } = await request.json();
+    const { name, settings, ...otherFields } = await request.json();
 
     // Get widget with venue info to check ownership
     const widget = await prisma.bookingWidget.findUnique({
@@ -82,12 +82,47 @@ export async function PUT(
       );
     }
 
+    // Prepare update data by mapping settings to individual fields
+    const updateData: any = {};
+    
+    if (name !== undefined) {
+      updateData.name = name;
+    }
+
+    // Map settings object to individual schema fields
+    if (settings) {
+      if (settings.theme !== undefined) {
+        updateData.theme = settings.theme;
+      }
+      if (settings.primaryColor !== undefined) {
+        updateData.primaryColor = settings.primaryColor;
+      }
+      if (settings.backgroundColor !== undefined) {
+        updateData.backgroundColor = settings.backgroundColor;
+      }
+      if (settings.textColor !== undefined) {
+        updateData.textColor = settings.textColor;
+      }
+      if (settings.allowGuestBooking !== undefined) {
+        updateData.allowGuestBooking = settings.allowGuestBooking;
+      }
+      if (settings.requirePhone !== undefined) {
+        updateData.requirePhone = settings.requirePhone;
+      }
+      if (settings.maxAdvanceBooking !== undefined) {
+        updateData.maxAdvanceBooking = settings.maxAdvanceBooking;
+      }
+      if (settings.minAdvanceBooking !== undefined) {
+        updateData.minAdvanceBooking = settings.minAdvanceBooking;
+      }
+    }
+
+    // Include any other direct field updates
+    Object.assign(updateData, otherFields);
+
     const updatedWidget = await prisma.bookingWidget.update({
       where: { id: params.id },
-      data: {
-        name,
-        settings,
-      },
+      data: updateData,
     });
 
     return NextResponse.json({ widget: updatedWidget });
