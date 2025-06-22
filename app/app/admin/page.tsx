@@ -114,7 +114,7 @@ export default function AdminPage() {
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-sm text-gray-600">
-                Welcome, {user.firstName}!
+                Welcome, {user.firstName ?? ""}!
               </span>
               <Button 
                 variant="outline" 
@@ -361,7 +361,7 @@ export default function AdminPage() {
                     {recentUsers.map((user) => (
                       <div key={user.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                         <div>
-                          <p className="font-medium text-sm">{user.firstName} {user.lastName}</p>
+                          <p className="font-medium text-sm">{user.firstName ?? ""} {user.lastName ?? ""}</p>
                           <p className="text-xs text-gray-600">{user.email}</p>
                         </div>
                         <div className="text-right">
