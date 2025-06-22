@@ -19,7 +19,6 @@ export async function GET(
       where: { id },
       include: {
         tables: true,
-        services: true,
         availability: true,
         _count: {
           select: {
