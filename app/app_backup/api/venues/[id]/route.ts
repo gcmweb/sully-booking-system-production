@@ -20,7 +20,6 @@ export async function GET(
       include: {
         subscription: true,
         tables: true,
-        services: true,
         availability: true,
         _count: {
           select: {
