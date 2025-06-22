@@ -16,19 +16,32 @@ export const registerSchema = z.object({
   phone: z.string().optional(),
 });
 
-// Venue validations
+// Venue validations - FIXED: Added all required fields from Prisma schema
 export const venueSchema = z.object({
   name: z.string().min(1, 'Venue name is required'),
   description: z.string().optional(),
   address: z.string().min(1, 'Address is required'),
   city: z.string().min(1, 'City is required'),
-  postcode: z.string().min(1, 'Postcode is required'),
-  phone: z.string().min(1, 'Phone is required'),
-  email: z.string().email('Invalid email address'),
+  state: z.string().min(1, 'State is required'), // ADDED: Required by Prisma
+  zipCode: z.string().min(1, 'ZIP code is required'), // ADDED: Required by Prisma
+  postcode: z.string().optional(), // Made optional since zipCode is the main postal field
+  country: z.string().default('US'), // Added with default
+  phone: z.string().optional(), // Made optional to match Prisma schema
+  email: z.string().email('Invalid email address').optional(), // Made optional to match Prisma
   website: z.string().url().optional().or(z.literal('')),
   cuisine: z.string().optional(),
-  venueType: z.nativeEnum(VenueType),
-  capacity: z.number().min(1, 'Capacity must be at least 1'),
+  venueType: z.nativeEnum(VenueType).optional(), // Made optional to match Prisma
+  capacity: z.number().min(1, 'Capacity must be at least 1').optional(), // Made optional to match Prisma
+  pricePerHour: z.number().min(0, 'Price per hour must be positive').optional(),
+  currency: z.string().default('USD'),
+  featured: z.boolean().default(false),
+  amenities: z.array(z.string()).default([]), // ADDED: Required by Prisma as String[]
+  isActive: z.boolean().default(true),
+  latitude: z.number().optional(),
+  longitude: z.number().optional(),
+  slug: z.string().optional(),
+  metaTitle: z.string().optional(),
+  metaDescription: z.string().optional(),
 });
 
 // Booking validations

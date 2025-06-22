@@ -214,8 +214,21 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    // Validate request body
-    const venueData = venueSchema.parse(body);
+    // FIXED: Ensure all required fields have defaults if not provided
+    const venueDataWithDefaults = {
+      ...body,
+      // Ensure required fields have sensible defaults
+      state: body.state || 'Unknown',
+      zipCode: body.zipCode || '00000',
+      amenities: Array.isArray(body.amenities) ? body.amenities : [],
+      country: body.country || 'US',
+      currency: body.currency || 'USD',
+      featured: body.featured || false,
+      isActive: body.isActive !== undefined ? body.isActive : true,
+    };
+    
+    // Validate request body with comprehensive schema
+    const venueData = venueSchema.parse(venueDataWithDefaults);
 
     // Generate slug from name
     const slug = venueData.name
@@ -248,12 +261,37 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    // Then create the venue with the subscription ID
+    // FIXED: Create venue with ALL required fields from Prisma schema
     const venue = await prisma.venue.create({
       data: {
-        ...venueData,
+        // Core required fields
+        name: venueData.name,
+        address: venueData.address,
+        city: venueData.city,
+        state: venueData.state, // FIXED: Now included
+        zipCode: venueData.zipCode, // FIXED: Now included
+        amenities: venueData.amenities, // FIXED: Now included
+        ownerId: user.id, // Required relation
+        
+        // Optional fields with defaults
+        description: venueData.description || null,
+        postcode: venueData.postcode || null,
+        country: venueData.country,
+        phone: venueData.phone || null,
+        email: venueData.email || null,
+        website: venueData.website || null,
+        capacity: venueData.capacity || null,
+        pricePerHour: venueData.pricePerHour || null,
+        currency: venueData.currency,
+        featured: venueData.featured,
+        cuisine: venueData.cuisine || null,
+        venueType: venueData.venueType || null,
+        isActive: venueData.isActive,
+        latitude: venueData.latitude || null,
+        longitude: venueData.longitude || null,
         slug,
-        ownerId: user.id,
+        metaTitle: venueData.metaTitle || null,
+        metaDescription: venueData.metaDescription || null,
         subscriptionId: subscription.id, // Link to the created subscription
       },
       include: {
