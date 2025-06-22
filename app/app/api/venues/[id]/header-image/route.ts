@@ -25,6 +25,7 @@ export async function PUT(
     // Check if venue exists
     const venue = await prisma.venue.findUnique({
       where: { id: venueId },
+      include: { images: true }
     });
 
     if (!venue) {
@@ -44,15 +45,35 @@ export async function PUT(
       );
     }
 
-    // Update venue header image
-    const updatedVenue = await prisma.venue.update({
+    // Remove existing header/main image if it exists
+    await prisma.venueImage.deleteMany({
+      where: { 
+        venueId: venueId,
+        type: 'MAIN'
+      }
+    });
+
+    // Create new header image
+    const headerImage = await prisma.venueImage.create({
+      data: {
+        url: headerImageUrl,
+        type: 'MAIN',
+        isPrimary: true,
+        venueId: venueId,
+        alt: `${venue.name} header image`
+      }
+    });
+
+    // Get updated venue with images
+    const updatedVenue = await prisma.venue.findUnique({
       where: { id: venueId },
-      data: { headerImageUrl },
+      include: { images: true }
     });
 
     return NextResponse.json({
       success: true,
       venue: updatedVenue,
+      headerImage: headerImage
     });
   } catch (error) {
     console.error('Error updating venue header image:', error);
@@ -71,10 +92,18 @@ export async function DELETE(
   try {
     const venueId = params.id;
 
-    // Update venue to remove header image
-    const updatedVenue = await prisma.venue.update({
+    // Remove header/main image
+    await prisma.venueImage.deleteMany({
+      where: { 
+        venueId: venueId,
+        type: 'MAIN'
+      }
+    });
+
+    // Get updated venue with images
+    const updatedVenue = await prisma.venue.findUnique({
       where: { id: venueId },
-      data: { },
+      include: { images: true }
     });
 
     return NextResponse.json({
