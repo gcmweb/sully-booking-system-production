@@ -56,10 +56,10 @@ export async function GET(
       );
     }
 
-    const settings = widget.settings as any || {};
-    const theme = settings.theme || 'light';
-    const primaryColor = settings.primaryColor || '#3b82f6';
-    const showLogo = settings.showLogo !== false;
+    // Fix: Access widget properties directly instead of widget.settings
+    const theme = widget.theme === 'default' ? 'light' : widget.theme;
+    const primaryColor = widget.primaryColor || '#3b82f6';
+    const showLogo = true; // Default to true since there's no showLogo property in the schema
 
     const html = `
     <!DOCTYPE html>
@@ -291,8 +291,8 @@ export async function GET(
           </div>
           
           <div class="form-group">
-            <label class="form-label" for="customerPhone">Phone Number *</label>
-            <input class="form-input" type="tel" id="customerPhone" name="customerPhone" required>
+            <label class="form-label" for="customerPhone">Phone Number ${widget.requirePhone ? '*' : ''}</label>
+            <input class="form-input" type="tel" id="customerPhone" name="customerPhone" ${widget.requirePhone ? 'required' : ''}>
           </div>
           
           <div class="form-row-3">
