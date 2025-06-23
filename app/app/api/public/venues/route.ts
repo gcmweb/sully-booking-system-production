@@ -59,13 +59,12 @@ export async function GET(request: NextRequest) {
         venueType: true,
         isActive: true,
         capacity: true,
+        branding: true,
         images: {
-          where: { isActive: true },
           select: {
             id: true,
             url: true,
             alt: true,
-            type: true,
           },
         },
         _count: {
@@ -94,21 +93,9 @@ export async function GET(request: NextRequest) {
       .filter(city => city && city.trim() !== '')
       .sort();
 
-    // Map images to expected fields for backward compatibility
-    const venuesWithMappedImages = (venues || []).map(venue => {
-      const headerImage = venue.images?.find(img => img.type === 'MAIN');
-      const logoImage = venue.images?.find(img => img.type === 'THUMBNAIL');
-      
-      return {
-        ...venue,
-        headerImageUrl: headerImage?.url || null,
-        logoUrl: logoImage?.url || null,
-      };
-    });
-
     return NextResponse.json({
       success: true,
-      venues: venuesWithMappedImages,
+      venues: venues || [],
       cities: cities || [],
       pagination: {
         page,
