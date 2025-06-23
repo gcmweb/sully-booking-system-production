@@ -16,7 +16,7 @@ const sizeClasses = {
   xl: 'h-12 w-12'
 };
 
-export default function LoadingSpinner({ 
+function LoadingSpinner({ 
   size = 'md', 
   className, 
   text,
@@ -88,3 +88,8 @@ export function LoadingButton() {
     </div>
   );
 }
+
+// Named export for compatibility
+export { LoadingSpinner };
+// Default export
+export default LoadingSpinner;

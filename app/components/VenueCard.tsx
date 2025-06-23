@@ -25,7 +25,7 @@ interface VenueCardProps {
   onBook?: (venueId: string) => void;
 }
 
-export default function VenueCard({ venue, onBook }: VenueCardProps) {
+function VenueCard({ venue, onBook }: VenueCardProps) {
   return (
     <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
       <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100">
@@ -88,3 +88,8 @@ export default function VenueCard({ venue, onBook }: VenueCardProps) {
     </Card>
   );
 }
+
+// Named export for compatibility
+export { VenueCard };
+// Default export
+export default VenueCard;
