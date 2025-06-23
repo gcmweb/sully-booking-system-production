@@ -4,8 +4,6 @@ import jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
 import { NextRequest } from 'next/server';
 import { prisma } from './db';
-import { Role } from '@prisma/client';
-
 const JWT_SECRET = process.env.JWT_SECRET || 'sully-booking-system-secret-key';
 const JWT_EXPIRES_IN = '7d';
 
@@ -14,7 +12,7 @@ export interface AuthUser {
   email: string;
   firstName: string;
   lastName: string;
-  role: Role;
+  role: string;
   isActive: boolean;
 }
 
@@ -101,7 +99,7 @@ export async function getSession(): Promise<AuthUser | null> {
   }
 }
 
-export async function requireAuth(allowedRoles?: Role[]): Promise<AuthUser> {
+export async function requireAuth(allowedRoles?: string[]): Promise<AuthUser> {
   const user = await getSession();
   
   if (!user) {
@@ -192,3 +190,26 @@ export async function getUserFromToken(request: NextRequest): Promise<AuthUser |
     return null;
   }
 }
+
+// Export authOptions for NextAuth compatibility
+export const authOptions = {
+  providers: [],
+  callbacks: {
+    session: async ({ session, token }: any) => {
+      if (token?.sub) {
+        session.user.id = token.sub;
+      }
+      return session;
+    },
+    jwt: async ({ token, user }: any) => {
+      if (user) {
+        token.sub = user.id;
+      }
+      return token;
+    },
+  },
+  pages: {
+    signIn: '/auth/signin',
+    signUp: '/auth/signup',
+  },
+};

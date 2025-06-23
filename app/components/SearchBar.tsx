@@ -19,7 +19,7 @@ interface SearchFilters {
   guests?: number;
 }
 
-export default function SearchBar({ 
+function SearchBar({ 
   onSearch, 
   placeholder = "Search venues...", 
   showFilters = true 
@@ -116,3 +116,8 @@ export default function SearchBar({
     </Card>
   );
 }
+
+// Named export for compatibility
+export { SearchBar };
+// Default export
+export default SearchBar;
