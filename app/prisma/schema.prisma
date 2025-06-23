@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -40,9 +40,9 @@ model Venue {
   website     String?
   priceRange  String?
   capacity    Int?
-  cuisine     Json?    // Changed from String[] to Json for SQLite compatibility
-  amenities   Json?    // Changed from String[] to Json for SQLite compatibility
-  images      Json?    // Changed from String[] to Json for SQLite compatibility
+  cuisine     String[]    // Reverted from Json to String[] for PostgreSQL
+  amenities   String[]    // Reverted from Json to String[] for PostgreSQL
+  images      String[]    // Reverted from Json to String[] for PostgreSQL
   headerImage String?
   logo        String?
   rating      Float?   @default(0)
