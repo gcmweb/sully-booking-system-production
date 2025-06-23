@@ -1,44 +1,25 @@
-
-export const dynamic = "force-dynamic";
-
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from "../../../../../lib/db";
+import { prisma } from '@/lib/prisma';
+import { VenueStatus } from '@prisma/client';
 
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
-    const venueId = params.id;
-
     const venue = await prisma.venue.findUnique({
-      where: { 
-        id: venueId,
-        isActive: true 
+      where: {
+        id: params.id,
+        status: VenueStatus.ACTIVE,
       },
-      select: {
-        id: true,
-        name: true,
-        slug: true,
-        description: true,
-        address: true,
-        city: true,
-        postcode: true,
-        country: true,
-        phone: true,
-        email: true,
-        website: true,
-        cuisine: true,
-        venueType: true,
-        capacity: true,
-        images: {
-          where: { isActive: true },
-          orderBy: { displayOrder: 'asc' },
+      include: {
+        images: true,
+        openingHours: true,
+        tables: true,
+        user: {
           select: {
-            id: true,
-            url: true,
-            alt: true,
-            type: true,
+            name: true,
+            email: true,
           },
         },
       },
@@ -51,17 +32,29 @@ export async function GET(
       );
     }
 
-    // Map images to expected fields for backward compatibility
-    const headerImage = venue.images.find(img => img.type === 'MAIN');
-    const logoImage = venue.images.find(img => img.type === 'THUMBNAIL');
-
-    const venueWithMappedImages = {
-      ...venue,
-      headerImageUrl: headerImage?.url || null,
-      logoUrl: logoImage?.url || null,
+    // Transform the venue data for public consumption
+    const publicVenue = {
+      id: venue.id,
+      name: venue.name,
+      description: venue.description,
+      address: venue.address,
+      phone: venue.phone,
+      email: venue.email,
+      website: venue.website,
+      cuisine: venue.cuisine,
+      priceRange: venue.priceRange,
+      capacity: venue.capacity,
+      headerImageUrl: venue.headerImageUrl,
+      logoUrl: venue.logoUrl,
+      images: venue.images,
+      openingHours: venue.openingHours,
+      tables: venue.tables,
+      owner: venue.user,
+      createdAt: venue.createdAt,
+      updatedAt: venue.updatedAt,
     };
 
-    return NextResponse.json({ venue: venueWithMappedImages });
+    return NextResponse.json(publicVenue);
   } catch (error) {
     console.error('Error fetching venue:', error);
     return NextResponse.json(
