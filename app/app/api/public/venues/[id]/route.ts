@@ -1,25 +1,44 @@
+
+export const dynamic = "force-dynamic";
+
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
-import { VenueStatus } from '@prisma/client';
+import { prisma } from "../../../../../lib/db";
 
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
+    const venueId = params.id;
+
     const venue = await prisma.venue.findUnique({
-      where: {
-        id: params.id,
-        status: VenueStatus.ACTIVE,
+      where: { 
+        id: venueId,
+        isActive: true 
       },
-      include: {
-        images: true,
-        openingHours: true,
-        tables: true,
-        user: {
+      select: {
+        id: true,
+        name: true,
+        slug: true,
+        description: true,
+        address: true,
+        city: true,
+        postcode: true,
+        country: true,
+        phone: true,
+        email: true,
+        website: true,
+        cuisine: true,
+        venueType: true,
+        capacity: true,
+        images: {
+          where: { isActive: true },
+          orderBy: { displayOrder: 'asc' },
           select: {
-            name: true,
-            email: true,
+            id: true,
+            url: true,
+            alt: true,
+            type: true,
           },
         },
       },
@@ -32,29 +51,7 @@ export async function GET(
       );
     }
 
-    // Transform the venue data for public consumption
-    const publicVenue = {
-      id: venue.id,
-      name: venue.name,
-      description: venue.description,
-      address: venue.address,
-      phone: venue.phone,
-      email: venue.email,
-      website: venue.website,
-      cuisine: venue.cuisine,
-      priceRange: venue.priceRange,
-      capacity: venue.capacity,
-      headerImageUrl: venue.headerImageUrl,
-      logoUrl: venue.logoUrl,
-      images: venue.images,
-      openingHours: venue.openingHours,
-      tables: venue.tables,
-      owner: venue.user,
-      createdAt: venue.createdAt,
-      updatedAt: venue.updatedAt,
-    };
-
-    return NextResponse.json(publicVenue);
+    return NextResponse.json({ venue });
   } catch (error) {
     console.error('Error fetching venue:', error);
     return NextResponse.json(

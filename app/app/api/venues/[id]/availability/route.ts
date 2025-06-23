@@ -70,18 +70,18 @@ export async function POST(
         },
       },
       update: {
-        openTime: availabilityData.openTime,
-        closeTime: availabilityData.closeTime,
         startTime: availabilityData.openTime,
         endTime: availabilityData.closeTime,
+        openTime: availabilityData.openTime,
+        closeTime: availabilityData.closeTime,
         },
       create: {
         venueId: params.id,
         dayOfWeek: availabilityData.dayOfWeek,
-        openTime: availabilityData.openTime,
-        closeTime: availabilityData.closeTime,
         startTime: availabilityData.openTime,
         endTime: availabilityData.closeTime,
+        openTime: availabilityData.openTime,
+        closeTime: availabilityData.closeTime,
         },
     });
 
