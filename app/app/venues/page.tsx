@@ -115,7 +115,7 @@ export default function VenuesDirectoryPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-orange-600"></div>
       </div>
     );
   }
@@ -127,11 +127,11 @@ export default function VenuesDirectoryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
-              <CalendarDays className="h-8 w-8 text-blue-600" />
+              <CalendarDays className="h-8 w-8 text-orange-600" />
               <span className="text-2xl font-bold text-gray-900">Sully</span>
             </Link>
             <nav className="flex space-x-4">
-              <Link href="/venues" className="text-blue-600 font-medium">
+              <Link href="/venues" className="text-orange-600 font-medium">
                 Browse Venues
               </Link>
               <Link href="/auth/login" className="text-gray-600 hover:text-gray-900">
@@ -274,8 +274,8 @@ export default function VenuesDirectoryPage() {
                         />
                       ) : null;
                     })()}
-                    <div className="fallback-bg h-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100" style={{ display: 'none' }}>
-                      <CalendarDays className="h-12 w-12 text-blue-400" />
+                    <div className="fallback-bg h-full flex items-center justify-center bg-gradient-to-br from-orange-100 to-orange-200" style={{ display: 'none' }}>
+                      <CalendarDays className="h-12 w-12 text-orange-400" />
                     </div>
                     <div className="absolute inset-0 bg-black bg-opacity-10"></div>
                     
