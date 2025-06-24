@@ -104,7 +104,7 @@ export default function DashboardLayout({
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-orange-600"></div>
       </div>
     );
   }
@@ -141,7 +141,7 @@ export default function DashboardLayout({
       `}>
         <div className="flex items-center justify-between h-16 px-6 border-b">
           <div className="flex items-center space-x-2">
-            <CalendarDays className="h-8 w-8 text-blue-600" />
+            <CalendarDays className="h-8 w-8 text-orange-600" />
             <span className="text-xl font-bold text-gray-900">Sully</span>
           </div>
           <Button
@@ -171,7 +171,7 @@ export default function DashboardLayout({
 
           <div className="p-4 border-t">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center">
                 <span className="text-white text-sm font-medium">
                   {user.firstName?.charAt(0) || user.email.charAt(0)}
                 </span>
@@ -216,7 +216,7 @@ export default function DashboardLayout({
               {/* Admin Panel Button - Only for SUPER_ADMIN */}
               {user?.role === 'SUPER_ADMIN' && (
                 <Link href="/admin">
-                  <Button variant="outline" size="sm" className="bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100">
+                  <Button variant="outline" size="sm" className="bg-orange-50 border-orange-200 text-orange-700 hover:bg-orange-100">
                     <Shield className="h-4 w-4 mr-2" />
                     Admin Panel
                   </Button>
@@ -233,7 +233,7 @@ export default function DashboardLayout({
                 >
                   <Bell className="h-5 w-5" />
                   {unreadCount > 0 && (
-                    <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 text-xs">
+                    <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 text-xs bg-orange-600">
                       {unreadCount}
                     </Badge>
                   )}
@@ -254,7 +254,7 @@ export default function DashboardLayout({
                           <div
                             key={notification.id}
                             className={`p-4 border-b hover:bg-gray-50 cursor-pointer ${
-                              !notification.isRead ? 'bg-blue-50' : ''
+                              !notification.isRead ? 'bg-orange-50' : ''
                             }`}
                             onClick={() => markNotificationAsRead(notification.id)}
                           >
@@ -271,7 +271,7 @@ export default function DashboardLayout({
                                 </p>
                               </div>
                               {!notification.isRead && (
-                                <div className="w-2 h-2 bg-blue-600 rounded-full ml-2 mt-1"></div>
+                                <div className="w-2 h-2 bg-orange-600 rounded-full ml-2 mt-1"></div>
                               )}
                             </div>
                           </div>
