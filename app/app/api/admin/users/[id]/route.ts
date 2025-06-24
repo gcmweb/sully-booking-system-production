@@ -6,13 +6,17 @@ import { Role } from '@prisma/client';
 
 export const dynamic = 'force-dynamic';
 
+interface RouteContext {
+  params: { id: string };
+}
+
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: RouteContext
 ) {
   try {
     const user = await requireAuth([Role.SUPER_ADMIN]);
-    const { id } = params;
+    const { id } = context.params;
 
     const targetUser = await prisma.user.findUnique({
       where: { id },
@@ -76,11 +80,11 @@ export async function GET(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: RouteContext
 ) {
   try {
     const user = await requireAuth([Role.SUPER_ADMIN]);
-    const { id } = params;
+    const { id } = context.params;
 
     // Check if user exists
     const targetUser = await prisma.user.findUnique({
