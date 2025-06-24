@@ -31,6 +31,8 @@ export async function GET(
         cuisine: true,
         venueType: true,
         capacity: true,
+
+
         images: {
           where: { isActive: true },
           orderBy: { displayOrder: 'asc' },

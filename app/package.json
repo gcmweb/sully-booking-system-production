@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "cp .env.build .env.local && prisma generate && next build && rm -f .env.local",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint"
   },

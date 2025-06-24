@@ -57,9 +57,10 @@ export async function GET(request: NextRequest) {
         website: true,
         cuisine: true,
         venueType: true,
+
         isActive: true,
         capacity: true,
-        branding: true,
+
         images: {
           select: {
             id: true,

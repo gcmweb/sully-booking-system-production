@@ -31,9 +31,12 @@ export async function GET() {
             website: true,
             cuisine: true,
             venueType: true,
+
+
             isActive: true,
             featured: true,
             capacity: true,
+
             images: {
               select: {
                 id: true,
