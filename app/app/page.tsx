@@ -135,7 +135,7 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Find Your Perfect Amazing
+              Find Your Perfect
               <span className="block bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
                 Event Venue
               </span>
