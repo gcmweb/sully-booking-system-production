@@ -1,6 +1,6 @@
 
 import { z } from 'zod';
-import { Role, VenueType, ServiceType, BookingStatus, SubscriptionPlan } from '@prisma/client';
+import { UserRole, VenueType, ServiceType, BookingStatus, SubscriptionPlan } from '@prisma/client';
 
 // Auth validations
 export const loginSchema = z.object({
@@ -16,32 +16,26 @@ export const registerSchema = z.object({
   phone: z.string().optional(),
 });
 
-// Venue validations - FIXED: Added all required fields from Prisma schema
+// Venue validations - Updated to match new schema
 export const venueSchema = z.object({
   name: z.string().min(1, 'Venue name is required'),
   description: z.string().optional(),
   address: z.string().min(1, 'Address is required'),
   city: z.string().min(1, 'City is required'),
-  state: z.string().min(1, 'State is required'), // ADDED: Required by Prisma
-  zipCode: z.string().min(1, 'ZIP code is required'), // ADDED: Required by Prisma
-  postcode: z.string().optional(), // Made optional since zipCode is the main postal field
-  country: z.string().default('US'), // Added with default
-  phone: z.string().optional(), // Made optional to match Prisma schema
-  email: z.string().email('Invalid email address').optional(), // Made optional to match Prisma
+  postcode: z.string().min(1, 'Postcode is required'),
+  country: z.string().default('UK'),
+  phone: z.string().min(1, 'Phone is required'),
+  email: z.string().email('Invalid email address'),
   website: z.string().url().optional().or(z.literal('')),
   cuisine: z.string().optional(),
-  venueType: z.nativeEnum(VenueType).optional(), // Made optional to match Prisma
-  capacity: z.number().min(1, 'Capacity must be at least 1').optional(), // Made optional to match Prisma
-  pricePerHour: z.number().min(0, 'Price per hour must be positive').optional(),
-  currency: z.string().default('USD'),
+  venueType: z.nativeEnum(VenueType),
+  capacity: z.number().min(1, 'Capacity must be at least 1').default(50),
   featured: z.boolean().default(false),
-  amenities: z.array(z.string()).default([]), // ADDED: Required by Prisma as String[]
   isActive: z.boolean().default(true),
-  latitude: z.number().optional(),
-  longitude: z.number().optional(),
-  slug: z.string().optional(),
-  metaTitle: z.string().optional(),
-  metaDescription: z.string().optional(),
+  settings: z.record(z.any()).default({}),
+  branding: z.record(z.any()).default({}),
+  headerImageUrl: z.string().optional(),
+  logoUrl: z.string().optional(),
 });
 
 // Booking validations
@@ -50,20 +44,24 @@ export const bookingSchema = z.object({
   serviceType: z.nativeEnum(ServiceType),
   date: z.string().min(1, 'Date is required'),
   time: z.string().regex(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/, 'Invalid time format'),
+  duration: z.number().min(30, 'Duration must be at least 30 minutes').default(120),
   partySize: z.number().min(1, 'Party size must be at least 1'),
   customerName: z.string().min(1, 'Customer name is required'),
   customerEmail: z.string().email('Invalid email address'),
   customerPhone: z.string().min(1, 'Phone number is required'),
   specialRequests: z.string().optional(),
   tableId: z.string().optional(),
+  totalAmount: z.number().min(0).optional(),
+  depositAmount: z.number().min(0).optional(),
 });
 
 // Table validations
 export const tableSchema = z.object({
   name: z.string().min(1, 'Table name is required'),
-  number: z.string().min(1, 'Table number is required'),
   capacity: z.number().min(1, 'Capacity must be at least 1'),
   description: z.string().optional(),
+  position: z.record(z.any()).optional(),
+  isActive: z.boolean().default(true),
 });
 
 // Event validations
@@ -75,6 +73,18 @@ export const eventSchema = z.object({
   endTime: z.string().min(1, 'End time is required'),
   capacity: z.number().min(1, 'Capacity must be at least 1'),
   price: z.number().min(0, 'Price must be positive').optional(),
+  isActive: z.boolean().default(true),
+  isRecurring: z.boolean().default(false),
+  recurrence: z.record(z.any()).optional(),
+});
+
+// Service validations
+export const serviceSchema = z.object({
+  type: z.nativeEnum(ServiceType),
+  name: z.string().min(1, 'Service name is required'),
+  description: z.string().optional(),
+  isActive: z.boolean().default(true),
+  settings: z.record(z.any()).default({}),
 });
 
 // Availability validations
@@ -82,7 +92,8 @@ export const availabilitySchema = z.object({
   dayOfWeek: z.number().min(0).max(6),
   openTime: z.string().min(1, 'Open time is required'),
   closeTime: z.string().min(1, 'Close time is required'),
-  isOpen: z.boolean(),
+  isOpen: z.boolean().default(true),
+  date: z.string().optional(),
 });
 
 // Opening hours validations
@@ -98,20 +109,30 @@ export const venueOpeningHoursSchema = z.object({
   openingHours: z.array(openingHoursSchema),
 });
 
-// Widget validations - Updated to match Prisma schema fields
+// Widget validations
 export const widgetSchema = z.object({
   name: z.string().min(1, 'Widget name is required'),
+  settings: z.record(z.any()).default({}),
   isActive: z.boolean().default(true),
-  theme: z.string().default('default'),
-  primaryColor: z.string().default('#3B82F6'),
-  backgroundColor: z.string().default('#FFFFFF'),
-  textColor: z.string().default('#1F2937'),
-  allowGuestBooking: z.boolean().default(true),
-  requirePhone: z.boolean().default(false),
-  maxAdvanceBooking: z.number().default(30),
-  minAdvanceBooking: z.number().default(1),
-  embedCode: z.string().optional(),
-  customCss: z.string().optional(),
+  embedCode: z.string().min(1, 'Embed code is required'),
+});
+
+// Staff validations
+export const staffSchema = z.object({
+  name: z.string().min(1, 'Staff name is required'),
+  email: z.string().email('Invalid email address'),
+  role: z.enum(['MANAGER', 'HOST', 'SERVER', 'ADMIN']),
+  isActive: z.boolean().default(true),
+});
+
+// User validations
+export const userUpdateSchema = z.object({
+  firstName: z.string().min(1, 'First name is required').optional(),
+  lastName: z.string().min(1, 'Last name is required').optional(),
+  phone: z.string().optional(),
+  role: z.nativeEnum(UserRole).optional(),
+  isActive: z.boolean().optional(),
+  emailVerified: z.boolean().optional(),
 });
 
 export type LoginInput = z.infer<typeof loginSchema>;
@@ -120,7 +141,10 @@ export type VenueInput = z.infer<typeof venueSchema>;
 export type BookingInput = z.infer<typeof bookingSchema>;
 export type TableInput = z.infer<typeof tableSchema>;
 export type EventInput = z.infer<typeof eventSchema>;
+export type ServiceInput = z.infer<typeof serviceSchema>;
 export type AvailabilityInput = z.infer<typeof availabilitySchema>;
 export type OpeningHoursInput = z.infer<typeof openingHoursSchema>;
 export type VenueOpeningHoursInput = z.infer<typeof venueOpeningHoursSchema>;
 export type WidgetInput = z.infer<typeof widgetSchema>;
+export type StaffInput = z.infer<typeof staffSchema>;
+export type UserUpdateInput = z.infer<typeof userUpdateSchema>;
