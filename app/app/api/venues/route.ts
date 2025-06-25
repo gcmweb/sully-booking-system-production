@@ -1,52 +1,30 @@
+
 import { NextRequest, NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/lib/auth';
-import { prisma } from '@/lib/prisma';
-import { VenueStatus } from '@prisma/client';
+import { prisma } from "../../../lib/db";
+import { requireAuth } from "../../../lib/auth";
+import { venueSchema } from "../../../lib/validations";
+import { checkVenueCreationLimits } from "../../../lib/subscription";
+import { UserRole, SubscriptionPlan, SubscriptionStatus } from '@prisma/client';
+
+export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
-    
-    if (!session?.user?.id) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      );
-    }
+    const user = await requireAuth();
 
-    const { searchParams } = new URL(request.url);
-    const page = parseInt(searchParams.get('page') || '1');
-    const limit = parseInt(searchParams.get('limit') || '10');
-    const search = searchParams.get('search') || '';
-    const status = searchParams.get('status') || '';
-
-    const skip = (page - 1) * limit;
-
-    const where: any = {
-      userId: session.user.id,
-    };
-
-    if (search) {
-      where.OR = [
-        { name: { contains: search, mode: 'insensitive' } },
-        { description: { contains: search, mode: 'insensitive' } },
-        { address: { contains: search, mode: 'insensitive' } },
-        { cuisine: { contains: search, mode: 'insensitive' } },
-      ];
-    }
-
-    if (status && status !== 'ALL') {
-      where.status = status as VenueStatus;
-    }
-
-    const [venues, total] = await Promise.all([
-      prisma.venue.findMany({
-        where,
+    let venues;
+    if (user.role === UserRole.SUPER_ADMIN) {
+      venues = await prisma.venue.findMany({
         include: {
-          images: {
-            take: 1,
+          owner: {
+            select: {
+              id: true,
+              email: true,
+              firstName: true,
+              lastName: true,
+            },
           },
+          subscription: true,
           _count: {
             select: {
               bookings: true,
@@ -54,28 +32,70 @@ export async function GET(request: NextRequest) {
             },
           },
         },
-        skip,
-        take: limit,
-        orderBy: {
-          createdAt: 'desc',
+        orderBy: { createdAt: 'desc' },
+      });
+    } else {
+      venues = await prisma.venue.findMany({
+        where: { ownerId: user.id },
+        include: {
+          subscription: true,
+          _count: {
+            select: {
+              bookings: true,
+              tables: true,
+            },
+          },
         },
-      }),
-      prisma.venue.count({ where }),
-    ]);
+        orderBy: { createdAt: 'desc' },
+      });
+    }
 
-    return NextResponse.json({
-      venues,
-      pagination: {
-        page,
-        limit,
-        total,
-        pages: Math.ceil(total / limit),
-      },
+    // Ensure venues is always an array
+    const safeVenues = Array.isArray(venues) ? venues : [];
+
+    return NextResponse.json({ 
+      success: true,
+      venues: safeVenues 
     });
-  } catch (error) {
-    console.error('Error fetching venues:', error);
+  } catch (error: any) {
+    console.error('Get venues error:', error);
+    
+    // Handle authentication errors
+    if (error.message === 'Authentication required') {
+      return NextResponse.json(
+        { 
+          error: 'Authentication required',
+          venues: [] // Always provide fallback array
+        },
+        { status: 401 }
+      );
+    }
+    
+    if (error.message === 'Account is inactive') {
+      return NextResponse.json(
+        { 
+          error: 'Account is inactive',
+          venues: [] // Always provide fallback array
+        },
+        { status: 403 }
+      );
+    }
+    
+    if (error.message === 'Insufficient permissions') {
+      return NextResponse.json(
+        { 
+          error: 'Insufficient permissions',
+          venues: [] // Always provide fallback array
+        },
+        { status: 403 }
+      );
+    }
+    
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { 
+        error: 'Failed to fetch venues',
+        venues: [] // Always provide fallback array
+      },
       { status: 500 }
     );
   }
@@ -83,107 +103,126 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
+    const user = await requireAuth([UserRole.VENUE_OWNER, UserRole.SUPER_ADMIN]);
     
-    if (!session?.user?.id) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      );
+    // Check venue creation limits (skip for super admin)
+    if (user.role !== UserRole.SUPER_ADMIN) {
+      const venueCheck = await checkVenueCreationLimits(user.id);
+      if (!venueCheck.canCreateVenue) {
+        return NextResponse.json(
+          { 
+            error: 'Venue limit reached',
+            message: venueCheck.message,
+            plan: venueCheck.plan,
+            venuesUsed: venueCheck.venuesUsed,
+            venuesLimit: venueCheck.venuesLimit
+          },
+          { status: 403 }
+        );
+      }
     }
-
-    const body = await request.json();
-    const {
-      name,
-      description,
-      address,
-      phone,
-      email,
-      website,
-      cuisine,
-      priceRange,
-      capacity,
-    } = body;
-
-    // Validate required fields
-    if (!name || !description || !address) {
+    
+    // Parse JSON body with error handling
+    let body;
+    try {
+      body = await request.json();
+    } catch (error) {
       return NextResponse.json(
-        { error: 'Name, description, and address are required' },
+        { error: 'Invalid JSON format' },
         { status: 400 }
       );
     }
+    
+    // Validate request body
+    const venueData = venueSchema.parse(body);
 
-    // Check venue limits based on user's subscription
-    const user = await prisma.user.findUnique({
-      where: { id: session.user.id },
-      include: {
-        _count: {
-          select: {
-            venues: {
-              where: {
-                status: {
-                  not: VenueStatus.INACTIVE,
-                },
-              },
-            },
+    // Generate slug from name
+    const slug = venueData.name
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+
+    // Check if slug is unique
+    const existingVenue = await prisma.venue.findUnique({
+      where: { slug },
+    });
+
+    if (existingVenue) {
+      return NextResponse.json(
+        { error: 'A venue with this name already exists' },
+        { status: 409 }
+      );
+    }
+
+    // Create venue with subscription
+    const venue = await prisma.venue.create({
+      data: {
+        ...venueData,
+        slug,
+        ownerId: user.id,
+        subscription: {
+          create: {
+            plan: SubscriptionPlan.FREE,
+            status: SubscriptionStatus.ACTIVE,
+            currentPeriodStart: new Date(),
+            currentPeriodEnd: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+            bookingsLimit: 50,
           },
         },
       },
+      include: {
+        subscription: true,
+      },
     });
 
-    if (!user) {
+    return NextResponse.json({ 
+      success: true,
+      venue 
+    });
+  } catch (error: any) {
+    console.error('Create venue error:', error);
+    
+    // Handle authentication errors
+    if (error.message === 'Authentication required') {
       return NextResponse.json(
-        { error: 'User not found' },
-        { status: 404 }
+        { error: 'Authentication required' },
+        { status: 401 }
       );
     }
-
-    // Check venue limits
-    const venueCount = user._count.venues;
-    let maxVenues = 1; // FREE plan
     
-    if (user.planType === 'PAID') {
-      maxVenues = 5;
-    } else if (user.planType === 'PREMIUM') {
-      maxVenues = 999; // Unlimited
-    }
-
-    if (venueCount >= maxVenues) {
+    if (error.message === 'Account is inactive') {
       return NextResponse.json(
-        { 
-          error: `Venue limit reached. Your ${user.planType} plan allows ${maxVenues === 999 ? 'unlimited' : maxVenues} venue${maxVenues === 1 ? '' : 's'}.`,
-          upgradeRequired: true,
-        },
+        { error: 'Account is inactive' },
         { status: 403 }
       );
     }
-
-    const venue = await prisma.venue.create({
-      data: {
-        name,
-        description,
-        address,
-        phone,
-        email,
-        website,
-        cuisine,
-        priceRange,
-        capacity: capacity ? parseInt(capacity) : null,
-        userId: session.user.id,
-        status: VenueStatus.ACTIVE,
-      },
-      include: {
-        images: true,
-        openingHours: true,
-        tables: true,
-      },
-    });
-
-    return NextResponse.json(venue, { status: 201 });
-  } catch (error) {
-    console.error('Error creating venue:', error);
+    
+    if (error.message === 'Insufficient permissions') {
+      return NextResponse.json(
+        { error: 'Insufficient permissions' },
+        { status: 403 }
+      );
+    }
+    
+    // Handle validation errors
+    if (error.name === 'ZodError') {
+      return NextResponse.json(
+        { error: 'Invalid request data', details: error.errors },
+        { status: 400 }
+      );
+    }
+    
+    // Handle Prisma errors
+    if (error.code === 'P2002') {
+      return NextResponse.json(
+        { error: 'A venue with this information already exists' },
+        { status: 409 }
+      );
+    }
+    
+    // Generic server error
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Failed to create venue' },
       { status: 500 }
     );
   }
