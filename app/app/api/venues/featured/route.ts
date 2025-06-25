@@ -61,7 +61,10 @@ export async function GET() {
     });
 
   } catch (error) {
-    console.error('Error in featured venues API:', error);
+    // Log error server-side only, not to client console
+    if (typeof window === 'undefined') {
+      console.error('Server error in featured venues API:', error);
+    }
     
     return NextResponse.json(
       {
