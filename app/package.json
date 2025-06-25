@@ -8,7 +8,9 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "npx prisma generate && next build",
+    "build": "npm run clean && npx prisma generate && next build",
+    "build:netlify": "npm run clean && npx prisma generate && next build",
+    "clean": "rm -rf .next .build",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "npx prisma generate"

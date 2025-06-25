@@ -107,3 +107,13 @@ set_*.html
 # Build verification and deployment scripts (keep source, ignore execution artifacts)
 BUILD_VERIFICATION_SCRIPT.log
 DEPLOYMENT_*.log
+
+# Next.js build artifacts (IMPORTANT: These should never be committed)
+app/.next/
+app/.build/
+app/out/
+
+# Test files that might cause build issues
+**/test-opening-hours/**
+**/test-*/**
+**/*test*
