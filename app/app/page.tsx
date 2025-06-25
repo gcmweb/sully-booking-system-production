@@ -33,6 +33,7 @@ export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
   const [priceRange, setPriceRange] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetchFeaturedVenues();
@@ -40,13 +41,26 @@ export default function HomePage() {
 
   const fetchFeaturedVenues = async () => {
     try {
-      const response = await fetch('/api/venues/featured');
+      setError(null);
+      const response = await fetch('/api/venues/featured', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      
       if (response.ok) {
         const data = await response.json();
         setVenues(data.venues || []);
+      } else {
+        // Handle HTTP errors gracefully without console noise
+        setError('Unable to load venues at this time');
+        setVenues([]);
       }
     } catch (error) {
-      console.error('Failed to fetch venues:', error);
+      // Handle network errors gracefully without console noise
+      setError('Network error - please check your connection');
+      setVenues([]);
     } finally {
       setLoading(false);
     }
@@ -217,6 +231,21 @@ export default function HomePage() {
             </p>
           </motion.div>
 
+          {error && (
+            <div className="text-center py-8">
+              <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 max-w-md mx-auto">
+                <p className="text-orange-700">{error}</p>
+                <Button 
+                  onClick={fetchFeaturedVenues}
+                  className="mt-2 bg-orange-600 hover:bg-orange-700 text-white"
+                  size="sm"
+                >
+                  Try Again
+                </Button>
+              </div>
+            </div>
+          )}
+
           {loading ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -324,7 +353,7 @@ export default function HomePage() {
             </div>
           )}
 
-          {!loading && filteredVenues.length === 0 && (
+          {!loading && !error && filteredVenues.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
