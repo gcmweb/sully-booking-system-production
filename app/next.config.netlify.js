@@ -1,4 +1,3 @@
-
 const path = require('path');
 
 /** @type {import('next').NextConfig} */
@@ -16,7 +15,21 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true,
+    // Enable TypeScript checking but with better error handling
+    ignoreBuildErrors: false,
+    tsconfigPath: './tsconfig.json'
+  },
+  // Ensure clean builds
+  cleanDistDir: true,
+  // Webpack configuration to handle module resolution better
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Ignore test files during build
+    config.module.rules.push({
+      test: /test-.*\.(ts|tsx|js|jsx)$/,
+      loader: 'ignore-loader'
+    });
+    
+    return config;
   },
 };
 
