@@ -15,6 +15,13 @@
     "lint": "next lint",
     "postinstall": "npx prisma generate"
   },
+  {
+  "scripts": {
+    "prebuild": "rimraf dist && npx prisma generate",
+    "build": "nest build",
+    // ... other scripts
+  }
+}
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
