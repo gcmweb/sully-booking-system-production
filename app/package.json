@@ -19,7 +19,6 @@
   "scripts": {
     "prebuild": "rimraf dist && npx prisma generate",
     "build": "nest build",
-    // ... other scripts
   }
 }
   "prisma": {
